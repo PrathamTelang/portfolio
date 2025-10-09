@@ -13,7 +13,8 @@ export const Hero = () => {
                 className="rounded-full border-2 border-white h-full w-full object-cover"
                 />    
             </div>   
-            <div className=" pt-12 border-l-2 w-full border-[#E5E5E5]">
+            <div className="  border-l-2 w-full border-[#E5E5E5] ">
+                <div className="pl-4 text-xs text-[#D4D4D8] bg-[repeating-linear-gradient(45deg,#E5E5E5_0_1px,transparent_1px_10px)] h-14 flex items-end">font-family: 'Source Code Pro', monospace;</div>
                 <div className="w-full h-[1px] bg-[#E5E5E5]" />
                 <h1 className="pl-4 text-3xl font-semibold" >Pratham Telang</h1>
                 <div className="w-full h-[1px] bg-[#E5E5E5]" />
