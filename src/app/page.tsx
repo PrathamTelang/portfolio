@@ -10,9 +10,9 @@ import { Line } from "./components/Line";
 
 export default function Home() {
   return (
-   <div className="bg-white h-full w-screen flex justify-center">
+   <div className="max-w-screen overflow-x-hidden">
     
-    <div className="h-full w-3/5 border-2 border-[#E5E5E5] border-dotted bg-[#FCFCFC]">
+    <div className="h-full max-w-screen bg-[#FCFCFC]">
       <Background/>
       <Line/>
       <Hero />
