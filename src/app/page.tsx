@@ -6,7 +6,7 @@ import { Hero } from "./components/Hero";
 import { Background } from "./components/Backgroud";
 import { Bar } from "./components/Bar";
 import { Line } from "./components/Line";
-import { Skills } from "./components/Skills";
+import { Skills } from "./components/TechStack";
 import { Education } from "./components/Education";
 import SocialLinks from "./components/SocialLink";
 
