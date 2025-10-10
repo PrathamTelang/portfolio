@@ -27,7 +27,7 @@ const socialLinks = [
   {
     name: "Reddit",
     username: "PrathamTelang",
-    icon: <FaReddit />,
+    icon: <FaReddit className="text-[#FF4500]" />,
     url: "https://www.reddit.com/user/PrathamTelang",
   },
 ];
@@ -37,7 +37,7 @@ export default function SocialLinks() {
     
     <div className="w-screen flex justify-center ">
         <div className="w-3/5 border border-[#E5E5E5]">
-            <h2 className="text-2xl px-4 font-semibold">About Me</h2>
+            <h2 className="text-2xl px-4 font-semibold">Social Links</h2>
                 
         <div className="grid md:grid-cols-2 gap-4">
         
@@ -46,12 +46,12 @@ export default function SocialLinks() {
           key={item.name}
           href={item.url}
           target="_blank"
-          className="flex items-center justify-between border border-[#E5E5E5] p-4 transition"
+          className="flex hover:underline items-center justify-between border border-[#E5E5E5] p-4 transition"
         >
           <div className="flex items-center gap-3">
-            <div className="text-2xl">{item.icon}</div>
+            <div className="text-5xl">{item.icon}</div>
             <div>
-              <h3 className="font-semibold">{item.name}</h3>
+              <h3 className="font-semibold ">{item.name}</h3>
               <p className="text-sm text-gray-500">{item.username}</p>
             </div>
           </div>
