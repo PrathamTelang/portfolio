@@ -15,10 +15,12 @@
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/webpack": "^5.28.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
