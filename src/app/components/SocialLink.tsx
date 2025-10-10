@@ -36,7 +36,7 @@ export default function SocialLinks() {
   return (
     
     <div className="w-screen flex justify-center ">
-        <div className="w-3/5 border border-[#E5E5E5]">
+        <div className="w-3/5 border border-[#E5E5E5] max-[475px]:w-screen">
             <h2 className="text-2xl px-4 font-semibold">Social Links</h2>
                 
         <div className="grid md:grid-cols-2 gap-4">

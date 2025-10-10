@@ -7,6 +7,7 @@ import { Background } from "./components/Backgroud";
 import { Bar } from "./components/Bar";
 import { Line } from "./components/Line";
 import { Skills } from "./components/Skills";
+import { Education } from "./components/Education";
 import SocialLinks from "./components/SocialLink";
 
 
@@ -25,6 +26,9 @@ export default function Home() {
       <Skills/>
       <Bar/>
       <SocialLinks/>
+      <Bar/>
+      <Education/>
+      <Bar/>
     </div>
    </div>
   );
