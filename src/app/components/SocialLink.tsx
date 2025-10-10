@@ -1,8 +1,9 @@
 "use client";
-import { FaLinkedin, FaGithub, FaXTwitter, FaYoutube, FaReddit , } from "react-icons/fa6";
+import { FaLinkedin, FaGithub, FaXTwitter, FaYoutube, FaReddit, FaSquareXTwitter , } from "react-icons/fa6";
 import { SiZalo, SiDailydotdev } from "react-icons/si"; // ✅ Corrected here
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { FaGithubSquare } from "react-icons/fa";
 
 
 const socialLinks = [
@@ -15,13 +16,13 @@ const socialLinks = [
   {
     name: "GitHub",
     username: "PrathamTelang",
-    icon: <FaGithub />,
+    icon: <FaGithubSquare />,
     url: "https://github.com/PrathamTelang",
   },
   {
     name: "X (Formerly Twitter)",
     username: "@Prat_Telang",
-    icon: <FaXTwitter />,
+    icon: <FaSquareXTwitter />,
     url: "https://x.com/Prat_Telang",
   },
   {
