@@ -26,9 +26,9 @@ const socialLinks = [
   },
   {
     name: "Reddit",
-    username: "PrathamTelang",
+    username: "MissionBasis7442",
     icon: <FaReddit className="text-[#FF4500]" />,
-    url: "https://www.reddit.com/user/PrathamTelang",
+    url: "https://www.reddit.com/user/MissionBasis7442/",
   },
 ];
 
