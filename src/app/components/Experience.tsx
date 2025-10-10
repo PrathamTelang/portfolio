@@ -8,9 +8,10 @@ export const Experience = () => {
             <Line/>
             <div className="pt-2">
                 <h3 className="text-lg px-4 font-semibold">TechVance Innovations</h3>
-            <p className="text-[#404040] px-4 my-1 text-sm">
+            <p className="text-[#404040] px-4 my-1 text-md">
                 Full Stack Developer | 26th May 2025 to 26th June 2025
             </p>
+                        <p className="text-[#404040] ml-4 text-sm">Developed the whole frontend of the</p>
             </div>
         </div>
         </div>
