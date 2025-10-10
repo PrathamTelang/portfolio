@@ -5,6 +5,7 @@ import { RiNextjsFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import motionIconpng from "./images/motion.png";
 import Image from "next/image";
+import expressIcon from "./images/express2.png"
 
 export const Skills = () => {
   return (
@@ -32,7 +33,19 @@ export const Skills = () => {
               <h3 className="text-lg px-4 font-semibold">Backend</h3>
               <div className="flex items-center pl-4 text-4xl gap-4">
                 <Tooltip icon={<FaNodeJs className="text-[#5EAF47]" />} text="Node.js" link="https://nodejs.org/" />
-                <Tooltip icon={<SiExpress />} text="Express" link="https://expressjs.com/" />
+                <Tooltip
+                  icon={
+                    <Image
+                      src={expressIcon}
+                      alt="Motion"
+                      width={40}
+                      height={40}
+                      className="object-contain p-1"
+                    />
+                  }
+                  text="Express"
+                  link="https://expressjs.com/"
+                />
                 <Tooltip icon={<SiMongodb className="text-[#6CAC48]" />} text="MongoDB" link="https://www.mongodb.com/" />
                 <Tooltip icon={<SiPostgresql className="text-[#396C94]" />} text="PostgreSQL" link="https://www.postgresql.org/" />
               </div>
