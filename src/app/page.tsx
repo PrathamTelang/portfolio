@@ -4,11 +4,12 @@ import { About } from "./components/About";
 import { Experience } from "./components/Experience";
 import { Hero } from "./components/Hero";
 import { Background } from "./components/Backgroud";
-import { Bar } from "./components/Bar";
+import { FilledBar } from "./components/FilledBar";
 import { Line } from "./components/Line";
 import { Skills } from "./components/TechStack";
 import { Education } from "./components/Education";
 import SocialLinks from "./components/SocialLink";
+import Projects from "./components/Projects"
 
 
 export default function Home() {
@@ -18,17 +19,19 @@ export default function Home() {
       <Background/>
       <Line/>
       <Hero />
-      <Bar/>
+      <FilledBar/>
       <About/>
-      <Bar/>
+      <FilledBar/>
       <Experience/>
-      <Bar/>
+      <FilledBar/>
+      <Projects/>
+      <FilledBar/>
       <Skills/>
-      <Bar/>
+      <FilledBar/>
       <SocialLinks/>
-      <Bar/>
+      <FilledBar/>
       <Education/>
-      <Bar/>
+      <FilledBar/>
     </div>
    </div>
   );
