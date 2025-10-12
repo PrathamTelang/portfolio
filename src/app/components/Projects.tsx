@@ -1,36 +1,39 @@
 "use client";
-import { FaLinkedin, FaGithub, FaXTwitter, FaYoutube, FaReddit, FaSquareXTwitter , } from "react-icons/fa6";
-import { SiZalo, SiDailydotdev } from "react-icons/si"; // ✅ Corrected here
-import { ArrowUpRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import { FaGithubSquare } from "react-icons/fa";
 
+import motionProject from "./images/motionProject.png"
+import Image from "next/image";
 
-const socialLinks = [
+const projectsLinks = [
   {
     name: "LinkedIn",
     username: "Pratham Telang",
-    icon: <FaLinkedin className="text-[#0A66C2]" />,
+    image: motionProject,
+    alt: "LinkedIn Preview",
     url: "https://www.linkedin.com/in/prathamtelang/",
   },
-  {
-    name: "GitHub",
-    username: "PrathamTelang",
-    icon: <FaGithubSquare />,
-    url: "https://github.com/PrathamTelang",
+    {
+    name: "LinkedIn",
+    username: "Pratham Telang",
+    image: motionProject,
+    alt: "LinkedIn Preview",
+    url: "https://www.linkedin.com/in/prathamtelang/",
   },
-  {
-    name: "X (Formerly Twitter)",
-    username: "@Prat_Telang",
-    icon: <FaSquareXTwitter />,
-    url: "https://x.com/Prat_Telang",
+    {
+    name: "LinkedIn",
+    username: "Pratham Telang",
+    image: motionProject,
+    alt: "LinkedIn Preview",
+    url: "https://www.linkedin.com/in/prathamtelang/",
   },
-  {
-    name: "Reddit",
-    username: "MissionBasis7442",
-    icon: <FaReddit className="text-[#FF4500]" />,
-    url: "https://www.reddit.com/user/MissionBasis7442/",
-  },
+    {
+    name: "LinkedIn",
+    username: "Pratham Telang",
+    image: motionProject,
+    alt: "LinkedIn Preview",
+    url: "https://www.linkedin.com/in/prathamtelang/",
+  }
 ];
 
 export default function Projects() {
@@ -42,21 +45,23 @@ export default function Projects() {
                 
         <div className="grid md:grid-cols-2 gap-4">
         
-      {socialLinks.map((item) => (
+      {projectsLinks.map((item) => (
         <Link
           key={item.name}
           href={item.url}
           target="_blank"
           className="flex hover:underline items-center justify-between border border-[#E5E5E5] p-4 transition"
         >
-          <div className="flex items-center gap-3">
-            <div className="text-5xl">{item.icon}</div>
-            <div>
-              <h3 className="font-semibold ">{item.name}</h3>
+          <div className="w-full">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="font-semibold ">{item.name}</h3>
               <p className="text-sm text-gray-500">{item.username}</p>
+              </div>
+              <ExternalLink className="text-gray-400" size={20} />
             </div>
+            <div className="w-full h-full pt-2"><Image src={item.image} alt={item.alt} className="rounded-lg hover:" /></div>
           </div>
-          <ArrowUpRight className="text-gray-400" size={18} />
         </Link>
       ))}
     </div>
