@@ -2,7 +2,7 @@ import '@/app/globals.css'
 
 export const Background = () => {
   return (
-    <div className="flex w-screen  items-center justify-center">
+    <div className="flex w-screen pt-12  items-center justify-center">
       <div className=" w-3/5 border-x border-[#E5E5E5] max-[475px]:w-screen">
       <div className="w-full h-60 flex justify-center items-center
                       relative overflow-hidden 
