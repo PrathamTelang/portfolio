@@ -37,7 +37,7 @@ export const Hero = () => {
                         <div className="w-full">
                             <h1 className="pl-4 text-3xl font-semibold" >Pratham Telang</h1>
                             <div className="w-full h-[1px] bg-[#E5E5E5]" />
-                            <p className="pl-4 text-[#404040] my-2 max-[475px]:my-1 text-md ">Software Engineer </p>
+                            <p className="pl-4 text-[#404040] my-2 max-[475px]:my-1 text-md max-[475px]:hidden">Software Engineer </p>
                             <div className="w-full h-[1px] bg-[#E5E5E5]" />
                             <p className="pl-4 text-[#404040] my-2 max-[475px]:my-0 text-sm ">Nagpur, Maharashtra, India</p>
                         </div>
