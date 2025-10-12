@@ -9,7 +9,7 @@ import Image from "next/image";
 export const Skills = () => {
   return (
     <div className="w-screen flex justify-center">
-      <div className="w-3/5 border-x border-[#E5E5E5] max-[475px]:w-screen">
+      <div className="w-3/5 border-x border-[#E5E5E5] max-[475px]:w-11/12">
         <h2 className="text-2xl px-4 font-semibold">Techstack</h2>
         <Line />
         <div className="bg-[radial-gradient(circle,_#E5E5E5_1px,_transparent_1px)] bg-[length:10px_10px]">

@@ -3,7 +3,7 @@ import '@/app/globals.css'
 export const Background = () => {
   return (
     <div className="flex w-screen pt-12  items-center justify-center">
-      <div className=" w-3/5 border-x border-[#E5E5E5] max-[475px]:w-screen">
+      <div className=" w-3/5 border-x border-[#E5E5E5] max-[475px]:w-11/12">
       <div className="w-full h-60 flex justify-center items-center
                       relative overflow-hidden 
 before:absolute before:inset-0 before:content-[''] before:z-0

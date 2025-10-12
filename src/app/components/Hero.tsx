@@ -8,7 +8,7 @@ import IndianFlag from "./images/Flag_of_India.svg.png"
 export const Hero = () => {
     return (
         <div className="w-screen  flex justify-center">
-            <div className="flex border-x border-[#E5E5E5] w-3/5 max-[475px]:w-screen max-[475px]:max-h-36 max-h-full">
+            <div className="flex border-x border-[#E5E5E5] w-3/5 max-[475px]:w-11/12 max-[475px]:max-h-36 max-h-full">
                 <div className="h-48 min-w-48 max-[475px]:min-w-36 max-[475px]:min-h-full">
                     <div className="absolute group inline-block ">
   <Image
