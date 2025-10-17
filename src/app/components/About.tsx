@@ -3,8 +3,8 @@ import { Line } from "./Line";
 
 export const About = () => {
   return (
-    <div className="w-screen flex justify-center items-center">
-      <div className="w-3/5 border-x border-[#E5E5E5] max-[475px]:w-11/12">
+    <div className="w-screen flex justify-center items-center ">
+      <div className="w-3/5 bg-white border-x border-[#e5e5e5] max-[475px]:w-11/12">
         <h2 className="text-2xl px-4 font-semibold">About Me</h2>
         <Line />
         <p className="text-[#404040] px-4 my-2 text-md">

@@ -3,7 +3,7 @@ import { Line } from "./Line"
 export const Experience = () => {
     return (
         <div className="w-screen flex justify-center">
-            <div className="w-3/5  border-x border-[#E5E5E5] max-[475px]:w-11/12">
+            <div className="w-3/5 bg-white border-x border-[#e5e5e5] max-[475px]:w-11/12">
             <h2 className="text-2xl px-4 font-semibold ">Experience</h2>
             <Line/>
             <div className="pt-2">

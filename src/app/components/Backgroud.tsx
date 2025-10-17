@@ -3,9 +3,9 @@ import '@/app/globals.css'
 export const Background = () => {
   return (
     <div className="flex w-screen pt-12  items-center justify-center">
-      <div className=" w-3/5 border-x border-[#E5E5E5] max-[475px]:w-11/12">
+      <div className=" w-3/5 border-x border-[#e5e5e5] max-[475px]:w-11/12">
       <div className="w-full h-60 flex justify-center items-center
-                      relative overflow-hidden 
+                      relative overflow-hidden bg-white
 before:absolute before:inset-0 before:content-[''] before:z-0
   before:bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px)]
   after:absolute after:inset-0 after:content-[''] after:z-0

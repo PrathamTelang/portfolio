@@ -14,7 +14,7 @@ import { Navbar } from "./components/Navbar";
 export default function Home() {
   return (
    <div className="max-w-screen overflow-x-hidden">
-    <div className="h-full max-w-screen bg-[#FCFCFC]">
+    <div className="h-full max-w-screen bg-[#FCFCFC] bg-[repeating-linear-gradient(45deg,#e5e5e5_0_1px,transparent_1px_8px)]">
       <Navbar/>
       <Background/>
       <Line/>

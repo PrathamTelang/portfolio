@@ -8,7 +8,7 @@ import IndianFlag from "./images/Flag_of_India.svg.png"
 export const Hero = () => {
     return (
         <div className="w-screen  flex justify-center">
-            <div className="flex border-x border-[#E5E5E5] w-3/5 max-[475px]:w-11/12 max-[475px]:max-h-36 max-h-full">
+            <div className="flex border-x border-[#e5e5e5] bg-white w-3/5 max-[475px]:w-11/12 max-[475px]:max-h-36 max-h-full">
                 <div className="h-48 min-w-48 max-[475px]:min-w-36 max-[475px]:min-h-full">
                     <div className="absolute group inline-block ">
   <Image
@@ -30,15 +30,15 @@ export const Hero = () => {
                         className="rounded-full border h-full w-full border-white max-[475px]:min-w-full max-[475px]:max-h-36 object-cover" 
                     />    
                 </div>   
-                <div className="w-full h-full border-l border-[#E5E5E5] max-[475px]:max-h-36">
-                    <div className="pl-4 text-xs text-[#D4D4D8] select-none bg-[repeating-linear-gradient(45deg,#E5E5E5_0_1px,transparent_1px_10px)] h-2/6 flex items-end max-[475px]:hidden">font-family: 'Source Code Pro', monospace;</div>
-                    <div className="w-full h-[1px] bg-[#E5E5E5]" />
+                <div className="w-full h-full border-l border-[#e5e5e5] max-[475px]:max-h-36">
+                    <div className="pl-4 text-xs text-[#D4D4D8] select-none bg-[repeating-linear-gradient(45deg,#e5e5e5_0_1px,transparent_1px_10px)] h-2/6 flex items-end max-[475px]:hidden">font-family: 'Source Code Pro', monospace;</div>
+                    <div className="w-full h-[1px] bg-[#e5e5e5]" />
                     <div className=" h-4/6 flex items-end max-[475px]:h-full">
                         <div className="w-full">
                             <h1 className="pl-4 text-3xl font-semibold" >Pratham Telang</h1>
-                            <div className="w-full h-[1px] bg-[#E5E5E5]" />
+                            <div className="w-full h-[1px] bg-[#e5e5e5]" />
                             <p className="pl-4 text-[#404040] my-2 max-[475px]:my-1 text-md max-[475px]:hidden">Software Engineer </p>
-                            <div className="w-full h-[1px] bg-[#E5E5E5]" />
+                            <div className="w-full h-[1px] bg-[#e5e5e5]" />
                             <p className="pl-4 text-[#404040] my-2 max-[475px]:my-0 text-sm ">Nagpur, Maharashtra, India</p>
                         </div>
                     </div>
