@@ -4,6 +4,7 @@ import { SiZalo, SiDailydotdev } from "react-icons/si"; // ✅ Corrected here
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { FaGithubSquare } from "react-icons/fa";
+import { Line } from "./Line";
 
 
 const socialLinks = [
@@ -37,10 +38,10 @@ export default function SocialLinks() {
   return (
     
     <div className="w-screen flex justify-center ">
-        <div className="w-3/5 bg-white border border-[#e5e5e5] max-[475px]:w-11/12">
+        <div className="w-3/5 bg-white border-x border-[#e5e5e5] max-[475px]:w-11/12">
             <h2 className="text-2xl px-4 font-semibold">Social Links</h2>
-                
-        <div className="grid md:grid-cols-2 gap-4">
+            <Line/>
+        <div className="grid md:grid-cols-2 gap-4 flex-wrap p-4 ">
         
       {socialLinks.map((item) => (
         <Link
