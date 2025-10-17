@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import motionProject from "./images/motionProject.png"
 import Image from "next/image";
+import { Line } from "./Line";
 
 const projectsLinks = [
   {
@@ -40,17 +41,18 @@ export default function Projects() {
   return (
     
     <div className="w-screen flex justify-center ">
-        <div className="w-3/5 border border-[#E5E5E5] max-[475px]:w-11/12">
+        <div className="w-3/5 border-x border-[#E5E5E5] max-[475px]:w-11/12">
             <h2 className="text-2xl px-4 font-semibold">Projects</h2>
+            <Line/>
                 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4 flex-wrap p-4 ">
         
       {projectsLinks.map((item) => (
         <Link
           key={item.name}
           href={item.url}
           target="_blank"
-          className="flex hover:underline items-center justify-between border border-[#E5E5E5] p-4 transition"
+          className="flex hover:underline hover:bg-[#F9F9F9] items-center justify-between border border-[#E5E5E5] p-4 transition"
         >
           <div className="w-full">
             <div className="flex items-center justify-between">
