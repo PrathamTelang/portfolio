@@ -17,19 +17,19 @@ const socialLinks = [
   {
     name: "GitHub",
     username: "PrathamTelang",
-    icon: <FaGithubSquare />,
+    icon: <FaGithubSquare className="dark:bg-white rounded-md" />,
     url: "https://github.com/PrathamTelang",
   },
   {
     name: "X (Formerly Twitter)",
     username: "@Prat_Telang",
-    icon: <FaSquareXTwitter />,
+    icon: <FaSquareXTwitter className="dark:bg-white rounded-md" />,
     url: "https://x.com/Prat_Telang",
   },
   {
     name: "Reddit",
     username: "MissionBasis7442",
-    icon: <FaReddit className="text-[#FF4500]" />,
+    icon: <FaReddit className="text-[#FF4500] dark:bg-white rounded-full" />,
     url: "https://www.reddit.com/user/MissionBasis7442/",
   },
 ];
@@ -38,8 +38,8 @@ export default function SocialLinks() {
   return (
     
     <div className="w-screen flex justify-center ">
-        <div className="w-3/5 bg-white border-x border-lightborder max-[475px]:w-11/12">
-            <h2 className="text-2xl px-4 font-semibold">Social Links</h2>
+        <div className="w-3/5 bg-white dark:bg-darkbg border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12">
+            <h2 className="text-2xl px-4 font-semibold dark:text-darkprimary-text ">Social Links</h2>
             <Line/>
         <div className="grid md:grid-cols-2 gap-4 flex-wrap p-4 ">
         
@@ -48,16 +48,16 @@ export default function SocialLinks() {
           key={item.name}
           href={item.url}
           target="_blank"
-          className="flex hover:underline items-center justify-between border border-lightborder p-4 transition"
+          className="flex hover:underline items-center justify-between border border-lightborder dark:border-darkborder p-4 transition"
         >
           <div className="flex items-center gap-3">
             <div className="text-5xl">{item.icon}</div>
             <div>
-              <h3 className="font-semibold ">{item.name}</h3>
-              <p className="text-sm text-gray-500">{item.username}</p>
+              <h3 className="font-semibold dark:text-darkprimary-text">{item.name}</h3>
+              <p className="text-sm text-secondary-text dark:text-darksecondary-text">{item.username}</p>
             </div>
           </div>
-          <ArrowUpRight className="text-gray-400" size={18} />
+          <ArrowUpRight className="text-secondary-text dark:text-darksecondary-text" size={18} />
         </Link>
       ))}
     </div>
