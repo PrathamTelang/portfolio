@@ -8,38 +8,40 @@ import IndianFlag from "./images/Flag_of_India.svg.png"
 export const Hero = () => {
     return (
         <div className="w-screen  flex justify-center">
-            <div className="flex border-x border-lightborder bg-white w-3/5 max-[475px]:w-11/12 max-[475px]:max-h-36 max-h-full">
+            <div className="flex border-x border-lightborder dark:border-darkborder dark:bg-darkbg bg-white w-3/5 max-[475px]:w-11/12 max-[475px]:max-h-36 max-h-full">
                 <div className="h-48 min-w-48 max-[475px]:min-w-36 max-[475px]:min-h-full">
                     <div className="absolute group inline-block ">
-  <Image
-    alt="Indian Flag"
-    src={IndianFlag}
-    className="h-12 w-auto max-[475px]:h-8"
-  />
-  <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 
-                  opacity-0 group-hover:opacity-100 
-                  transition-opacity duration-300 
-                  bg-gray-800 text-white text-sm rounded py-1 px-2 whitespace-nowrap pointer-events-none">
-    I'm from India
-  </div>
-</div>
+                    <Image
+                        alt="Indian Flag"
+                        src={IndianFlag}
+                        className="h-12 w-auto max-[475px]:h-8"
+                      />
+                      <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 
+                                      opacity-0 group-hover:opacity-100 
+                                      transition-opacity duration-300 
+                                      bg-gray-800 dark:bg-[#3C3C3C] text-white text-sm rounded py-1 px-2 whitespace-nowrap pointer-events-none">
+                        I'm from India
+                      </div>
+                    </div>
 
                     <Image
                         src={thanos} 
                         alt="Dark Hole" 
-                        className="rounded-full border h-full w-full border-white max-[475px]:min-w-full max-[475px]:max-h-36 object-cover" 
+                        className="rounded-full border h-full w-full border-white dark:border-darkborder max-[475px]:min-w-full max-[475px]:max-h-36 object-cover" 
                     />    
                 </div>   
-                <div className="w-full h-full border-l border-lightborder max-[475px]:max-h-36">
-                    <div className="pl-4 text-xs text-[#D4D4D8] select-none bg-[repeating-linear-gradient(45deg,#e5e5e5_0_1px,transparent_1px_8px)] h-2/6 flex items-end max-[475px]:hidden">font-family: 'Source Code Pro', monospace;</div>
-                    <div className="w-full h-[1px] bg-lightborder" />
+                <div className="w-full h-full border-l border-lightborder dark:border-darkborder max-[475px]:max-h-36">
+                    <div className="pl-4 text-xs text-[#D4D4D8] dark:text-darksecondary-text  select-none bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
+                    dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)0_1px,transparent_1px_8px)]
+                    h-2/6 flex items-end max-[475px]:hidden">font-family: 'Source Code Pro', monospace;</div>
+                    <div className="w-full h-[1px] bg-lightborder dark:bg-darkborder" />
                     <div className=" h-4/6 flex items-end max-[475px]:h-full">
                         <div className="w-full">
-                            <h1 className="pl-4 text-3xl font-semibold" >Pratham Telang</h1>
-                            <div className="w-full h-[1px] bg-lightborder" />
-                            <p className="pl-4 text-secondary-text my-2 max-[475px]:my-1 text-md max-[475px]:hidden">Software Engineer </p>
-                            <div className="w-full h-[1px] bg-lightborder" />
-                            <p className="pl-4 text-secondary-text my-2 max-[475px]:my-0 text-sm ">Nagpur, Maharashtra, India</p>
+                            <h1 className="pl-4 text-3xl font-semibold dark:text-darkprimary-text" >Pratham Telang</h1>
+                            <div className="w-full h-[1px] bg-lightborder dark:bg-darkborder" />
+                            <p className="pl-4 text-secondary-text my-2 max-[475px]:my-1 text-md max-[475px]:hidden dark:text-darksecondary-text">Software Engineer </p>
+                            <div className="w-full h-[1px] bg-lightborder dark:bg-darkborder" />
+                            <p className="pl-4 text-secondary-text my-2 max-[475px]:my-0 text-sm dark:text-darksecondary-text">Nagpur, Maharashtra, India</p>
                         </div>
                     </div>
                 </div>
