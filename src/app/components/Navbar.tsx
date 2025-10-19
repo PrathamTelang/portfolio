@@ -28,22 +28,22 @@ export const Navbar = () => {
   
 
   return (
-    <div className="flex w-screen justify-center h-12 fixed top-0 mb-2 border-y border-[#e5e5e5] bg-white z-10 dark:bg-black dark:border-[#333333]">
-      <div className="w-3/5 border-x border-[#e5e5e5] max-[475px]:w-11/12 flex items-center justify-end px-4">
-        <div className="flex gap-1 bg-[#F3F3F3] dark:bg-[#1A1A1A] rounded-full">
+    <div className="flex w-screen justify-center h-12 fixed top-0 mb-2 border-y border-[#e5e5e5] bg-white z-10 dark:bg-[#030712] dark:text-white dark:border-[#1D202A]">
+      <div className="w-3/5 border-x border-[#e5e5e5] dark:border-[#1D202A] max-[475px]:w-11/12 flex items-center justify-end px-4">
+        <div className="flex gap-1 bg-[#F2F2F3] dark:bg-[#1D202A] rounded-full p-1">
           <button
-            className="h-7 w-7 cursor-pointer rounded-full border border-[#e5e5e5] flex items-center justify-center"
-            onClick={() => setDarkMode(true)}
-            title="Enable Dark Mode"
-          >
-            <BsMoonStars />
-          </button>
-          <button
-            className="h-7 w-7 cursor-pointer rounded-full border border-[#e5e5e5] flex items-center justify-center"
+            className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center border border-[#D9DADC] dark:border-none bg-white dark:bg-[#1D202A] "
             onClick={() => setDarkMode(false)}
             title="Enable Light Mode"
           >
             <MdOutlineLightMode />
+          </button>
+          <button
+            className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center p-1 dark:border border-[#4A5465] dark:bg-[#364153]"
+            onClick={() => setDarkMode(true)}
+            title="Enable Dark Mode"
+          >
+            <BsMoonStars />
           </button>
         </div>
       </div>
