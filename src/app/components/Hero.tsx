@@ -31,7 +31,7 @@ export const Hero = () => {
                     />    
                 </div>   
                 <div className="w-full h-full border-l border-lightborder dark:border-darkborder max-[475px]:max-h-36">
-                    <div className="pl-4 text-xs text-[#D4D4D8] dark:text-darksecondary-text  select-none bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
+                    <div className="pl-4 text-xs text-[#D4D4D8] dark:text-[#42454D]  select-none bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
                     dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)0_1px,transparent_1px_8px)]
                     h-2/6 flex items-end max-[475px]:hidden">font-family: 'Source Code Pro', monospace;</div>
                     <div className="w-full h-[1px] bg-lightborder dark:bg-darkborder" />
