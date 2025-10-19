@@ -3,7 +3,7 @@ import { Line } from "./Line";
 
 export const About = () => {
   return (
-    <div className="w-screen flex justify-center items-center dark:bg-darkbg dark:border-darkborder ">
+    <div className="w-screen flex justify-center items-center ">
       <div className="w-3/5 bg-white border-x border-lightborder dark:bg-darkbg dark:border-darkborder  max-[475px]:w-11/12
       ">
         <h2 className="text-2xl px-4 font-semibold dark:text-white">About Me</h2>
