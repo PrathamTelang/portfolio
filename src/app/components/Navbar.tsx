@@ -28,8 +28,8 @@ export const Navbar = () => {
   
 
   return (
-    <div className="flex w-screen justify-center h-12 fixed top-0 mb-2 border-y border-[#e5e5e5] bg-white z-10 dark:bg-[#030712] dark:text-white dark:border-[#1D202A]">
-      <div className="w-3/5 border-x border-[#e5e5e5] dark:border-[#1D202A] max-[475px]:w-11/12 flex items-center justify-end px-4">
+    <div className="flex w-screen justify-center h-12 fixed top-0 mb-2 border-y border-lightborder bg-white z-10 dark:bg-[#030712] dark:text-white dark:border-[#1D202A]">
+      <div className="w-3/5 border-x border-lightborder dark:border-[#1D202A] max-[475px]:w-11/12 flex items-center justify-end px-4">
         <div className="flex gap-1 bg-[#F2F2F3] dark:bg-[#1D202A] rounded-full p-1">
           <button
             className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center border border-[#D9DADC] dark:border-none bg-white dark:bg-[#1D202A] "

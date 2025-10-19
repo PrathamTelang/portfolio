@@ -3,11 +3,12 @@ import { Line } from "./Line";
 
 export const About = () => {
   return (
-    <div className="w-screen flex justify-center items-center ">
-      <div className="w-3/5 bg-white border-x border-[#e5e5e5] max-[475px]:w-11/12">
-        <h2 className="text-2xl px-4 font-semibold">About Me</h2>
+    <div className="w-screen flex justify-center items-center dark:bg-darkbg dark:border-darkborder ">
+      <div className="w-3/5 bg-white border-x border-lightborder dark:bg-darkbg dark:border-darkborder  max-[475px]:w-11/12
+      ">
+        <h2 className="text-2xl px-4 font-semibold dark:text-white">About Me</h2>
         <Line />
-        <p className="text-[#404040] px-4 my-2 text-md">
+        <p className="text-secondary-text px-4 my-2 text-md dark:text-darksecondary-text">
           I follow simplicity, pay attention to details, and trust my intuition
           to structure things in a way that just feels right. I think
           differently, and that's my strength. I move fast.

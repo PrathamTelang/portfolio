@@ -41,7 +41,7 @@ export default function Projects() {
   return (
     
     <div className="w-screen flex justify-center ">
-        <div className="w-3/5 bg-white border-x border-[#e5e5e5] max-[475px]:w-11/12">
+        <div className="w-3/5 bg-white border-x border-lightborder max-[475px]:w-11/12">
             <h2 className="text-2xl px-4 font-semibold">Projects</h2>
             <Line/>
                 
@@ -52,7 +52,7 @@ export default function Projects() {
           key={item.name}
           href={item.url}
           target="_blank"
-          className="flex hover:underline hover:bg-[#F9F9F9] items-center justify-between border border-[#e5e5e5] p-4 transition"
+          className="flex hover:underline hover:bg-[#F9F9F9] items-center justify-between border border-lightborder p-4 transition"
         >
           <div className="w-full">
             <div className="flex items-center justify-between">

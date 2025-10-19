@@ -38,7 +38,7 @@ export default function SocialLinks() {
   return (
     
     <div className="w-screen flex justify-center ">
-        <div className="w-3/5 bg-white border-x border-[#e5e5e5] max-[475px]:w-11/12">
+        <div className="w-3/5 bg-white border-x border-lightborder max-[475px]:w-11/12">
             <h2 className="text-2xl px-4 font-semibold">Social Links</h2>
             <Line/>
         <div className="grid md:grid-cols-2 gap-4 flex-wrap p-4 ">
@@ -48,7 +48,7 @@ export default function SocialLinks() {
           key={item.name}
           href={item.url}
           target="_blank"
-          className="flex hover:underline items-center justify-between border border-[#e5e5e5] p-4 transition"
+          className="flex hover:underline items-center justify-between border border-lightborder p-4 transition"
         >
           <div className="flex items-center gap-3">
             <div className="text-5xl">{item.icon}</div>
