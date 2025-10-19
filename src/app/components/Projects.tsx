@@ -41,8 +41,8 @@ export default function Projects() {
   return (
     
     <div className="w-screen flex justify-center ">
-        <div className="w-3/5 bg-white border-x border-lightborder max-[475px]:w-11/12">
-            <h2 className="text-2xl px-4 font-semibold">Projects</h2>
+        <div className="w-3/5 bg-white dark:bg-darkbg border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12">
+            <h2 className="text-2xl px-4 font-semibold dark:text-darkprimary-text">Projects</h2>
             <Line/>
                 
         <div className="grid md:grid-cols-2 gap-4 flex-wrap p-4 ">
@@ -52,15 +52,15 @@ export default function Projects() {
           key={item.name}
           href={item.url}
           target="_blank"
-          className="flex hover:underline hover:bg-[#F9F9F9] items-center justify-between border border-lightborder p-4 transition"
+          className="flex hover:underline hover:bg-[#F9F9F9] dark:hover:decoration-darkprimary-text dark:hover:bg-[#10141E] items-center justify-between border border-lightborder dark:border-darkborder p-4 transition"
         >
           <div className="w-full">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-semibold ">{item.name}</h3>
-              <p className="text-sm text-gray-500">{item.username}</p>
+                <h3 className="font-semibold dark:text-darkprimary-text">{item.name}</h3>
+              <p className="text-sm text-secondary-text dark:text-darksecondary-text">{item.username}</p>
               </div>
-              <ExternalLink className="text-gray-400" size={20} />
+              <ExternalLink className="text-secondary-text dark:text-darksecondary-text" size={20} />
             </div>
             <div className="w-full h-full pt-2"><Image src={item.image} alt={item.alt} className="rounded-lg hover:" /></div>
           </div>
