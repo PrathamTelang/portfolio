@@ -19,7 +19,7 @@ export const Hero = () => {
                       <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 
                                       opacity-0 group-hover:opacity-100 
                                       transition-opacity duration-300 
-                                      bg-gray-800 dark:bg-[#3C3C3C] text-white text-sm rounded py-1 px-2 whitespace-nowrap pointer-events-none">
+                                      bg-gray-800  text-white text-sm rounded py-1 px-2 whitespace-nowrap pointer-events-none">
                         I'm from India
                       </div>
                     </div>

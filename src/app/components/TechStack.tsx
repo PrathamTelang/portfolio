@@ -9,30 +9,31 @@ import Image from "next/image";
 export const Skills = () => {
   return (
     <div className="w-screen flex justify-center">
-      <div className="w-3/5 bg-white border-x border-lightborder max-[475px]:w-11/12">
-        <h2 className="text-2xl px-4 font-semibold">Techstack</h2>
+      <div className="w-3/5 bg-white dark:bg-darkbg border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12">
+        <h2 className="text-2xl px-4 font-semibold dark:text-darkprimary-text">Techstack</h2>
         <Line />
-        <div className="bg-[radial-gradient(circle,_#e5e5e5_1px,_transparent_1px)] bg-[length:10px_10px]">
+        <div className="bg-[radial-gradient(circle,_var(--color-lightborder)_1px,_transparent_1px)] bg-[length:10px_10px]
+        dark:bg-[radial-gradient(circle,_var(--color-darkborder)_1px,_transparent_1px)]">
           <div className="relative z-10">
 
             {/* Frontend */}
             <div className="pt-2">
-              <h3 className="text-lg px-4 font-semibold">Frontend</h3>
+              <h3 className="text-lg px-4 font-semibold dark:text-darkprimary-text ">Frontend</h3>
               <div className="flex items-center pl-4 text-4xl gap-4">
                 <Tooltip icon={<SiTypescript className="text-[#007ACC]" />} text="TypeScript" link="https://www.typescriptlang.org/" />
                 <Tooltip icon={<SiJavascript className="text-[#F7DF1E]" />} text="JavaScript" link="https://www.javascript.com/" />
                 <Tooltip icon={<FaReact className="text-[#61DAFB]" />} text="React" link="https://reactjs.org/" />
-                <Tooltip icon={<RiNextjsFill />} text="Next.js" link="https://nextjs.org/" />
+                <Tooltip icon={<RiNextjsFill className="dark:text-white" />} text="Next.js" link="https://nextjs.org/" />
                 <Tooltip icon={<SiTailwindcss className="text-[#06B6D4]" />} text="Tailwind CSS" link="https://tailwindcss.com/" />
               </div>
             </div>
 
             {/* Backend */}
             <div className="pt-2">
-              <h3 className="text-lg px-4 font-semibold">Backend</h3>
+              <h3 className="text-lg px-4 font-semibold dark:text-darkprimary-text">Backend</h3>
               <div className="flex items-center pl-4 text-4xl gap-4">
                 <Tooltip icon={<FaNodeJs className="text-[#5EAF47]" />} text="Node.js" link="https://nodejs.org/" />
-                <Tooltip icon={<SiExpress />} text="Express" link="https://expressjs.com/" />
+                <Tooltip icon={<SiExpress className="dark:text-white" />} text="Express" link="https://expressjs.com/" />
                 <Tooltip icon={<SiMongodb className="text-[#6CAC48]" />} text="MongoDB" link="https://www.mongodb.com/" />
                 <Tooltip icon={<SiPostgresql className="text-[#396C94]" />} text="PostgreSQL" link="https://www.postgresql.org/" />
               </div>
@@ -40,7 +41,7 @@ export const Skills = () => {
 
             {/* Design & Tools */}
             <div className="pt-2">
-              <h3 className="text-lg px-4 font-semibold">Design and Tools</h3>
+              <h3 className="text-lg px-4 font-semibold dark:text-darkprimary-text">Design and Tools</h3>
               <div className="flex items-center pl-4 text-4xl gap-4">
                 <Tooltip icon={<FaGitAlt className="text-[#DE4C36]" />} text="Git" link="https://git-scm.com/" />
                 <Tooltip icon={<VscVscode className="text-[#2AAFF2]" />} text="VSCode" link="https://code.visualstudio.com/" />
