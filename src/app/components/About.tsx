@@ -4,10 +4,13 @@ import { Line } from "./Line";
 export const About = () => {
   return (
     <div className="w-screen flex justify-center items-center ">
-      <div className="w-3/5 bg-white border-x border-lightborder dark:bg-darkbg dark:border-darkborder  max-[475px]:w-11/12
+      <div className="w-3/5 relative bg-white border-x border-lightborder dark:bg-darkbg dark:border-darkborder  max-[475px]:w-11/12
       ">
-        <h2 className="text-2xl px-4 font-semibold dark:text-white">About Me</h2>
-        <Line />
+          <h2 className="text-xs font-semibold dark:text-[#7C86FF] 
+           transform -rotate-90  absolute sm:top-7 sm:-left-12 sm:text-lg top-5 -left-8
+        ">About Me</h2>
+        
+        
         <p className="text-secondary-text px-4 my-2 text-md dark:text-darksecondary-text">
           I follow simplicity, pay attention to details, and trust my intuition
           to structure things in a way that just feels right. I think
