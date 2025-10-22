@@ -25,6 +25,17 @@ export const Navbar = () => {
       localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
+
+
+    const flashSound = () => {
+      const audio = new Audio('sounds/flashBang.mp3');
+      audio.play();
+    }
+    const switchSound = () => {
+      const audio = new Audio('sounds/LightSwitch.mp3');
+      audio.play();
+    }
+  
   
 
   return (
@@ -33,14 +44,14 @@ export const Navbar = () => {
         <div className="flex gap-1 bg-[#F2F2F3] dark:bg-[#1D202A] rounded-full p-1">
           <button
             className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center border border-[#D9DADC] dark:border-none bg-white dark:bg-[#1D202A] "
-            onClick={() => setDarkMode(false)}
+            onClick={() => { setDarkMode(false); flashSound(); }}
             title="Enable Light Mode"
           >
             <MdOutlineLightMode />
           </button>
           <button
             className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center p-1 dark:border border-[#4A5465] dark:bg-[#364153]"
-            onClick={() => setDarkMode(true)}
+            onClick={() => { setDarkMode(true); switchSound(); }}
             title="Enable Dark Mode"
           >
             <BsMoonStars />
