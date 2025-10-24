@@ -6,7 +6,7 @@ export const About = () => {
     <div className="w-screen flex justify-center items-center ">
       <div className="w-3/5 relative bg-white border-x border-lightborder dark:bg-darkbg dark:border-darkborder  max-[475px]:w-11/12
       ">
-          <h2 className="text-xs font-semibold dark:text-[#7C86FF] 
+          <h2 className="text-xs font-semibold text-[#615FFF] 
            transform -rotate-90  absolute sm:top-7 sm:-left-12 sm:text-lg top-5 -left-8
         ">About Me</h2>
         
