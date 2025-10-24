@@ -38,9 +38,10 @@ export default function SocialLinks() {
   return (
     
     <div className="w-screen flex justify-center ">
-        <div className="w-3/5 bg-white dark:bg-darkbg border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12">
-            <h2 className="text-2xl px-4 font-semibold dark:text-darkprimary-text ">Social Links</h2>
-            <Line/>
+        <div className="w-3/5 relative bg-white dark:bg-darkbg border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12">
+            <h2 className="text-xs font-semibold text-[#F6D743] 
+           transform -rotate-90  absolute sm:top-11 sm:-left-16.5 sm:text-lg top-7.5 -left-10.5
+        ">Social Links</h2>
         <div className="grid md:grid-cols-2 gap-4 flex-wrap p-4 ">
         
       {socialLinks.map((item) => (
