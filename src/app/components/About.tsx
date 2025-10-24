@@ -1,5 +1,4 @@
 "use client";
-import { Line } from "./Line";
 
 export const About = () => {
   return (
