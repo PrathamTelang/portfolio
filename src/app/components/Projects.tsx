@@ -41,9 +41,10 @@ export default function Projects() {
   return (
     
     <div className="w-screen flex justify-center ">
-        <div className="w-3/5 bg-white dark:bg-darkbg border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12">
-            <h2 className="text-2xl px-4 font-semibold dark:text-darkprimary-text">Projects</h2>
-            <Line/>
+        <div className="w-3/5 relative bg-white dark:bg-darkbg border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12">
+            <h2 className="text-xs font-semibold text-[#00A6F4] 
+           transform -rotate-90  absolute sm:top-7 sm:-left-12 sm:text-lg top-5 -left-8
+        ">Projects</h2>
                 
         <div className="grid md:grid-cols-2 gap-4 flex-wrap p-4 ">
         

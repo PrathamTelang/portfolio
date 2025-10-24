@@ -5,7 +5,7 @@ export const Experience = () => {
         <div className="w-screen flex h-full justify-center">
             <div className="w-3/5 relative  bg-white dark:bg-darkbg border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12">
             <h2 className="text-xs font-semibold text-[#F6339A] 
-           transform -rotate-90  absolute sm:top-9 sm:-left-14 sm:text-lg top-6 -left-9
+           transform -rotate-90  absolute sm:top-9 sm:-left-14 sm:text-lg top-6 -left-9.5
             ">Experience</h2>
            
             <div className="pt-2">
