@@ -39,7 +39,7 @@ export const Navbar = () => {
   
 
   return (
-    <div className="flex w-screen justify-center h-12 fixed top-0 mb-2 border-y border-lightborder bg-white z-10 dark:bg-darkbg dark:text-white dark:border-darkborder">
+    <div className="flex w-screen justify-center h-12 fixed top-0 mb-2 border-y border-lightborder bg-white z-20 dark:bg-darkbg dark:text-white dark:border-darkborder">
       <div className="w-3/5 border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12 flex items-center justify-end px-4">
         <div className="flex gap-1 bg-[#F2F2F3] dark:bg-darkborder rounded-full p-1">
           <button
