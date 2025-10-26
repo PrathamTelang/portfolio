@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { BsMoonStars } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 import { MdOutlineLightMode } from "react-icons/md";
 
 export const Navbar = () => {
@@ -40,7 +41,12 @@ export const Navbar = () => {
 
   return (
     <div className="flex w-screen justify-center h-12 fixed top-0 mb-2 border-y border-lightborder bg-white z-20 dark:bg-darkbg dark:text-white dark:border-darkborder">
-      <div className="w-3/5 border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12 flex items-center justify-end px-4">
+      <div className="w-3/5 border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12 flex items-center justify-end px-4 gap-2">
+      <div className="cursor-pointer rounded-full border border-lightborder dark:border-darkborder p-2 flex items-center justify-center hover:bg-lightborder dark:hover:bg-darkborder"
+        onClick={() => window.open("https://github.com/PrathamTelang/portfolio")}
+      >
+        <FaGithub className="" />
+      </div>
         <div className="flex gap-1 bg-[#F2F2F3] dark:bg-darkborder rounded-full p-1">
           <button
             className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center border border-[#D9DADC] dark:border-none bg-white dark:bg-darkborder"
