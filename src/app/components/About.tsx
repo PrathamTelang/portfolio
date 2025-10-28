@@ -11,9 +11,9 @@ export const About = () => {
         
         
         <p className="text-secondary-text px-4 my-2 text-md dark:text-darksecondary-text">
-          I follow simplicity, pay attention to details, and trust my intuition
-          to structure things in a way that just feels right. I think
-          differently, and that's my strength. I move fast.
+          Pratham Telang <br/>
+Web Developer & Design Engineer <br/>
+I build fast, intuitive, and user-centric digital experiences using modern web technologies like React, Next.js, and TypeScript.
         </p>
         
           <button
