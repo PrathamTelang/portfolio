@@ -39,9 +39,9 @@ export const Hero = () => {
                         <div className="w-full">
                             <h1 className="pl-4 text-3xl font-semibold dark:text-darkprimary-text" >Pratham Telang</h1>
                             <div className="w-full h-[1px] bg-lightborder dark:bg-darkborder" />
-                            <p className="pl-4 text-secondary-text my-2 max-[475px]:my-1 text-md max-[475px]:hidden dark:text-darksecondary-text">Software Engineer </p>
+                            <p className="pl-4 text-secondary-text my-2 max-[475px]:my-0 text-md max-[475px]:text-sm dark:text-darksecondary-text">Software Engineer </p>
                             <div className="w-full h-[1px] bg-lightborder dark:bg-darkborder" />
-                            <p className="pl-4 text-secondary-text my-2 max-[475px]:my-0 text-sm dark:text-darksecondary-text">Nagpur, Maharashtra, India</p>
+                            <p className="pl-4 text-secondary-text my-2 max-[475px]:my-0 text-xs dark:text-darksecondary-text">Nagpur, Maharashtra, India</p>
                         </div>
                     </div>
                 </div>
