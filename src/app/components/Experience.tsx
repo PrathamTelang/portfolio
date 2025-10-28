@@ -10,18 +10,22 @@ export const Experience = () => {
            
             <div className="pt-2">
                 <h3 className="text-lg px-4 font-semibold dark:text-darkprimary-text">TechVance Innovations</h3>
-            <p className="text-secondary-text px-4 my-1 text-md dark:text-darksecondary-text">
+            <p className="text-primary-text px-4 mt-1 text-md dark:text-darkprimary-text">
                 Full Stack Developer | 26th May 2025 to 26th June 2025
             </p>
-                        <p className="text-secondary-text ml-4 text-sm dark:text-darksecondary-text">Developed the whole frontend of the</p>
+                <p className="before:content-['•'] text-secondary-text ml-4 mt-1 text-sm dark:text-darksecondary-text">
+                    <a className="pl-2 text-primary-text dark:text-darkprimary-text">
+                        Robot Control Dashboard:
+                    </a>
+                     Developed the frontend interface for a robot control system, focusing on responsive UI and seamless user interaction.</p>
+               
+                <p className="before:content-['•'] text-secondary-text ml-4 mt-1 text-sm dark:text-darksecondary-text">
+                    <a className="pl-2 text-primary-text dark:text-darkprimary-text">
+                        E-commerce Platform: 
+                    </a>
+                     Built and integrated cart and product routes using Node.js and Express, ensuring smooth API communication between frontend and backend.</p>
             </div>
-            <div className="pt-2">
-                <h3 className="text-lg px-4 font-semibold dark:text-darkprimary-text">TechVance Innovations</h3>
-            <p className="text-secondary-text px-4 my-1 text-md dark:text-darksecondary-text">
-                Full Stack Developer | 26th May 2025 to 26th June 2025
-            </p>
-                        <p className="text-secondary-text ml-4 text-sm dark:text-darksecondary-text">Developed the whole frontend of the</p>
-            </div>
+            
         </div>
         </div>
     )
