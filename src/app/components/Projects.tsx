@@ -2,38 +2,24 @@
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
-import motionProject from "./images/motionProject.png"
+import PulseRead from "./images/PulseRead.png"
+import LinkStash from "./images/LinkStash.png"
 import Image from "next/image";
-import { Line } from "./Line";
 
 const projectsLinks = [
   {
-    name: "LinkedIn",
-    username: "Pratham Telang",
-    image: motionProject,
-    alt: "LinkedIn Preview",
-    url: "https://www.linkedin.com/in/prathamtelang/",
+    name: "LinkStash",
+    description: "Save and organize your links",
+    image: LinkStash,
+    alt: "LinkStash Preview",
+    url: "https://github.com/PrathamTelang/LinkStash",
   },
     {
-    name: "LinkedInn",
-    username: "Pratham Telang",
-    image: motionProject,
-    alt: "LinkedIn Preview",
-    url: "https://www.linkedin.com/in/prathamtelang/",
-  },
-    {
-    name: "LinkedInnn",
-    username: "Pratham Telang",
-    image: motionProject,
-    alt: "LinkedIn Preview",
-    url: "https://www.linkedin.com/in/prathamtelang/",
-  },
-    {
-    name: "LinkedInnnn",
-    username: "Pratham Telang",
-    image: motionProject,
-    alt: "LinkedIn Preview",
-    url: "https://www.linkedin.com/in/prathamtelang/",
+    name: "PulseRead",
+    description: "Master speed reading, one pulse at a time.",
+    image: PulseRead,
+    alt: "PulseRead Preview",
+    url: "https://github.com/PrathamTelang/PulseRead",
   }
 ];
 
@@ -59,7 +45,7 @@ export default function Projects() {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="font-semibold dark:text-darkprimary-text">{item.name}</h3>
-              <p className="text-sm text-secondary-text dark:text-darksecondary-text">{item.username}</p>
+              <p className="text-sm text-secondary-text dark:text-darksecondary-text">{item.description}</p>
               </div>
               <ExternalLink className="text-secondary-text dark:text-darksecondary-text" size={20} />
             </div>
