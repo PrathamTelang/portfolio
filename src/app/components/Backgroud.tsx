@@ -1,4 +1,5 @@
 import '@/app/globals.css'
+import NameSvg from './NameSvg'
 
 export const Background = () => {
   return (
@@ -11,8 +12,8 @@ bg-[size:4px_4px]
 dark:bg-[linear-gradient(to_right,var(--color-darkborder)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-darkborder)_1px,transparent_1px)]
       
                       ">
-        <div className="flex items-center justify-center text-8xl font-extrabold ">
-          प्रथम
+        <div className="flex items-center justify-center h-40 ">
+          <NameSvg/>
           </div>                  
       </div>
     </div>
