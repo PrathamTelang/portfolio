@@ -9,6 +9,7 @@ import { Education } from "./components/Education";
 import SocialLinks from "./components/SocialLink";
 import Projects from "./components/Projects"
 import { Navbar } from "./components/Navbar";
+import GitHubContributions from "./components/GithubContributions";
 
 
 export default function Home() {
@@ -26,6 +27,8 @@ export default function Home() {
       <Experience/>
       <Bar/>
       <Projects/>
+      <Bar/>
+      <GitHubContributions/>
       <Bar/>
       <Skills/>
       <Bar/>
