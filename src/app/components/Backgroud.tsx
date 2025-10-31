@@ -1,5 +1,7 @@
+"use client"
 import '@/app/globals.css'
 import NameSvg from './NameSvg'
+import { motion } from "motion/react"
 
 export const Background = () => {
   return (
@@ -12,11 +14,11 @@ bg-[size:4px_4px]
 dark:bg-[linear-gradient(to_right,var(--color-darkborder)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-darkborder)_1px,transparent_1px)]
       
                       ">
-        <div className="flex items-center justify-center h-40 ">
+        <motion.div className="flex items-center justify-center">
           <NameSvg/>
-          </div>                  
+          </motion.div>                  
+        </div>
       </div>
-    </div>
     </div>
   )
 }
