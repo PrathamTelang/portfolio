@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import PulseRead from "./images/PulseRead.png"
 import LinkStash from "./images/LinkStash.png"
+import PortfolioSS from "./images/PortfolioSS.png"
 import Image from "next/image";
 
 const projectsLinks = [
@@ -20,6 +21,13 @@ const projectsLinks = [
     image: PulseRead,
     alt: "PulseRead Preview",
     url: "https://github.com/PrathamTelang/PulseRead",
+  },
+  {
+    name: "Portfolio",
+    description: "My personal portfolio website",
+    image: PortfolioSS,
+    alt: "Portfolio Preview",
+    url: "https://github.com/PrathamTelang/Portfolio",
   }
 ];
 
