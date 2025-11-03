@@ -3,6 +3,7 @@ import pfp from "./images/pfp.png"
 import shinchan from "./images/shinchan.jpeg"
 import { Line } from "./Line"
 import thanos from "./images/thanos.jpg"
+import profilePic from "./images/profilePic.jpg"
 import IndianFlag from "./images/Flag_of_India.svg.png"
 
 export const Hero = () => {
@@ -25,7 +26,7 @@ export const Hero = () => {
                     </div>
 
                     <Image
-                        src={thanos} 
+                        src={profilePic} 
                         alt="Dark Hole" 
                         className="rounded-full border h-full w-full border-white dark:border-darkborder max-[475px]:min-w-full max-[475px]:max-h-36 object-cover" 
                     />    
