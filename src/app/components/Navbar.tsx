@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { BsMoonStars } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineLightMode } from "react-icons/md";
+import Button from "./Button";
 
 export const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -42,6 +43,9 @@ export const Navbar = () => {
   return (
     <div className="flex w-screen justify-center h-12 fixed top-0 mb-2 border-y border-lightborder bg-white z-20 dark:bg-darkbg dark:text-white dark:border-darkborder">
       <div className="w-3/5 border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12 flex items-center justify-end px-4 gap-2">
+      <div className="">
+            <Button/>
+          </div>
       <div className="cursor-pointer rounded-full border border-lightborder dark:border-darkborder p-2 flex items-center justify-center hover:bg-lightborder dark:hover:bg-darkborder"
         onClick={() => window.open("https://github.com/PrathamTelang/portfolio")}
       >

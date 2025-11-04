@@ -15,6 +15,7 @@ body {
     --color-darkprimary-text: white;
     --color-secondary-text: #404040;
     --color-darksecondary-text: #99A1AF;
+    --color-primary: #00BCFF;
 }
  
 /* Default (light mode) scrollbar */
