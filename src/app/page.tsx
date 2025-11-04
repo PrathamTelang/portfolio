@@ -10,6 +10,7 @@ import SocialLinks from "./components/SocialLink";
 import Projects from "./components/Projects"
 import { Navbar } from "./components/Navbar";
 import GitHubContributions from "./components/GithubContributions";
+import { Footer } from "./components/Footer";
 
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
       <Bar/>
       <Education/>
       <Bar/>
+      <Footer/>
     </div>
    </div>
   );
