@@ -115,10 +115,6 @@ function ProjectModal({
     setIndex(startIndex);
   }, [startIndex]);
 
-  
-
-  const prev = () => setIndex((i) => (i - 1 + items.length) % items.length);
-  const next = () => setIndex((i) => (i + 1) % items.length);
 
   const item = items[index];
 
@@ -144,22 +140,13 @@ function ProjectModal({
               aria-label="Close"
               className="text-secondary-text dark:text-darksecondary-text cursor-pointer"
             >
-              <RxCross2 />
+              <RxCross2 className="text-xl" />
             </button>
           </div>
         </div>
 
         <div className="mt-4">
           <Image src={item.image} alt={item.alt} className="rounded-lg w-full h-auto" />
-        </div>
-
-        <div className="flex justify-between gap-4 mt-4">
-          <button onClick={prev} className="px-3 py-1 border rounded">
-            Prev
-          </button>
-          <button onClick={next} className="px-3 py-1 border rounded">
-            Next
-          </button>
         </div>
       </div>
     </div>
