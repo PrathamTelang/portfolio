@@ -149,7 +149,10 @@ function ProjectModal({
         <div className="mt-4">
           <Image src={item.image} alt={item.alt} className="rounded-lg w-full h-auto" />
         </div>
-        <Button/>
+        <Button
+          text="Close"
+          onClick={onClose}
+        />
       </div>
     </div>
   );
