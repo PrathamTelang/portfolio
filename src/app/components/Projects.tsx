@@ -8,6 +8,7 @@ import PortfolioSS from "./images/PortfolioSS.png"
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { RxCross2 } from "react-icons/rx";
+import Button from "./Button";
 
 const projectsLinks = [
   {
@@ -148,6 +149,7 @@ function ProjectModal({
         <div className="mt-4">
           <Image src={item.image} alt={item.alt} className="rounded-lg w-full h-auto" />
         </div>
+        <Button/>
       </div>
     </div>
   );
