@@ -16,21 +16,23 @@ const projectsLinks = [
     description: "Save and organize your links",
     image: LinkStash,
     alt: "LinkStash Preview",
-    url: "https://github.com/PrathamTelang/LinkStash",
+    giturl: "https://github.com/PrathamTelang/LinkStash",
   },
-    {
+  {
     name: "PulseRead",
     description: "Master speed reading, one pulse at a time.",
     image: PulseRead,
     alt: "PulseRead Preview",
-    url: "https://github.com/PrathamTelang/PulseRead",
+    weburl: "https://pulseread.pages.dev/",
+    giturl: "https://github.com/PrathamTelang/PulseRead",
   },
   {
     name: "Portfolio",
     description: "My personal portfolio website",
     image: PortfolioSS,
     alt: "Portfolio Preview",
-    url: "https://github.com/PrathamTelang/Portfolio",
+    weburl: "https://prathamtelang-portfolio.vercel.app/",
+    giturl: "https://github.com/PrathamTelang/Portfolio",
   }
 ];
 
@@ -64,14 +66,6 @@ export default function Projects() {
                     <h3 className="font-semibold dark:text-darkprimary-text">{item.name}</h3>
                     <p className="text-sm text-secondary-text dark:text-darksecondary-text">{item.description}</p>
                   </div>
-                  {/* External link opens in new tab without opening the modal */}
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                  </a>
                 </div>
                 <div className="w-full h-full pt-2"><Image src={item.image} alt={item.alt} className="rounded-lg" /></div>
               </div>
@@ -98,7 +92,8 @@ type Project = {
   description: string;
   image: StaticImageData;
   alt: string;
-  url: string;
+  weburl?: string;
+  giturl?: string;
 };
 
 function ProjectModal({
@@ -133,9 +128,7 @@ function ProjectModal({
             <h3 className="font-semibold dark:text-darkprimary-text">{item.name}</h3>
             <p className="text-sm text-secondary-text dark:text-darksecondary-text">{item.description}</p>
           </div>
-          <div className="flex items-center gap-2">
-            <a href={item.url} target="_blank" rel="noreferrer">
-            </a>
+          <div className="flex items-center gap-3">
             <button
               onClick={onClose}
               aria-label="Close"
@@ -149,10 +142,16 @@ function ProjectModal({
         <div className="mt-4">
           <Image src={item.image} alt={item.alt} className="rounded-lg w-full h-auto" />
         </div>
-        <Button
-          text="Close"
-          onClick={onClose}
-        />
+        <div className="pt-2 gap-4 flex ">
+          <Button
+            text="View Project"
+            onClick={() => item.weburl && window.open(item.weburl, "_blank")}
+          />
+          <Button
+            text="View Code"
+            onClick={() => item.giturl && window.open(item.giturl, "_blank")}
+          />
+        </div>
       </div>
     </div>
   );
