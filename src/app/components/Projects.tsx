@@ -145,10 +145,12 @@ function ProjectModal({
         <div className="pt-2 gap-4 flex ">
           <Button
             text="View Project"
+            cursor={item.weburl ? "pointer" : "not-allowed"}
             onClick={() => item.weburl && window.open(item.weburl, "_blank")}
           />
           <Button
             text="View Code"
+            cursor={item.giturl ? "pointer" : "not-allowed"}
             onClick={() => item.giturl && window.open(item.giturl, "_blank")}
           />
         </div>
