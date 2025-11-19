@@ -3,7 +3,7 @@ import { Line } from "./Line";
 import { SiExpress, SiJavascript, SiMongodb, SiPostgresql, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
-import motionIconpng from "./images/motion.png";
+import motionIconpng from "../images/motion.png";
 import Image from "next/image";
 
 export const Skills = () => {

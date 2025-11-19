@@ -1,16 +1,16 @@
-import { About } from "./components/About";
-import { Experience } from "./components/Experience";
-import { Hero } from "./components/Hero";
-import { Background } from "./components/Backgroud";
-import { Bar } from "./components/Bar";
-import { Line } from "./components/Line";
-import { Skills } from "./components/TechStack";
-import { Education } from "./components/Education";
-import SocialLinks from "./components/SocialLink";
-import Projects from "./components/Projects"
-import { Navbar } from "./components/Navbar";
-import GitHubContributions from "./components/GithubContributions";
-import { Footer } from "./components/Footer";
+import { About } from "./components/sections/About";
+import { Experience } from "./components/sections/Experience";
+import { Hero } from "./components/sections/Hero";
+import { Background } from "./components/sections/Backgroud";
+import { Bar } from "./components/sections/Bar";
+import { Line } from "./components/sections/Line";
+import { Skills } from "./components/sections/TechStack";
+import { Education } from "./components/sections/Education";
+import SocialLinks from "./components/sections/SocialLink";
+import Projects from "./components/sections/Projects"
+import { Navbar } from "./components/sections/Navbar";
+import GitHubContributions from "./components/sections/GithubContributions";
+import { Footer } from "./components/sections/Footer";
 
 
 export default function Home() {

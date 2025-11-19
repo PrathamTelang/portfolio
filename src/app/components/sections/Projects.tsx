@@ -2,9 +2,9 @@
 import { ExternalLink } from "lucide-react";
 import type { StaticImageData } from 'next/image';
 
-import PulseRead from "./images/PulseRead.png"
-import LinkStash from "./images/LinkStash.png"
-import PortfolioSS from "./images/PortfolioSS.png"
+import PulseRead from "../images/PulseRead.png"
+import LinkStash from "../images/LinkStash.png"
+import PortfolioSS from "../images/PortfolioSS.png"
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { RxCross2 } from "react-icons/rx";
