@@ -1,37 +1,31 @@
-"use client";
+// src/app/components/page.tsx
+import Link from "next/link";
 
-import Button from "./sections/Button";
-import ComponentShowcase from "./showcase/ComponentShowcase";
-import Badge from "./ui/Badge";
-import Buttonnn from "./ui/Buttonnn";
-import { Card } from "./ui/Card";
-
+const components = [
+  { name: "Button", slug: "button" },
+  { name: "Badge", slug: "badge" },
+  { name: "Input", slug: "input" },
+  { name: "Card", slug: "card" },
+  { name: "Navbar", slug: "navbar" },
+];
 
 export default function ComponentsPage() {
   return (
-    <div className="max-w-4xl mx-auto py-20 text-white">
-      <h1 className="text-4xl font-bold mb-10">UI Components</h1>
+    <div className="min-h-screen p-10">
+      <h1 className="text-4xl font-bold mb-8">Components</h1>
 
-      <ComponentShowcase
-        title="Button"
-        code={`<Buttonnn variant="default">Click me</Buttonnn>`}
-      >
-        <Buttonnn variant="default">Click me</Buttonnn>
-      </ComponentShowcase>
-
-      <ComponentShowcase
-        title="Badge"
-        code={`<Badge variant="success">Success</Badge>`}
-      >
-        <Badge variant="success">Success</Badge>
-      </ComponentShowcase>
-
-      <ComponentShowcase
-        title="Card"
-        code={`<Card>Card Content</Card>`}
-      >
-        <Card>Card Content</Card>
-      </ComponentShowcase>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {components.map((c) => (
+          <Link
+            key={c.slug}
+            href={`/components/${c.slug}`}
+            className="border rounded-xl p-6 hover:bg-neutral-900 transition"
+          >
+            <h2 className="text-xl font-semibold">{c.name}</h2>
+            <p className="text-neutral-400">View component →</p>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

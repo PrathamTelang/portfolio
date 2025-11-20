@@ -17,13 +17,13 @@ const socialLinks = [
   {
     name: "GitHub",
     username: "PrathamTelang",
-    icon: <FaGithubSquare className="dark:bg-white rounded-md" />,
+    icon: <FaGithubSquare className="rounded-md" />,
     url: "https://github.com/PrathamTelang",
   },
   {
-    name: "X (Formerly Twitter)",
+    name: "X",
     username: "@Prat_Telang",
-    icon: <FaSquareXTwitter className="dark:bg-white rounded-md" />,
+    icon: <FaSquareXTwitter className=" rounded-md" />,
     url: "https://x.com/Prat_Telang",
   },
   {

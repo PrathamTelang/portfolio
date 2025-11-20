@@ -1,16 +1,16 @@
-import { About } from "./components/sections/About";
-import { Experience } from "./components/sections/Experience";
-import { Hero } from "./components/sections/Hero";
-import { Background } from "./components/sections/Backgroud";
-import { Bar } from "./components/sections/Bar";
-import { Line } from "./components/sections/Line";
-import { Skills } from "./components/sections/TechStack";
-import { Education } from "./components/sections/Education";
-import SocialLinks from "./components/sections/SocialLink";
-import Projects from "./components/sections/Projects"
-import { Navbar } from "./components/sections/Navbar";
-import GitHubContributions from "./components/sections/GithubContributions";
-import { Footer } from "./components/sections/Footer";
+import { About } from "./features/portfolio/components/About";
+import { Experience } from "./features/portfolio/components/Experience";
+import { Hero } from "./features/portfolio/components/Hero";
+import { Background } from "./features/portfolio/components/Backgroud";
+import { Bar } from "./features/portfolio/components/Bar";
+import { Line } from "./features/portfolio/components/Line";
+import { Skills } from "./features/portfolio/components/TechStack";
+import { Education } from "./features/portfolio/components/Education";
+import SocialLinks from "./features/portfolio/components/SocialLink";
+import Projects from "./features/portfolio/components/Projects"
+import { Navbar } from "./features/portfolio/components/Navbar";
+import GitHubContributions from "./features/portfolio/components/GithubContributions";
+import { Footer } from "./features/portfolio/components/Footer";
 
 
 export default function Home() {
