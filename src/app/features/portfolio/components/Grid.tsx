@@ -17,7 +17,7 @@ export default function Grid({
       dark:bg-darkbg 
       dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]"
     >
-      <div className="relative w-3/5 isolate bg-lightbg dark:bg-darkbg border-x">
+      <div className="w-3/5  relative bg-white border-x border-lightborder dark:bg-darkbg dark:border-darkborder  max-[475px]:w-11/12">
 
         {/* Background grid lines (auto-match the XL column count) */}
         <div
