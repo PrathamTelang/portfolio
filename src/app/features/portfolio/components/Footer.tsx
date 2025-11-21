@@ -1,7 +1,7 @@
 
 export const Footer = () => {
   return (
-    <div className="w-screen flex justify-center items-center bg-lightbg dark:bg-darkbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
+    <div className="w-screen bottom-0 flex justify-center items-center bg-lightbg dark:bg-darkbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
      dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
       <div className="w-3/5 relative bg-white border-x border-lightborder dark:bg-darkbg dark:border-darkborder  max-[475px]:w-11/12
       ">

@@ -43,10 +43,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} h-screen w-screen`}>
         <Navbar/>
         {children}
-        <Footer/>
       </body>
     </html>
   );
