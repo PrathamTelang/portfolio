@@ -18,7 +18,6 @@ export default function Home() {
    <div className="max-w-screen tracking-tighter text-balance overflow-x-hidden ">
     <div className="h-full max-w-screen bg-[#FCFCFC] bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
     dark:bg-darkbg dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
-      <Navbar/>
       <Background/>
       <Line/>
       <Hero />
@@ -37,7 +36,6 @@ export default function Home() {
       <Bar/>
       <Education/>
       <Bar/>
-      <Footer/>
     </div>
    </div>
   );
