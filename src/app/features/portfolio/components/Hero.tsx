@@ -8,7 +8,8 @@ import IndianFlag from "../images/Flag_of_India.svg.png"
 
 export const Hero = () => {
     return (
-        <div className="w-screen  flex justify-center">
+        <div className="w-screen  flex justify-center bg-lightbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
+            dark:bg-darkbg dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
             <div className="flex border-x border-lightborder dark:border-darkborder dark:bg-darkbg bg-white w-3/5 max-[475px]:w-11/12 max-[475px]:max-h-36 max-h-full">
                 <div className="h-48 min-w-48 max-[475px]:min-w-36 max-[475px]:min-h-full">
                     <div className="absolute group inline-block ">

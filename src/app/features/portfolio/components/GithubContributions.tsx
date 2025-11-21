@@ -23,7 +23,8 @@ export default function GitHubContributions() {
   }, []);
 
   return (
-    <div className="w-screen flex justify-center items-center">
+    <div className="w-screen flex justify-center items-center bg-lightbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
+        dark:bg-darkbg dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
       <div
         className="w-3/5 relative bg-white border-x border-lightborder dark:bg-darkbg dark:border-darkborder max-[475px]:w-11/12"
       >

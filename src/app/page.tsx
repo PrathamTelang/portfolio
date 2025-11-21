@@ -16,8 +16,7 @@ import { Footer } from "./features/portfolio/components/Footer";
 export default function Home() {
   return (
    <div className="max-w-screen tracking-tighter text-balance overflow-x-hidden ">
-    <div className="h-full max-w-screen bg-[#FCFCFC] bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
-    dark:bg-darkbg dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
+    <div className="h-full max-w-screen">
       <Background/>
       <Line/>
       <Hero />
