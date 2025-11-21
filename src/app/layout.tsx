@@ -45,7 +45,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} h-screen w-screen`}>
         <Navbar/>
-        {children}
+        <div id="content" className="pt-12">
+  {children}
+</div>
+
       </body>
     </html>
   );
