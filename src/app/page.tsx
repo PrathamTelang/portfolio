@@ -8,7 +8,6 @@ import { Skills } from "./features/portfolio/components/TechStack";
 import { Education } from "./features/portfolio/components/Education";
 import SocialLinks from "./features/portfolio/components/SocialLink";
 import Projects from "./features/portfolio/components/Projects"
-import { Navbar } from "./features/portfolio/components/Navbar";
 import GitHubContributions from "./features/portfolio/components/GithubContributions";
 import { Footer } from "./features/portfolio/components/Footer";
 
