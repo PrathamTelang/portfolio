@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { Card, CardContent } from "@/components/ui/shadcn/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/shadcn/tabs";
+import { CodeBlock } from "@/components/ui/shadcn/code-block";
 
 export default function ComponentShowcase({ params }: { params: { component: string } }) {
   const { component } = params;
@@ -48,8 +49,12 @@ export default function ComponentShowcase({ params }: { params: { component: str
         </TabsContent>
 
         <TabsContent value="code">
-          <pre className="whitespace-pre-wrap bg-black text-white p-4 rounded-xl text-sm overflow-x-auto">
-            {sourceCode}
+          <pre className="whitespace-pre-wrap  overflow-x-auto">
+            <CodeBlock
+        language="tsx"
+        filename={`${capitalize(component)}.tsx`}
+        code={sourceCode}
+      />
           </pre>
         </TabsContent>
       </Tabs>
