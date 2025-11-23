@@ -7,7 +7,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "sm" | "md" | "lg";
 }
 
-export default function Buttonnn({
+export default function Button({
   className,
   variant = "default",
   size = "md",

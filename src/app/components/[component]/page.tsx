@@ -105,7 +105,7 @@ npm install @your/components/{component}
 /* -------- Helper Components -------- */
 
 function YourButton() {
-  const Button = require("../../../components/ui/custom-components/Buttonnn").default;
+  const Button = require("../../../components/ui/custom-components/Button").default;
   return <Button>Click me</Button>;
 }
 
@@ -120,7 +120,7 @@ function YourInput() {
 }
 
 function YourCard() {
-  const CustomCard = require("../../../components/ui/custom-components/Input").default;
+  const CustomCard = require("../../../components/ui/custom-components/Card").default;
   return <CustomCard>This is a custom card component.</CustomCard>;
 }
 
