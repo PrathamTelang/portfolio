@@ -34,7 +34,6 @@ export default function Home() {
       <Bar/>
       <Education/>
       <Bar/>
-      <Footer/>
     </div>
    </div>
   );

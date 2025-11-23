@@ -3,6 +3,9 @@ import path from "path";
 import { Card, CardContent } from "@/components/ui/shadcn/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/shadcn/tabs";
 import { CodeBlock } from "@/components/ui/shadcn/code-block";
+import { div } from "motion/react-client";
+import { Footer } from "@/app/features/portfolio/components/Footer";
+import { Bar } from "@/app/features/portfolio/components/Bar";
 
 export default function ComponentShowcase({ params }: { params: { component: string } }) {
   const { component } = params;
@@ -20,9 +23,12 @@ export default function ComponentShowcase({ params }: { params: { component: str
   }
 
   return (
-    <div className="px-6 py-12 max-w-4xl mx-auto space-y-12">
-      
+    <div className="w-screen flex flex-col justify-center items-center bg-lightbg dark:bg-darkbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
+     dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
+      <Bar/>
+    <div className="px-6  w-3/5 mx-auto space-y-12 border-x bg-background">
       {/* Page Title */}
+      
       <div>
         <h1 className="text-3xl font-bold capitalize">{component} Component</h1>
         <p className="text-muted-foreground mt-1">
@@ -97,8 +103,9 @@ npm install @your/components/{component}
 {exampleCode(component)}
         </pre>
       </section>
-
     </div>
+    <Bar/>
+  </div>
   );
 }
 
