@@ -90,9 +90,12 @@ npm install @your/components/{component}
       <section className="space-y-2">
         <h2 className="text-xl font-semibold">Usage</h2>
         <pre className="rounded-md border bg-card p-4 font-mono text-sm">
-{`import { ${capitalize(component)} } from "@/components/ui/custom-components/${capitalize(component)}";
+         <CodeBlock
+         language="tsx"
+         code={`import { ${capitalize(component)} } from "@/components/ui/custom-components/${capitalize(component)}";
 
 <${capitalize(component)}>Example</${capitalize(component)}>`}
+         />
         </pre>
       </section>
 
