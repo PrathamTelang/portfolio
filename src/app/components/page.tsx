@@ -1,9 +1,7 @@
 // src/app/components/page.tsx
-import { image } from "motion/react-client";
 import { Bar } from "../features/portfolio/components/Bar";
-import { Footer } from "../features/portfolio/components/Footer";
 import Grid from "../features/portfolio/components/Grid";
-import { Line } from "../features/portfolio/components/Line";
+
 
 const components = [
   { name: "Button", slug: "button", image: "/components/button.png" },
@@ -23,7 +21,6 @@ export default function ComponentsPage() {
       <h1 className="pl-4 text-3xl font-semibold dark:text-darkprimary-text" >Beautiful UI components,
           <br />
           crafted with Tailwind CSS.</h1>
-      
     </div>
     <Bar />
       <Grid items={components} />

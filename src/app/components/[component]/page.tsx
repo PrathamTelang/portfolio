@@ -46,27 +46,37 @@ export default function ComponentShowcase({ params }: { params: { component: str
           <TabsList>
             <TabsTrigger value="preview">Preview</TabsTrigger>
             <TabsTrigger value="code">Code</TabsTrigger>
-            <TabsTrigger value="example">Example</TabsTrigger>
           </TabsList>
 
           {/* Preview */}
-          <TabsContent value="preview">
-            <Card>
-              <CardContent className="py-10">
-                <ComponentPreview name={component} />
-              </CardContent>
-            </Card>
-          </TabsContent>
+<TabsContent value="preview">
+  <Card>
+    <CardContent className="py-10">
+      <ComponentPreview name={component} />
+    </CardContent>
+  </Card>
+
+  {/* ---- Example Preview Always Visible ---- */}
+  <h2 className="text-xl font-semibold mt-8">Example</h2>
+
+  <Card>
+    <CardContent className="py-10">
+      <ExamplePreview name={component} />
+    </CardContent>
+  </Card>
+</TabsContent>
+
+{/* Source Code */}
+<TabsContent value="code">
+  <CodeBlock language="tsx" code={sourceCode} filename={`${ComponentName}.tsx`} />
+</TabsContent>
+
 
           {/* Source Code */}
           <TabsContent value="code">
             <CodeBlock language="tsx" code={sourceCode} filename={`${ComponentName}.tsx`} />
           </TabsContent>
 
-          {/* Example Code */}
-          <TabsContent value="example">
-            <CodeBlock language="tsx" code={exampleCode} filename={`${component}-example.tsx`} />
-          </TabsContent>
         </Tabs>
       </div>
 
@@ -88,4 +98,13 @@ function ComponentPreview({ name }: { name: string }) {
 /* -------------------- Helpers -------------------- */
 function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function ExamplePreview({ name }: { name: string }) {
+  try {
+    const ExampleComp = require(`../../../components/ui/custom-components/examples/${name}-example`).default;
+    return <ExampleComp />;
+  } catch (err) {
+    return <div>No example available.</div>;
+  }
 }
