@@ -5,6 +5,34 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/shadcn
 import { CodeBlock } from "@/components/ui/shadcn/code-block";
 import { Bar } from "@/app/features/portfolio/components/Bar";
 
+const previewDefaults: Record<string, any> = {
+  Button: {
+    children: "Click Me",
+    variant: "default",
+  },
+
+  Badge: {
+    children: "New",
+    variant: "default",
+  },
+
+  Input: {
+    placeholder: "Enter text...",
+    type: "text",
+  },
+
+  Card: {
+    children: (
+      <div className="p-6">
+        <h3 className="font-semibold text-lg">Card Title</h3>
+        <p className="text-muted-foreground">This is a card preview.</p>
+      </div>
+    ),
+  }
+};
+
+
+
 /* -------------------- PAGE -------------------- */
 export default function ComponentShowcase({ params }: { params: { component: string } }) {
   const { component } = params;
@@ -108,11 +136,16 @@ function ComponentPreview({ name }: { name: string }) {
   try {
     const Comp =
       require(`../../../components/ui/custom-components/${capitalize(name)}`).default;
-    return <Comp />;
-  } catch {
+
+    const defaults = previewDefaults[capitalize(name)] || {};
+
+    return <Comp {...defaults} />;
+  } catch (err) {
+    console.error(err);
     return <div>Preview not available.</div>;
   }
 }
+
 
 /* -------------------- Helpers -------------------- */
 function capitalize(str: string) {
