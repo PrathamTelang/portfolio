@@ -6,12 +6,11 @@ import { CodeBlock } from "@/components/ui/shadcn/code-block";
 import { Bar } from "@/app/features/portfolio/components/Bar";
 
 /* -------------------- PAGE -------------------- */
-
 export default function ComponentShowcase({ params }: { params: { component: string } }) {
   const { component } = params;
   const ComponentName = capitalize(component);
 
-  /* ---- Load component source ---- */
+  /* -------- Load component source (tsx) -------- */
   const componentPath = path.join(
     process.cwd(),
     "src/components/ui/custom-components",
@@ -22,16 +21,16 @@ export default function ComponentShowcase({ params }: { params: { component: str
     ? fs.readFileSync(componentPath, "utf8")
     : "Component not found";
 
-  /* ---- Load example code ---- */
-  const examplePath = path.join(
+  /* -------- Load markdown docs -------- */
+  const docsDir = path.join(
     process.cwd(),
-    "src/components/ui/custom-components/examples",
-    `${component}-example.tsx`
+    "docs/custom-components",
+    component
   );
 
-  const exampleCode = fs.existsSync(examplePath)
-    ? fs.readFileSync(examplePath, "utf8")
-    : "/* No example available */";
+  const installation = safeRead(path.join(docsDir, "installation.md"));
+  const usage = safeRead(path.join(docsDir, "usage.md"));
+  const example = safeRead(path.join(docsDir, "example.md"));
 
   return (
     <div className="w-screen flex flex-col justify-center items-center">
@@ -39,44 +38,66 @@ export default function ComponentShowcase({ params }: { params: { component: str
 
       <div className="px-6 w-3/5 mx-auto space-y-12 border-x bg-background">
         <h1 className="text-3xl font-bold capitalize">{component} Component</h1>
-        <p className="text-muted-foreground">Documentation and examples for {component}.</p>
+        <p className="text-muted-foreground">Documentation, preview, and source code.</p>
 
-        {/* ---------- Tabs ---------- */}
         <Tabs defaultValue="preview" className="w-full">
           <TabsList>
             <TabsTrigger value="preview">Preview</TabsTrigger>
             <TabsTrigger value="code">Code</TabsTrigger>
           </TabsList>
 
-          {/* Preview */}
-<TabsContent value="preview">
-  <Card>
-    <CardContent className="py-10">
-      <ComponentPreview name={component} />
-    </CardContent>
-  </Card>
+          {/* -------- Preview + Docs Under It -------- */}
+          <TabsContent value="preview">
+            <Card>
+              <CardContent className="py-10">
+                <ComponentPreview name={component} />
+              </CardContent>
+            </Card>
 
-  {/* ---- Example Preview Always Visible ---- */}
-  <h2 className="text-xl font-semibold mt-8">Example</h2>
-
-  <Card>
-    <CardContent className="py-10">
-      <ExamplePreview name={component} />
-    </CardContent>
-  </Card>
-</TabsContent>
-
-{/* Source Code */}
-<TabsContent value="code">
-  <CodeBlock language="tsx" code={sourceCode} filename={`${ComponentName}.tsx`} />
-</TabsContent>
+            {/* 🔥 Installation, Usage, Example appear directly under preview */}
+            <div className="prose dark:prose-invert mt-10 space-y-10">
 
 
-          {/* Source Code */}
-          <TabsContent value="code">
-            <CodeBlock language="tsx" code={sourceCode} filename={`${ComponentName}.tsx`} />
+  <section>
+    <h2>Installation</h2>
+    <CodeBlock
+      language="tsx"
+      code={installation}
+      filename="installation.md"
+    />
+  </section>
+
+
+  <section>
+    <h2>Usage</h2>
+    <CodeBlock
+      language="tsx"
+      code={usage}
+      filename="usage.md"
+    />
+  </section>
+
+  {/* -------- Example -------- */}
+  <section>
+    <h2>Example</h2>
+    <CodeBlock
+      language="tsx"
+      code={example}
+      filename="example.md"
+    />
+  </section>
+</div>
+
           </TabsContent>
 
+          {/* -------- Component Code -------- */}
+          <TabsContent value="code">
+            <CodeBlock
+              language="tsx"
+              code={sourceCode}
+              filename={`${ComponentName}.tsx`}
+            />
+          </TabsContent>
         </Tabs>
       </div>
 
@@ -85,12 +106,20 @@ export default function ComponentShowcase({ params }: { params: { component: str
   );
 }
 
+/* -------------------- SAFE FILE READER -------------------- */
+function safeRead(filePath: string) {
+  return fs.existsSync(filePath)
+    ? fs.readFileSync(filePath, "utf8")
+    : "*No documentation available.*";
+}
+
 /* -------------- Dynamic Component Preview Loader -------------- */
 function ComponentPreview({ name }: { name: string }) {
   try {
-    const Comp = require(`../../../components/ui/custom-components/${capitalize(name)}`).default;
+    const Comp =
+      require(`../../../components/ui/custom-components/${capitalize(name)}`).default;
     return <Comp />;
-  } catch (err) {
+  } catch {
     return <div>Preview not available.</div>;
   }
 }
@@ -98,13 +127,4 @@ function ComponentPreview({ name }: { name: string }) {
 /* -------------------- Helpers -------------------- */
 function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-function ExamplePreview({ name }: { name: string }) {
-  try {
-    const ExampleComp = require(`../../../components/ui/custom-components/examples/${name}-example`).default;
-    return <ExampleComp />;
-  } catch (err) {
-    return <div>No example available.</div>;
-  }
 }

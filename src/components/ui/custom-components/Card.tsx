@@ -1,15 +1,16 @@
-import { cn } from "@/lib/utils";
+import React from "react";
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export default function Card({ className, ...props }: CardProps) {
-  return (
-    <div
-      className={cn(
-        "rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-5 shadow-md",
-        className
-      )}
-      {...props}
-    />
-  );
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
 }
+
+const Card: React.FC<CardProps> = ({ children, className = "" }) => {
+  return (
+    <div className={`border rounded-xl p-4 shadow-sm bg-white dark:bg-neutral-900 dark:border-neutral-700 ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Card;
