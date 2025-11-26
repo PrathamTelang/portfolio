@@ -36,7 +36,7 @@ export default function ComponentShowcase({ params }: { params: { component: str
     <div className="w-screen flex flex-col justify-center items-center">
       <Bar />
 
-      <div className="px-6 w-3/5 mx-auto space-y-12 border-x bg-background">
+      <div className="px-6 w-3/5 mx-auto border-x bg-background">
         <h1 className="text-3xl font-bold capitalize">{component} Component</h1>
         <p className="text-muted-foreground">Documentation, preview, and source code.</p>
 
@@ -45,52 +45,15 @@ export default function ComponentShowcase({ params }: { params: { component: str
             <TabsTrigger value="preview">Preview</TabsTrigger>
             <TabsTrigger value="code">Code</TabsTrigger>
           </TabsList>
-
-          {/* -------- Preview + Docs Under It -------- */}
+          {/*------------ Preview Tab --------- */}
           <TabsContent value="preview">
             <Card>
               <CardContent className="py-10">
                 <ComponentPreview name={component} />
               </CardContent>
             </Card>
-
-            {/* 🔥 Installation, Usage, Example appear directly under preview */}
-            <div className="prose dark:prose-invert mt-10 space-y-10">
-
-
-  <section>
-    <h2>Installation</h2>
-    <CodeBlock
-      language="tsx"
-      code={installation}
-      filename="installation.md"
-    />
-  </section>
-
-
-  <section>
-    <h2>Usage</h2>
-    <CodeBlock
-      language="tsx"
-      code={usage}
-      filename="usage.md"
-    />
-  </section>
-
-  {/* -------- Example -------- */}
-  <section>
-    <h2>Example</h2>
-    <CodeBlock
-      language="tsx"
-      code={example}
-      filename="example.md"
-    />
-  </section>
-</div>
-
           </TabsContent>
-
-          {/* -------- Component Code -------- */}
+          {/*------------ Code Tab --------- */}
           <TabsContent value="code">
             <CodeBlock
               language="tsx"
@@ -98,9 +61,36 @@ export default function ComponentShowcase({ params }: { params: { component: str
               filename={`${ComponentName}.tsx`}
             />
           </TabsContent>
+
+          {/* Installation, Usage, Example appear directly under preview */}
+            <div className="prose dark:prose-invert mt-10 space-y-10">
+              {/* -------- Installation -------- */}
+              <section>
+                <h2>Installation</h2>
+                <CodeBlock
+                  language="tsx"
+                  code={installation}
+                />
+              </section>
+              {/* -------- Usage -------- */}
+              <section>
+                <h2>Usage</h2>
+                <CodeBlock
+                  language="tsx"
+                  code={usage}
+                />
+              </section>
+              {/* -------- Example -------- */}
+              <section>
+                <h2>Example</h2>
+                <CodeBlock
+                  language="tsx"
+                  code={example}
+                />
+              </section>
+            </div>
         </Tabs>
       </div>
-
       <Bar />
     </div>
   );
