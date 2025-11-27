@@ -42,7 +42,7 @@ export const Navbar = () => {
 
   return (
     <div className="flex w-screen justify-center h-12 fixed top-0 left-0 border-y border-lightborder bg-white z-20 dark:bg-darkbg dark:text-white dark:border-darkborder">
-      <div className="w-3/5 border-x border-lightborder dark:border-darkborder max-[475px]:w-11/12 flex items-center justify-end px-4 gap-2">
+      <div className="w-11/12 lg:w-3/5 border-x border-lightborder dark:border-darkborder  flex items-center justify-end px-4 gap-2">
       <div>
             <Button
               text="Email"

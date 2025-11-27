@@ -64,7 +64,7 @@ export default function ComponentShowcase({ params }: { params: { component: str
     <div className="w-screen flex flex-col justify-center items-center">
       <Bar />
 
-      <div className="px-6 w-3/5 mx-auto border-x bg-background">
+      <div className="px-6 w-11/12 lg:w-11/12 lg:w-3/5 mx-auto border-x bg-background">
         <h1 className="text-3xl font-bold capitalize">{component} Component</h1>
         <p className="text-muted-foreground">Documentation, preview, and source code.</p>
 
