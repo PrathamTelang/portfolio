@@ -13,6 +13,8 @@ const componentMap: Record<string, string> = {
   input: "Input",
   card: "Card",
   "spotlight-card": "SpotlightCard",
+  "liquid-button": "LiquidButton",
+  "hologram-card": "HologramCard",
 };
 
 
@@ -43,6 +45,12 @@ const previewDefaults: Record<string, any> = {
   SpotlightCard: {
   title: "Ultimate UI Experience",
   description: "Interactive glassmorphism spotlight card.",
+  },
+  LiquidButton: {
+    children: "Liquid Button",
+  },
+  HologramCard: {
+    children: "Hologram Card",
   },
 };
 
