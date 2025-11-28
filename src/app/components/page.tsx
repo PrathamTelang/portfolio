@@ -8,6 +8,7 @@ const components = [
   { name: "Badge", slug: "badge", image: "/components/badge.png" },
   { name: "Input", slug: "input", image: "/components/input.png" },
   { name: "Card", slug: "card", image: "/components/card.png" },
+  { name: "SpotlightCard", slug: "spotlight-card", image: "/components/spotlight-card.png" },
 ];
 
 export default function ComponentsPage() {

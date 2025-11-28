@@ -5,6 +5,17 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/shadcn
 import { CodeBlock } from "@/components/ui/shadcn/code-block";
 import { Bar } from "@/app/features/portfolio/components/Bar";
 
+
+/* -------------------- COMPONENT MAP -------------------- */
+const componentMap: Record<string, string> = {
+  button: "Button",
+  badge: "Badge",
+  input: "Input",
+  card: "Card",
+  "spotlight-card": "SpotlightCard",
+};
+
+
 const previewDefaults: Record<string, any> = {
   Button: {
     children: "Click Me",
@@ -28,7 +39,11 @@ const previewDefaults: Record<string, any> = {
         <p className="text-muted-foreground">This is a card preview.</p>
       </div>
     ),
-  }
+  },
+  SpotlightCard: {
+  title: "Ultimate UI Experience",
+  description: "Interactive glassmorphism spotlight card.",
+  },
 };
 
 
@@ -36,7 +51,7 @@ const previewDefaults: Record<string, any> = {
 /* -------------------- PAGE -------------------- */
 export default function ComponentShowcase({ params }: { params: { component: string } }) {
   const { component } = params;
-  const ComponentName = capitalize(component);
+  const ComponentName = componentMap[component] || capitalize(component);
 
   /* -------- Load component source (tsx) -------- */
   const componentPath = path.join(
@@ -135,16 +150,17 @@ function safeRead(filePath: string) {
 function ComponentPreview({ name }: { name: string }) {
   try {
     const Comp =
-      require(`../../../components/ui/custom-components/${capitalize(name)}`).default;
+      require(`../../../components/ui/custom-components/${componentMap[name] || capitalize(name)}`).default;
 
-    const defaults = previewDefaults[capitalize(name)] || {};
+    const defaults = previewDefaults[componentMap[name] || capitalize(name)] || {};
 
     return <Comp {...defaults} />;
   } catch (err) {
-    console.error(err);
+    console.error("PREVIEW ERROR:", err);
     return <div>Preview not available.</div>;
   }
 }
+
 
 
 /* -------------------- Helpers -------------------- */
