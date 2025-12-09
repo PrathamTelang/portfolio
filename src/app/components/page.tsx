@@ -11,6 +11,7 @@ const components = [
   { name: "SpotlightCard", slug: "spotlight-card", image: "/components/spotlight-card.png" },
   { name: "LiquidButton", slug: "liquid-button", image: "/components/liquid-button.png" },
   { name: "HologramCard", slug: "hologram-card", image: "/components/hologram-card.png" },
+  { name: "SparkClickLayer", slug: "spark-click", image: "/components/spark-click.png" },
 ];
 
 export default function ComponentsPage() {

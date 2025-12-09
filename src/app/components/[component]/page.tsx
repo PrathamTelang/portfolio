@@ -15,7 +15,9 @@ const componentMap: Record<string, string> = {
   "spotlight-card": "SpotlightCard",
   "liquid-button": "LiquidButton",
   "hologram-card": "HologramCard",
+  "spark-click": "SparkClickLayer", // ✅ use this key
 };
+
 
 
 const previewDefaults: Record<string, any> = {
@@ -51,6 +53,9 @@ const previewDefaults: Record<string, any> = {
   },
   HologramCard: {
     children: "Hologram Card",
+  },
+  SparkClickLayer: {
+    // No props needed
   },
 };
 
