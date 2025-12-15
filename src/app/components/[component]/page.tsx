@@ -62,8 +62,13 @@ const previewDefaults: Record<string, any> = {
 
 
 /* -------------------- PAGE -------------------- */
-export default function ComponentShowcase({ params }: { params: { component: string } }) {
-  const { component } = params;
+export default async function ComponentShowcase({
+  params,
+}: {
+  params: Promise<{ component: string }>;
+}) {
+  const { component } = await params;
+
   const ComponentName = componentMap[component] || capitalize(component);
 
   /* -------- Load component source (tsx) -------- */
