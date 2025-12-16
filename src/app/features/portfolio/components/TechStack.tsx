@@ -8,13 +8,13 @@ import Image from "next/image";
 
 export const Skills = () => {
   return (
-    <div className="w-screen flex justify-center bg-lightbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
+    <div className="w-screen flex justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
          dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
-      <div className="w-11/12 lg:w-3/5 relative bg-white  border-x border-border dark:border-darkborder ">
+      <div className="w-11/12 lg:w-3/5 relative bg-background  border-x border-border  ">
         <h2 className="text-xs font-semibold text-[#ED6BFF] 
            transform -rotate-90  absolute sm:top-8 sm:-left-13 sm:text-lg top-5 -left-8.5
         ">TechStack</h2>
-        <div className="bg-[radial-gradient(circle,_var(--color-lightborder)_1px,_transparent_1px)] bg-[length:10px_10px]
+        <div className="bg-[radial-gradient(circle,_var(--color-border)_1px,_transparent_1px)] bg-[length:10px_10px]
         dark:bg-[radial-gradient(circle,_var(--color-darkborder)_1px,_transparent_1px)]">
           <div className="relative z-10">
 
@@ -32,7 +32,7 @@ export const Skills = () => {
 
             {/* Backend */}
             <div className="pt-2">
-              <h3 className="text-lg px-4 font-semibold dark:text-darkprimary-text">Backend</h3>
+              <h3 className="text-lg px-4 font-semibold ">Backend</h3>
               <div className="flex items-center pl-4 text-4xl gap-4">
                 <Tooltip icon={<FaNodeJs className="text-[#5EAF47]" />} text="Node.js" link="https://nodejs.org/" />
                 <Tooltip icon={<SiExpress className="dark:text-white" />} text="Express" link="https://expressjs.com/" />
@@ -43,7 +43,7 @@ export const Skills = () => {
 
             {/* Design & Tools */}
             <div className="pt-2">
-              <h3 className="text-lg px-4 font-semibold dark:text-darkprimary-text">Design and Tools</h3>
+              <h3 className="text-lg px-4 font-semibold ">Design and Tools</h3>
               <div className="flex items-center pl-4 text-4xl gap-4">
                 <Tooltip icon={<FaGitAlt className="text-[#DE4C36]" />} text="Git" link="https://git-scm.com/" />
                 <Tooltip icon={<VscVscode className="text-[#2AAFF2]" />} text="VSCode" link="https://code.visualstudio.com/" />

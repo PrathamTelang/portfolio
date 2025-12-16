@@ -29,7 +29,7 @@ const socialLinks = [
   {
     name: "Reddit",
     username: "MissionBasis7442",
-    icon: <FaReddit className="text-[#FF4500] dark:bg-white rounded-full" />,
+    icon: <FaReddit className="text-[#FF4500] dark:bg-background rounded-full" />,
     url: "https://www.reddit.com/user/MissionBasis7442/",
   },
 ];
@@ -37,9 +37,9 @@ const socialLinks = [
 export default function SocialLinks() {
   return (
     
-    <div className="w-screen flex justify-center bg-lightbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
+    <div className="w-screen flex justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
          dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
-        <div className="w-11/12 lg:w-3/5 relative bg-white  border-x border-border dark:border-darkborder ">
+        <div className="w-11/12 lg:w-3/5 relative bg-background  border-x border-border  ">
             <h2 className="text-xs font-semibold text-[#F6D743] 
            transform -rotate-90  absolute sm:top-11 sm:-left-16.5 sm:text-lg top-7.5 -left-10.5
         ">Social Links</h2>
@@ -50,16 +50,16 @@ export default function SocialLinks() {
           key={item.name}
           href={item.url}
           target="_blank"
-          className="flex hover:underline items-center justify-between border border-border dark:border-darkborder p-4 transition"
+          className="flex hover:underline items-center justify-between border border-border  p-4 transition"
         >
           <div className="flex items-center gap-3">
             <div className="text-5xl">{item.icon}</div>
             <div>
-              <h3 className="font-semibold dark:text-darkprimary-text">{item.name}</h3>
-              <p className="text-sm text-secondary-text dark:text-darksecondary-text">{item.username}</p>
+              <h3 className="font-semibold ">{item.name}</h3>
+              <p className="text-sm text-secondary-text ">{item.username}</p>
             </div>
           </div>
-          <ArrowUpRight className="text-secondary-text dark:text-darksecondary-text" size={18} />
+          <ArrowUpRight className="text-secondary-text " size={18} />
         </Link>
       ))}
     </div>

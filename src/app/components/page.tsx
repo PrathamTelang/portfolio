@@ -14,11 +14,11 @@ export default function ComponentsPage() {
   return (
     <div className="w-screen ">
       <Bar/>
-      <div className="w-screen flex flex-col justify-center items-center bg-lightbg  bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
+      <div className="w-screen flex flex-col justify-center items-center bg-background  bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
      dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
- <div className="w-11/12 lg:w-3/5  relative bg-white border-x border-border  dark:border-darkborder  
+ <div className="w-11/12 lg:w-3/5  relative bg-background border-x border-border    
       ">
-      <h1 className="pl-4 text-3xl font-semibold dark:text-darkprimary-text" >Beautiful UI components,
+      <h1 className="pl-4 text-3xl font-semibold " >Beautiful UI components,
           <br />
           crafted with Tailwind CSS.</h1>
     </div>

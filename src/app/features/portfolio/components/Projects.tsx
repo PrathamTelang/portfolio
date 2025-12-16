@@ -47,9 +47,9 @@ export default function Projects() {
   };
 
   return (
-    <div className="w-screen flex justify-center bg-lightbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
+    <div className="w-screen flex justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
          dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
-      <div className="w-11/12 lg:w-3/5 relative bg-white  border-x border-border dark:border-darkborder ">
+      <div className="w-11/12 lg:w-3/5 relative bg-background  border-x border-border  ">
         <h2 className="text-xs font-semibold text-[#00A6F4] 
            transform -rotate-90  absolute sm:top-7 sm:-left-12 sm:text-lg top-5 -left-8
         ">Projects</h2>
@@ -59,13 +59,13 @@ export default function Projects() {
             <button
               key={item.name}
               onClick={() => openAt(idx)}
-              className="text-left flex hover:underline hover:bg-[#F9F9F9] dark:hover:decoration-darkprimary-text dark:hover:bg-[#10141E] items-center justify-between border border-border dark:border-darkborder p-4 transition w-full"
+              className="text-left flex hover:underline hover:bg-[#F9F9F9] dark:hover:decoration-darkprimary-text dark:hover:bg-[#10141E] items-center justify-between border border-border  p-4 transition w-full"
             >
               <div className="w-full cursor-pointer">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-semibold dark:text-darkprimary-text">{item.name}</h3>
-                    <p className="text-sm text-secondary-text dark:text-darksecondary-text">{item.description}</p>
+                    <h3 className="font-semibold ">{item.name}</h3>
+                    <p className="text-sm text-secondary-text ">{item.description}</p>
                   </div>
                 </div>
                 <div className="w-full h-full pt-2"><Image src={item.image} alt={item.alt} className="rounded-lg" /></div>
@@ -121,19 +121,19 @@ function ProjectModal({
       onClick={onClose}
     >
       <div
-        className="bg-white  border border-border dark:border-darkborder rounded-lg p-4 w-11/12 max-w-3xl"
+        className="bg-background  border border-border  rounded-lg p-4 w-11/12 max-w-3xl"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between">
           <div>
-            <h3 className="font-semibold dark:text-darkprimary-text">{item.name}</h3>
-            <p className="text-sm text-secondary-text dark:text-darksecondary-text">{item.description}</p>
+            <h3 className="font-semibold ">{item.name}</h3>
+            <p className="text-sm text-secondary-text ">{item.description}</p>
           </div>
           <div className="flex items-center gap-3">
             <button
               onClick={onClose}
               aria-label="Close"
-              className="text-secondary-text dark:text-darksecondary-text cursor-pointer"
+              className="text-secondary-text  cursor-pointer"
             >
               <RxCross2 className="text-xl" />
             </button>

@@ -107,7 +107,7 @@ const Ball = () => (
       className="
         absolute top-[18%] left-[18%]
         h-1 w-1 rounded-full
-        bg-white/70 blur-[0.5px]
+        bg-background/70 blur-[0.5px]
       "
     />
 

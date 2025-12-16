@@ -10,7 +10,7 @@ function NameSvg() {
   viewBox="0 0 175 62" 
   fill="currentColor"
   stroke="currentColor"
-  className="text-primary-text dark:text-darkprimary-text"
+  className="text-primary-text "
   xmlns="http://www.w3.org/2000/svg">
   <motion.path 
     initial={{ pathLength: 0, fillOpacity: 0 }}

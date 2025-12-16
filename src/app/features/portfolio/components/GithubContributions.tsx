@@ -23,13 +23,13 @@ export default function GitHubContributions() {
   }, []);
 
   return (
-    <div className="w-screen flex justify-center items-center bg-lightbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
+    <div className="w-screen flex justify-center items-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
          dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
       <div
-        className="w-11/12 lg:w-3/5 relative bg-white border-x border-border  dark:border-darkborder "
+        className="w-11/12 lg:w-3/5 relative bg-background border-x border-border   "
       >
         <section className="flex flex-col items-center w-full overflow-hidden ">
-          <div className="p-2 w-full bg-lightbg  text-primary-text text-primary-text flex flex-col items-center justify-center">
+          <div className="p-2 w-full bg-background  text-primary-text text-primary-text flex flex-col items-center justify-center">
             <GitHubCalendar
               username="PrathamTelang"
               blockSize={12}
@@ -39,7 +39,7 @@ export default function GitHubContributions() {
             />
             <div className="w-full">
               <a
-              className="text-secondary-text dark:text-darksecondary-text underline"
+              className="text-secondary-text  underline"
               href="https://github.com/PrathamTelang"
               target="_blank"
               rel="noopener noreferrer"

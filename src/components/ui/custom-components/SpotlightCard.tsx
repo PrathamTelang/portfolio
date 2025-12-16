@@ -33,7 +33,7 @@ export default function SpotlightCard({
       ref={cardRef}
       onMouseMove={handleMouseMove}
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-8 shadow-xl backdrop-blur-xl transition-transform duration-300",
+        "relative overflow-hidden rounded-2xl border border-white/20 bg-background/10 p-8 shadow-xl backdrop-blur-xl transition-transform duration-300",
         "hover:scale-[1.02] hover:rotate-[1deg] hover:-translate-y-1",
         "dark:bg-neutral-900/50 dark:border-neutral-700/40",
         className

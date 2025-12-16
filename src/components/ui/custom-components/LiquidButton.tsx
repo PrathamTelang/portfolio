@@ -36,7 +36,7 @@ export default function LiquidButton({
       "
     >
       <motion.div
-        className="absolute inset-0 rounded-2xl bg-white/20 blur-2xl"
+        className="absolute inset-0 rounded-2xl bg-background/20 blur-2xl"
         style={{ x, y }}
       />
       {children}
