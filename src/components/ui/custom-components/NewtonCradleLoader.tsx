@@ -9,7 +9,15 @@ export default function NewtonCradleLoader() {
       role="status"
       aria-label="Loading"
     >
-      <div className="border-t border-x border-foreground rounded-t-2xl h-15 w-32 flex justify-center">
+      {/* Frame */}
+      <div
+        className="
+          flex h-15 w-32 justify-center rounded-t-2xl
+          border-t border-x
+          border-slate-800
+          dark:border-gray-400
+        "
+      >
         <Pendulum type="right" />
         <Pendulum type="toggle" delay={0.02} />
         <Pendulum type="toggle" delay={0.04} />
@@ -17,7 +25,14 @@ export default function NewtonCradleLoader() {
         <Pendulum type="left" />
       </div>
 
-      <div className="w-40 bg-foreground h-1 rounded-2xl" />
+      {/* Base */}
+      <div
+        className="
+          h-1 w-40 rounded-2xl
+          bg-slate-900
+          dark:bg-gray-500
+        "
+      />
     </div>
   );
 }
@@ -33,43 +48,21 @@ const Pendulum = ({ type, delay = 0 }: PendulumProps) => {
       className="flex flex-col items-center"
       animate={
         type === "left"
-          ? {
-              rotate: [-40, 0, 0],
-              scaleY: [1, 0.98, 1],
-            }
+          ? { rotate: [-40, 0, 0], scaleY: [1, 0.98, 1] }
           : type === "right"
-          ? {
-              rotate: [0, 0, 40],
-              scaleY: [1, 0.98, 1],
-            }
+          ? { rotate: [0, 0, 40], scaleY: [1, 0.98, 1] }
           : type === "toggle"
-          ? {
-              rotate: [-1, 0, 1],
-              scaleY: [1, 0.985, 1],
-            }
+          ? { rotate: [-1, 0, 1], scaleY: [1, 0.985, 1] }
           : {}
       }
-      transition={
-        type === "left" || type === "right"
-          ? {
-              duration: 0.65,
-              times: [0, 0.1, 1],
-              repeat: Infinity,
-              repeatType: "mirror",
-              ease: easeInOut,
-              delay,
-            }
-          : type === "toggle"
-          ? {
-              duration: 0.65,
-              times: [0, 0.5, 1],
-              repeat: Infinity,
-              repeatType: "mirror",
-              ease: easeInOut,
-              delay,
-            }
-          : {}
-      }
+      transition={{
+        duration: 0.65,
+        times: type === "toggle" ? [0, 0.5, 1] : [0, 0.1, 1],
+        repeat: Infinity,
+        repeatType: "mirror",
+        ease: easeInOut,
+        delay,
+      }}
       style={{ transformOrigin: "top center" }}
     >
       <String />
@@ -78,17 +71,53 @@ const Pendulum = ({ type, delay = 0 }: PendulumProps) => {
   );
 };
 
-const Ball = () => (
-  <div className="relative h-3 w-3 rounded-full bg-foreground overflow-hidden">
-    {/* specular highlight */}
-    <div className="absolute top-[15%] left-[15%] h-1.5 w-1.5 rounded-full bg-secondary-foreground blur-[1px]" />
-
-    {/* subtle sheen */}
-    <div className="absolute inset-0 rounded-full bg-linear-to-br from-secondary-foreground via-transparent to-transparent" />
-  </div>
-);
-
-
 const String = () => (
-  <div className="bg-foreground h-8 w-[0.5px]" />
+  <div
+    className="
+      h-8 w-[0.5px]
+      bg-slate-800
+      dark:bg-gray-400
+    "
+  />
 );
+
+const Ball = () => (
+  <motion.div
+    className="
+      relative h-3 w-3 rounded-full overflow-hidden
+      bg-slate-800
+      dark:bg-gray-600
+    "
+    animate={{ backgroundPosition: ["0% 0%", "100% 100%"] }}
+    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+    style={{
+      backgroundImage: `
+        radial-gradient(
+          circle at 28% 28%,
+          rgba(255,255,255,0.55),
+          rgba(255,255,255,0.25) 18%,
+          rgba(255,255,255,0.08) 35%,
+          transparent 60%
+        )
+      `,
+    }}
+  >
+    {/* specular highlight */}
+    <div
+      className="
+        absolute top-[18%] left-[18%]
+        h-1 w-1 rounded-full
+        bg-white/70 blur-[0.5px]
+      "
+    />
+
+    {/* subtle edge definition */}
+    <div
+      className="
+        absolute inset-0 rounded-full
+        shadow-[inset_-1px_-1px_2px_rgba(0,0,0,0.35)]
+      "
+    />
+  </motion.div>
+);
+
