@@ -84,7 +84,7 @@ export default function Grid({ items = [] }: { items?: GridItem[] }) {
             <Link
               key={item.slug}
               href={`/components/${item.slug}`}
-              className="hover:bg-[#0D111B] transition block"
+              className="hover:bg-hover transition block"
             >
               <Line />
               <div className="p-2">

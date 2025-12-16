@@ -63,6 +63,8 @@ body {
     --color-popover: var(--popover);
     --color-popover-foreground: var(--popover-foreground);
 
+    --color-hover: var(--hover);
+
     --color-primary: var(--primary);
     --color-primary-foreground: var(--primary-text);
 
@@ -112,6 +114,9 @@ body {
     --popover: #FFFFFF;
     --popover-foreground: #000000;
 
+    /* Hovers */
+    --hover: #E5E5E5;
+
     /* Primary & Accent */
     --primary: #00BCFF;
     --secondary: #888888;
@@ -156,6 +161,8 @@ body {
     --card-foreground: #FFFFFF;
     --popover: #0B101B;
     --popover-foreground: #FFFFFF;
+
+    --hover: #10141E;
 
     --primary: #00BCFF;
     --secondary: #606C80;
