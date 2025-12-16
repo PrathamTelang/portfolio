@@ -47,10 +47,10 @@ export default function Grid({ items = [] }: { items?: GridItem[] }) {
     <div
       className="h-full w-screen flex justify-center max-w-screen bg-lightbg 
       bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
-      dark:bg-darkbg 
+       
       dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]"
     >
-      <div className="w-11/12 lg:w-3/5 relative bg-white border-x border-lightborder dark:bg-darkbg dark:border-darkborder">
+      <div className="w-11/12 lg:w-3/5 relative bg-white border-x border-border  dark:border-darkborder">
 
         {/* Background vertical grid lines – dynamically match column count */}
         <div className="pointer-events-none absolute inset-0 z-10">
@@ -65,7 +65,7 @@ export default function Grid({ items = [] }: { items?: GridItem[] }) {
             {Array.from({ length: cols }).map((_, i) => (
               <div
                 key={i}
-                className="border-x border-lightborder  dark:border-darkborder"
+                className="border-x border-border  dark:border-darkborder"
               />
             ))}
           </div>

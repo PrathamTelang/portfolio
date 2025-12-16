@@ -38,8 +38,8 @@ export default function SocialLinks() {
   return (
     
     <div className="w-screen flex justify-center bg-lightbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
-        dark:bg-darkbg dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
-        <div className="w-11/12 lg:w-3/5 relative bg-white dark:bg-darkbg border-x border-lightborder dark:border-darkborder ">
+         dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
+        <div className="w-11/12 lg:w-3/5 relative bg-white  border-x border-border dark:border-darkborder ">
             <h2 className="text-xs font-semibold text-[#F6D743] 
            transform -rotate-90  absolute sm:top-11 sm:-left-16.5 sm:text-lg top-7.5 -left-10.5
         ">Social Links</h2>
@@ -50,7 +50,7 @@ export default function SocialLinks() {
           key={item.name}
           href={item.url}
           target="_blank"
-          className="flex hover:underline items-center justify-between border border-lightborder dark:border-darkborder p-4 transition"
+          className="flex hover:underline items-center justify-between border border-border dark:border-darkborder p-4 transition"
         >
           <div className="flex items-center gap-3">
             <div className="text-5xl">{item.icon}</div>

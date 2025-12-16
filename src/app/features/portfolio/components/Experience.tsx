@@ -3,8 +3,8 @@ import { Line } from "./Line"
 export const Experience = () => {
     return (
         <div className="w-screen flex h-full justify-center bg-lightbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
-            dark:bg-darkbg dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
-            <div className="w-11/12 lg:w-3/5 relative  bg-white dark:bg-darkbg border-x border-lightborder dark:border-darkborder ">
+             dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
+            <div className="w-11/12 lg:w-3/5 relative  bg-white  border-x border-border dark:border-darkborder ">
             <h2 className="text-xs font-semibold text-[#F6339A] 
            transform -rotate-90  absolute sm:top-9 sm:-left-14 sm:text-lg top-6 -left-9
             ">Experience</h2>

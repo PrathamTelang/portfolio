@@ -9,8 +9,8 @@ import IndianFlag from "../images/Flag_of_India.svg.png"
 export const Hero = () => {
     return (
         <div className="w-screen  flex justify-center bg-lightbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
-            dark:bg-darkbg dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
-            <div className="flex border-x border-lightborder dark:border-darkborder dark:bg-darkbg bg-white w-11/12 lg:w-3/5  max-[475px]:max-h-36 max-h-full">
+             dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
+            <div className="flex border-x border-border dark:border-darkborder  bg-white w-11/12 lg:w-3/5  max-[475px]:max-h-36 max-h-full">
                 <div className="h-48 min-w-48 max-[475px]:min-w-36 max-[475px]:min-h-full">
                     <div className="absolute group inline-block ">
                     <Image
@@ -32,7 +32,7 @@ export const Hero = () => {
                         className="rounded-full border h-full w-full border-white dark:border-darkborder max-[475px]:min-w-full max-[475px]:max-h-36 object-cover" 
                     />    
                 </div>   
-                <div className="w-full h-full border-l border-lightborder dark:border-darkborder max-[475px]:max-h-36">
+                <div className="w-full h-full border-l border-border dark:border-darkborder max-[475px]:max-h-36">
                     <div className="pl-4 text-xs text-[#D4D4D8] dark:text-[#42454D]  select-none bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
                     dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)0_1px,transparent_1px_8px)]
                     h-2/6 flex items-end max-[475px]:hidden">font-family: 'Source Code Pro', monospace;</div>

@@ -24,12 +24,12 @@ export default function GitHubContributions() {
 
   return (
     <div className="w-screen flex justify-center items-center bg-lightbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
-        dark:bg-darkbg dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
+         dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
       <div
-        className="w-11/12 lg:w-3/5 relative bg-white border-x border-lightborder dark:bg-darkbg dark:border-darkborder "
+        className="w-11/12 lg:w-3/5 relative bg-white border-x border-border  dark:border-darkborder "
       >
         <section className="flex flex-col items-center w-full overflow-hidden ">
-          <div className="p-2 w-full bg-lightbg dark:bg-darkbg text-primary-text dark:text-darkprimary-text flex flex-col items-center justify-center">
+          <div className="p-2 w-full bg-lightbg  text-primary-text text-primary-text flex flex-col items-center justify-center">
             <GitHubCalendar
               username="PrathamTelang"
               blockSize={12}

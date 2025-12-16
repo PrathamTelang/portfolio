@@ -9,8 +9,8 @@ import Image from "next/image";
 export const Skills = () => {
   return (
     <div className="w-screen flex justify-center bg-lightbg bg-[repeating-linear-gradient(45deg,var(--color-lightborder)_0_1px,transparent_1px_8px)]
-        dark:bg-darkbg dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
-      <div className="w-11/12 lg:w-3/5 relative bg-white dark:bg-darkbg border-x border-lightborder dark:border-darkborder ">
+         dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
+      <div className="w-11/12 lg:w-3/5 relative bg-white  border-x border-border dark:border-darkborder ">
         <h2 className="text-xs font-semibold text-[#ED6BFF] 
            transform -rotate-90  absolute sm:top-8 sm:-left-13 sm:text-lg top-5 -left-8.5
         ">TechStack</h2>
@@ -20,7 +20,7 @@ export const Skills = () => {
 
             {/* Frontend */}
             <div className="pt-2">
-              <h3 className="text-lg px-4 font-semibold dark:text-darkprimary-text ">Frontend</h3>
+              <h3 className="text-lg px-4 font-semibold text-primary-text ">Frontend</h3>
               <div className="flex items-center pl-4 text-4xl gap-4">
                 <Tooltip icon={<SiTypescript className="text-[#007ACC]" />} text="TypeScript" link="https://www.typescriptlang.org/" />
                 <Tooltip icon={<SiJavascript className="text-[#F7DF1E]" />} text="JavaScript" link="https://www.javascript.com/" />
