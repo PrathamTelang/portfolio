@@ -4,12 +4,16 @@ import { easeInOut, motion } from "motion/react";
 
 export default function NewtonCradleLoader() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div
+      className="flex flex-col items-center justify-center"
+      role="status"
+      aria-label="Loading"
+    >
       <div className="border-t border-x border-foreground rounded-t-2xl h-15 w-32 flex justify-center">
         <Pendulum type="right" />
-        <Pendulum type="toggle" />
-        <Pendulum type="toggle" />
-        <Pendulum type="toggle" />
+        <Pendulum type="toggle" delay={0.02} />
+        <Pendulum type="toggle" delay={0.04} />
+        <Pendulum type="toggle" delay={0.06} />
         <Pendulum type="left" />
       </div>
 
@@ -20,9 +24,10 @@ export default function NewtonCradleLoader() {
 
 type PendulumProps = {
   type?: "left" | "right" | "toggle";
+  delay?: number;
 };
 
-const Pendulum = ({ type }: PendulumProps) => {
+const Pendulum = ({ type, delay = 0 }: PendulumProps) => {
   return (
     <motion.div
       className="flex flex-col items-center"
@@ -30,42 +35,38 @@ const Pendulum = ({ type }: PendulumProps) => {
         type === "left"
           ? {
               rotate: [-40, 0, 0],
+              scaleY: [1, 0.98, 1],
             }
           : type === "right"
           ? {
               rotate: [0, 0, 40],
+              scaleY: [1, 0.98, 1],
             }
-            : type === "toggle"
+          : type === "toggle"
           ? {
               rotate: [-1, 0, 1],
+              scaleY: [1, 0.985, 1],
             }
           : {}
       }
       transition={
-        type === "left"
+        type === "left" || type === "right"
           ? {
               duration: 0.65,
-              times: [0, 0.1, 1], // pause at impact
+              times: [0, 0.1, 1],
               repeat: Infinity,
               repeatType: "mirror",
               ease: easeInOut,
+              delay,
             }
-          : type === "right"
+          : type === "toggle"
           ? {
               duration: 0.65,
-              delay: 0,
-              times: [0, 0.1, 1], // pause before swing
+              times: [0, 0.5, 1],
               repeat: Infinity,
               repeatType: "mirror",
               ease: easeInOut,
-            }
-            : type === "toggle"
-          ? {
-              duration: 0.65,
-              delay: 0,
-              repeat: Infinity,
-              repeatType: "mirror",
-              ease: easeInOut,
+              delay,
             }
           : {}
       }
@@ -76,7 +77,6 @@ const Pendulum = ({ type }: PendulumProps) => {
     </motion.div>
   );
 };
-
 
 const Ball = () => (
   <div className="bg-foreground rounded-full h-3 w-3" />
