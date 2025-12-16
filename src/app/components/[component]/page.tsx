@@ -8,51 +8,20 @@ import { Bar } from "@/app/features/portfolio/components/Bar";
 
 /* -------------------- COMPONENT MAP -------------------- */
 const componentMap: Record<string, string> = {
-  button: "Button",
-  badge: "Badge",
-  input: "Input",
-  card: "Card",
   "spotlight-card": "SpotlightCard",
   "liquid-button": "LiquidButton",
-  "hologram-card": "HologramCard",
   "spark-click": "SparkClickLayer", // ✅ use this key
 };
 
 
 
 const previewDefaults: Record<string, any> = {
-  Button: {
-    children: "Click Me",
-    variant: "default",
-  },
-
-  Badge: {
-    children: "New",
-    variant: "default",
-  },
-
-  Input: {
-    placeholder: "Enter text...",
-    type: "text",
-  },
-
-  Card: {
-    children: (
-      <div className="p-6">
-        <h3 className="font-semibold text-lg">Card Title</h3>
-        <p className="text-muted-foreground">This is a card preview.</p>
-      </div>
-    ),
-  },
   SpotlightCard: {
   title: "Ultimate UI Experience",
   description: "Interactive glassmorphism spotlight card.",
   },
   LiquidButton: {
     children: "Liquid Button",
-  },
-  HologramCard: {
-    children: "Hologram Card",
   },
   SparkClickLayer: {
     // No props needed

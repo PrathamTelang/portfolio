@@ -4,13 +4,8 @@ import Grid from "../features/portfolio/components/Grid";
 
 
 const components = [
-  { name: "Button", slug: "button", image: "/components/button.png" },
-  { name: "Badge", slug: "badge", image: "/components/badge.png" },
-  { name: "Input", slug: "input", image: "/components/input.png" },
-  { name: "Card", slug: "card", image: "/components/card.png" },
   { name: "SpotlightCard", slug: "spotlight-card", image: "/components/spotlight-card.png" },
   { name: "LiquidButton", slug: "liquid-button", image: "/components/liquid-button.png" },
-  { name: "HologramCard", slug: "hologram-card", image: "/components/hologram-card.png" },
   { name: "SparkClickLayer", slug: "spark-click", image: "/components/spark-click.png" },
 ];
 
