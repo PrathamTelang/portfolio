@@ -79,8 +79,15 @@ const Pendulum = ({ type, delay = 0 }: PendulumProps) => {
 };
 
 const Ball = () => (
-  <div className="bg-foreground rounded-full h-3 w-3" />
+  <div className="relative h-3 w-3 rounded-full bg-foreground overflow-hidden">
+    {/* specular highlight */}
+    <div className="absolute top-[15%] left-[15%] h-1.5 w-1.5 rounded-full bg-secondary-foreground blur-[1px]" />
+
+    {/* subtle sheen */}
+    <div className="absolute inset-0 rounded-full bg-linear-to-br from-secondary-foreground via-transparent to-transparent" />
+  </div>
 );
+
 
 const String = () => (
   <div className="bg-foreground h-8 w-[0.5px]" />
