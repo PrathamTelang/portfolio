@@ -48,7 +48,7 @@ export default function Projects() {
 
   return (
     <div className="w-screen flex justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
-         dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
+         ">
       <div className="w-11/12 lg:w-3/5 relative bg-background  border-x border-border  ">
         <h2 className="text-xs font-semibold text-[#00A6F4] 
            transform -rotate-90  absolute sm:top-7 sm:-left-12 sm:text-lg top-5 -left-8

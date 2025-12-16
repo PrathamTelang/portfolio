@@ -15,7 +15,7 @@ export default function ComponentsPage() {
     <div className="w-screen ">
       <Bar/>
       <div className="w-screen flex flex-col justify-center items-center bg-background  bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
-     dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
+     ">
  <div className="w-11/12 lg:w-3/5  relative bg-background border-x border-border    
       ">
       <h1 className="pl-4 text-3xl font-semibold " >Beautiful UI components,

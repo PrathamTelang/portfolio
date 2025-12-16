@@ -3,7 +3,7 @@ import { Line } from "./Line"
 export const Experience = () => {
     return (
         <div className="w-screen flex h-full justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
-             dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]">
+             ">
             <div className="w-11/12 lg:w-3/5 relative  bg-background  border-x border-border  ">
             <h2 className="text-xs font-semibold text-[#F6339A] 
            transform -rotate-90  absolute sm:top-9 sm:-left-14 sm:text-lg top-6 -left-9

@@ -48,7 +48,7 @@ export default function Grid({ items = [] }: { items?: GridItem[] }) {
       className="h-full w-screen flex justify-center max-w-screen bg-background 
       bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
        
-      dark:bg-[repeating-linear-gradient(45deg,var(--color-darkborder)_0_1px,transparent_1px_8px)]"
+      "
     >
       <div className="w-11/12 lg:w-3/5 relative bg-background border-x border-border  ">
 
