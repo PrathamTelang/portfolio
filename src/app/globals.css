@@ -7,17 +7,7 @@ body {
     font-family: 'Source Code Pro', monospace;
 }
 
-@theme {
-    --color-darkbg: #030712;
-    --color-lightbg: #FFFFFF;
-    --color-darkborder: #1D202A;
-    --color-lightborder: #E5E5E5;
-    --color-primary-text: black;
-    --color-darkprimary-text: white;
-    --color-secondary-text: #404040;
-    --color-darksecondary-text: #99A1AF;
-    --color-primary: #00BCFF;
-}
+
 
 /* Default (light mode) scrollbar */
 ::-webkit-scrollbar {
@@ -69,6 +59,7 @@ body {
     --color-primary-foreground: var(--primary-text);
 
     --color-secondary: var(--secondary);
+    --color-secondary-text: var(--secondary-text);
     --color-secondary-foreground: var(--secondary-foreground);
 
     --color-muted: var(--muted);
