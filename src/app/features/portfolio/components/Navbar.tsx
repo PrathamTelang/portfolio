@@ -41,22 +41,22 @@ export const Navbar = () => {
   
 
   return (
-    <div className="flex w-screen justify-center h-12 fixed top-0 left-0 border-y border-lightborder bg-white z-50 dark:bg-darkbg dark:text-white dark:border-darkborder">
-      <div className="w-11/12 lg:w-3/5 border-x border-lightborder dark:border-darkborder  flex items-center justify-end px-4 gap-2">
+    <div className="flex w-screen justify-center h-12 fixed top-0 left-0 border-y border-border z-50 bg-background ">
+      <div className="w-11/12 lg:w-3/5 border-x border-border flex items-center justify-end px-4 gap-2">
       <div>
             <Button
               text="Email"
               onClick={() => window.open("https://mail.google.com/mail/?view=cm&fs=1&to=prathamtelang007@gmail.com", "_blank")} 
             />
           </div>
-      <div className="cursor-pointer rounded-full border border-lightborder dark:border-darkborder p-2 flex items-center justify-center hover:bg-lightborder dark:hover:bg-darkborder"
+      <div className="cursor-pointer rounded-full border border-border p-2 flex items-center justify-center hover:bg-border "
         onClick={() => window.open("https://github.com/PrathamTelang/portfolio")}
       >
         <FaGithub className="" />
       </div>
-        <div className="flex gap-1 bg-[#F2F2F3] dark:bg-darkborder rounded-full p-1">
+        <div className="flex gap-1 bg-border rounded-full p-1">
           <button
-            className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center border border-[#D9DADC] dark:border-none bg-white dark:bg-darkborder"
+            className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center border border-[#D9DADC] dark:border-none bg-background"
             onClick={() => { setDarkMode(false); flashSound(); }}
             title="Enable Light Mode"
           >
