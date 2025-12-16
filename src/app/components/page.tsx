@@ -7,6 +7,7 @@ const components = [
   { name: "SpotlightCard", slug: "spotlight-card", image: "/components/spotlight-card.png" },
   { name: "LiquidButton", slug: "liquid-button", image: "/components/liquid-button.png" },
   { name: "SparkClickLayer", slug: "spark-click", image: "/components/spark-click.png" },
+  { name: "NewtonCradleLoader", slug: "newton-cradle-loader", image: "/components/newton-cradle-loader.png" },
 ];
 
 export default function ComponentsPage() {

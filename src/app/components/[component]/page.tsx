@@ -10,7 +10,8 @@ import { Bar } from "@/app/features/portfolio/components/Bar";
 const componentMap: Record<string, string> = {
   "spotlight-card": "SpotlightCard",
   "liquid-button": "LiquidButton",
-  "spark-click": "SparkClickLayer", // ✅ use this key
+  "spark-click": "SparkClickLayer",
+  "newton-cradle-loader": "NewtonCradleLoader",
 };
 
 
@@ -24,6 +25,9 @@ const previewDefaults: Record<string, any> = {
     children: "Liquid Button",
   },
   SparkClickLayer: {
+    // No props needed
+  },
+  NewtonCradleLoader: {
     // No props needed
   },
 };
