@@ -8,6 +8,7 @@ import { RxCross2 } from "react-icons/rx";
 import PulseRead from "../images/PulseRead.png";
 import LinkStash from "../images/LinkStash.png";
 import PortfolioSS from "../images/PortfolioSS.png";
+import NexRead from "../images/NexRead.png";
 import Button from "./Button";
 import { Line } from "./Line";
 
@@ -32,13 +33,21 @@ const projectsLinks = [
     giturl: "https://github.com/PrathamTelang/PulseRead",
   },
   {
+    name: "NexRead",
+    description: "AI Summaries & Insights Instantly",
+    image: NexRead,
+    alt: "NexRead Preview",
+    weburl: "https://nex-read.vercel.app/",
+    giturl: "https://github.com/PrathamTelang/NexRead",
+  },
+  {
     name: "Portfolio",
     description: "My personal portfolio website",
     image: PortfolioSS,
     alt: "Portfolio Preview",
     weburl: "https://prathamtelang-portfolio.vercel.app/",
     giturl: "https://github.com/PrathamTelang/Portfolio",
-  },
+  }
 ];
 
 /* ------------------------------------------------------------------ */
@@ -211,7 +220,7 @@ function ProjectModal({
             aria-label="Close"
             className="text-secondary-text"
           >
-            <RxCross2 className="text-xl" />
+            <RxCross2 className="text-xl cursor-pointer" />
           </button>
         </div>
 
