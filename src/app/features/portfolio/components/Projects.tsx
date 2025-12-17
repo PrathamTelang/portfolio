@@ -29,7 +29,7 @@ const projectsLinks = [
     description: "Master speed reading, one pulse at a time.",
     image: PulseRead,
     alt: "PulseRead Preview",
-    weburl: "https://pulseread.pages.dev/",
+    weburl: "https://pulse-read.vercel.app/",
     giturl: "https://github.com/PrathamTelang/PulseRead",
   },
   {
