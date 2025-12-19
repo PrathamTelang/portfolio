@@ -8,6 +8,7 @@ const components = [
   { name: "LiquidButton", slug: "liquid-button", image: "/components/liquid-button.png" },
   { name: "SparkClickLayer", slug: "spark-click", image: "/components/spark-click.png" },
   { name: "NewtonCradleLoader", slug: "newton-cradle-loader", image: "/components/newton-cradle-loader.png" },
+  { name: "OfferButton", slug: "offer-button", image: "/components/offer-button.png" },
 ];
 
 export default function ComponentsPage() {

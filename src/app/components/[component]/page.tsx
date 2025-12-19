@@ -12,6 +12,7 @@ const componentMap: Record<string, string> = {
   "liquid-button": "LiquidButton",
   "spark-click": "SparkClickLayer",
   "newton-cradle-loader": "NewtonCradleLoader",
+  "offer-button": "OfferButton",
 };
 
 
