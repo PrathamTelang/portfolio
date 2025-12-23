@@ -64,17 +64,20 @@ export default function SpotlightCard({
           "shadow-xl transition-transform duration-200 ease-out",
           "dark:bg-neutral-900/50 dark:border-neutral-700/40",
           "will-change-transform",
+          "[--spotlight:rgba(0,0,0,0.1)]",
+    "dark:[--spotlight:rgba(255,255,255,0.08)]",
           className
         )}
         style={{
-          background: `
-            radial-gradient(
-              circle at var(--x, 50%) var(--y, 50%),
-              rgba(255,255,255,0.15),
-              rgba(255,255,255,0) 60%
-            )
-          `,
-        }}
+  background: `
+    radial-gradient(
+      circle at var(--x, 50%) var(--y, 50%),
+      var(--spotlight),
+      rgba(0,0,0,0) 60%
+    )
+  `,
+}}
+
         {...props}
       >
         <div className="relative h-full p-6 flex flex-col transform-gpu">
@@ -84,8 +87,8 @@ export default function SpotlightCard({
               <span
                 key={i}
                 className="w-8 h-8 flex items-center justify-center
-                rounded-lg border border-white/20 text-sm
-                bg-white/5"
+                rounded-lg border dark:border-white/20 text-sm
+                dark:bg-white/5 bg-black/5 "
               >
                 {icon}
               </span>
@@ -94,20 +97,20 @@ export default function SpotlightCard({
 
           {/* title + description */}
           <div className="mt-6 translate-z-8">
-            <h2 className="text-2xl font-semibold text-white">
+            <h2 className="text-2xl font-semibold text-black dark:text-white">
               {title}
             </h2>
-            <p className="mt-2 text-sm text-neutral-300 dark:text-neutral-400">
+            <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-400">
               {description}
             </p>
           </div>
 
           {/* progress bar */}
           <div className="mt-6 translate-z-4">
-            <div className="h-1 w-full rounded-full bg-white/10 overflow-hidden">
-              <div className="h-full w-2/3 bg-white/40 rounded-full" />
+            <div className="h-1 w-full rounded-full bg-black/10 dark:bg-white/10 overflow-hidden">
+              <div className="h-full w-2/3 bg-black dark:bg-white/40 rounded-full" />
             </div>
-            <span className="mt-1 block text-xs text-white/50">
+            <span className="mt-1 block text-xs text-black dark:text-white/50">
               Progress 67%
             </span>
           </div>
@@ -137,7 +140,7 @@ export default function SpotlightCard({
             </div>
 
             {/* CTA */}
-            <button className="relative text-sm text-white/80 group cursor-pointer flex justify-center items-center gap-1">
+            <button className="relative text-sm text-black dark:text-white/80 group cursor-pointer flex justify-center items-center gap-1">
               Explore<FaArrowRight />
               <span
                 className="absolute left-0 -bottom-0.5 h-px w-0
