@@ -56,7 +56,7 @@ export default function Grid({ items = [] }: { items?: GridItem[] }) {
         <div className="pointer-events-none absolute inset-0 z-10">
           <div
             className="
-              grid h-full gap-10
+              grid h-full gap-9
             "
             style={{
               gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
@@ -74,7 +74,7 @@ export default function Grid({ items = [] }: { items?: GridItem[] }) {
         {/* Items */}
         <ul
           className="
-            grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 
+            grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-9
             lg:grid-cols-3 
             xl:grid-cols-3 
             relative z-20
