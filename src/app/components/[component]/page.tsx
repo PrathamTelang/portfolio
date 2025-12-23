@@ -9,7 +9,6 @@ import { Bar } from "@/app/features/portfolio/components/Bar";
 /* -------------------- COMPONENT MAP -------------------- */
 const componentMap: Record<string, string> = {
   "spotlight-card": "SpotlightCard",
-  "liquid-button": "LiquidButton",
   "spark-click": "SparkClickLayer",
   "newton-cradle-loader": "NewtonCradleLoader",
   "offer-button": "OfferButton",
