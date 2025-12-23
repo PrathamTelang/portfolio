@@ -79,7 +79,7 @@ export default function SpotlightCard({
       >
         <div className="relative h-full p-6 flex flex-col transform-gpu">
           {/* icon grid */}
-          <div className="flex gap-2 translate-z-6">
+          <div className="flex gap-2 translate-z-6 animate-pulse">
             {[<FaRegLightbulb />, <CiLock />, <AiFillClockCircle />].map((icon, i) => (
               <span
                 key={i}
