@@ -5,10 +5,10 @@ import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import { RxCross2 } from "react-icons/rx";
 
-import PulseRead from "../images/PulseRead.png";
+import PulseRead from "../images/og-pulseread.png";
 import LinkStash from "../images/LinkStash.png";
 import PortfolioSS from "../images/PortfolioSS.png";
-import NexRead from "../images/NexRead.png";
+import NexRead from "../images/og-nexread.png";
 import Button from "./Button";
 import { Line } from "./Line";
 
@@ -106,7 +106,7 @@ export default function Projects() {
         {/* Background grid lines */}
         <div className="pointer-events-none absolute inset-0 z-10">
           <div
-            className="grid h-full gap-10"
+            className="grid h-full gap-9"
             style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}
           >
             {Array.from({ length: cols }).map((_, i) => (
@@ -119,7 +119,7 @@ export default function Projects() {
         <ul
           className="
             grid grid-cols-1 sm:grid-cols-2
-            gap-5 md:gap-10
+            gap-5 md:gap-9
             relative z-20
           "
         >
@@ -129,7 +129,7 @@ export default function Projects() {
                 onClick={() => openAt(idx)}
                 className="
                   w-full text-left  cursor-pointer
-                  hover:bg-[#F9F9F9] dark:hover:bg-[#10141E]
+                  hover:bg-hover
                   transition
                 "
               >
