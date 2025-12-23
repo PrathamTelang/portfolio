@@ -5,6 +5,9 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { FaGithubSquare } from "react-icons/fa";
 import { Line } from "./Line";
+import Grid from "./Grid";
+import Image from "next/image";
+import React from "react";
 
 
 const socialLinks = [
@@ -43,27 +46,109 @@ export default function SocialLinks() {
             <h2 className="text-xs font-semibold text-[#F6D743] 
            transform -rotate-90  absolute sm:top-11 sm:-left-16.5 sm:text-lg top-7.5 -left-10.5
         ">Social Links</h2>
-        <div className="grid md:grid-cols-2 gap-4 flex-wrap p-4 ">
         
-      {socialLinks.map((item) => (
-        <Link
-          key={item.name}
-          href={item.url}
-          target="_blank"
-          className="flex hover:underline items-center justify-between border border-border  p-4 transition"
-        >
-          <div className="flex items-center gap-3">
-            <div className="text-5xl">{item.icon}</div>
-            <div>
-              <h3 className="font-semibold ">{item.name}</h3>
-              <p className="text-sm text-secondary-text ">{item.username}</p>
-            </div>
-          </div>
-          <ArrowUpRight className="text-secondary-text " size={18} />
-        </Link>
-      ))}
-    </div>
+          <GridForSocialLinks items={socialLinks.map(link => ({
+          name: link.name,
+          username: link.username,
+          icon: link.icon,
+          url: link.url,
+        }))} />
+        
         </div>
     </div>
   );
 }
+
+type GridItem = {
+  name: string;
+  username: string;
+  icon: React.ReactNode;
+  url: string;
+};
+
+function useGridColumns() {
+  const [cols, setCols] = React.useState(1);
+
+  React.useEffect(() => {
+    const updateCols = () => {
+      const width = window.innerWidth;
+
+      // Match your Tailwind breakpoints / grid-cols:
+      // base: 1 col
+      // sm (≥640px): 2 cols
+      // lg (≥1024px): 3 cols
+      // xl (≥1280px): 3 cols (same as lg in your code)
+      if (width >= 1024) {
+        setCols(2); // lg & up
+      } else if (width >= 640) {
+        setCols(2); // sm
+      } else {
+        setCols(1); // base
+      }
+    };
+
+    updateCols();
+    window.addEventListener("resize", updateCols);
+    return () => window.removeEventListener("resize", updateCols);
+  }, []);
+
+  return cols;
+}
+
+export function GridForSocialLinks({ items = [] }: { items?: GridItem[] }) {
+  const cols = useGridColumns();
+
+  return (
+      <div className=" relative bg-background border-x border-border  ">
+
+        {/* Background vertical grid lines – dynamically match column count */}
+        <div className="pointer-events-none absolute inset-0 z-10">
+          <div
+            className="
+              grid h-full gap-9
+            "
+            style={{
+              gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
+            }}
+          >
+            {Array.from({ length: cols }).map((_, i) => (
+              <div
+                key={i}
+                className="border-x border-border  "
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Items */}
+        <ul
+          className="
+            grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-9 
+            lg:grid-cols-2 
+            xl:grid-cols-2 
+            relative z-20
+          "
+        >
+          {items.map((item) => (
+            <Link
+              href={item.url}
+              className="hover:bg-hover transition block"
+            >
+              <Line />
+              <div className="flex justify-between px-4 py-1">
+                <div className="flex flex-col justify-center ">
+                <h3 className="font-semibold">{item.name}</h3>
+                <p className="text-sm text-neutral-400">{item.username}</p>
+              </div>
+              <div className="text-5xl flex items-center">
+                {item.icon}
+              </div>
+              </div>
+              <Line />
+            </Link>
+          ))}
+        </ul>
+      </div>
+  );
+}
+
