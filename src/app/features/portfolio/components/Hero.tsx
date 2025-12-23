@@ -1,9 +1,5 @@
 import Image from "next/image"
-import pfp from "./images/pfp.png"
-import shinchan from "./images/shinchan.jpeg"
-import { Line } from "./Line"
-import thanos from "./images/thanos.jpg"
-import profilePic from "../images/profilePic.jpg"
+import profilePic from "../images/heroImage.jpg"
 import IndianFlag from "../images/Flag_of_India.svg.png"
 
 export const Hero = () => {

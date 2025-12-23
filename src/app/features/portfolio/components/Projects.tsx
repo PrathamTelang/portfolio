@@ -6,8 +6,8 @@ import type { StaticImageData } from "next/image";
 import { RxCross2 } from "react-icons/rx";
 
 import PulseRead from "../images/og-pulseread.png";
-import LinkStash from "../images/LinkStash.png";
-import PortfolioSS from "../images/PortfolioSS.png";
+import LinkStash from "../images/og-linkstash.png";
+import PortfolioSS from "../images/og-portfolio.png";
 import NexRead from "../images/og-nexread.png";
 import Button from "./Button";
 import { Line } from "./Line";
