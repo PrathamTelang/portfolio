@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-tabs": "^1.1.13",
     "@tabler/icons-react": "^3.35.0",
     "class-variance-authority": "^0.7.1",
