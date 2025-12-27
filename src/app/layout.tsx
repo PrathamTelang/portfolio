@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://prathamtelang-portfolio.vercel.app/"),
 
-  title: "Pratham Telang | Full Stack Developer Portfolio",
+  title: "Pratham Telang | Design Engineer Portfolio",
   description:
     "Portfolio of Pratham Telang, a full stack developer specializing in modern web applications, React, Next.js, TypeScript, and scalable backend systems.",
 
