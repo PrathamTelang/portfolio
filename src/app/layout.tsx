@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "Portfolio of Pratham Telang, a full stack developer specializing in modern web applications, React, Next.js, TypeScript, and scalable backend systems.",
 
   icons: {
-    icon: "/icon.png",
+    icon: "/icon.svg",
   },
 
   openGraph: {
