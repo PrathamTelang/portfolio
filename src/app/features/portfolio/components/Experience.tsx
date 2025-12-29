@@ -14,17 +14,19 @@ export const Experience = () => {
             <p className="text-primary-text px-4 mt-1 text-md ">
                 Full Stack Developer | 26th May 2025 to 26th June 2025
             </p>
-                <p className="before:content-['•'] text-secondary-text ml-4 mt-1 text-sm ">
-                    <a className="pl-2 text-primary-text ">
+            <ul className="list-disc list-inside">   
+                <li className=" text-secondary-text ml-4 mt-1 text-sm ">
+                    <a>
                         Robot Control Dashboard:
                     </a>
-                     Developed the frontend interface for a robot control system, focusing on responsive UI and seamless user interaction.</p>
+                     Developed the frontend interface for a robot control system, focusing on responsive UI and seamless user interaction.</li>
                
-                <p className="before:content-['•'] text-secondary-text ml-4 mt-1 text-sm ">
-                    <a className="pl-2 text-primary-text ">
+                <li className="text-secondary-text ml-4 mt-1 text-sm ">
+                    <a>
                         E-commerce Platform: 
                     </a>
-                     Built and integrated cart and product routes using Node.js and Express, ensuring smooth API communication between frontend and backend.</p>
+                     Built and integrated cart and product routes using Node.js and Express, ensuring smooth API communication between frontend and backend.</li>
+            </ul>
             </div>
             
         </div>
