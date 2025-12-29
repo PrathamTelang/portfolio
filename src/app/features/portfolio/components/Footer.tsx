@@ -1,7 +1,7 @@
 
 export const Footer = () => {
   return (
-    <div className="w-screen bottom-0 flex justify-center items-center bg-background  bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
+    <div className="w-screen bottom-0 flex justify-center items-center bg-background  bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)] edge-fade-x
      ">
       <div className="w-11/12 lg:w-3/5 relative bg-background border-x border-border    
       ">

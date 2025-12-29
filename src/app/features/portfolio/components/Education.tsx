@@ -2,7 +2,7 @@ import { Line } from "./Line"
 
 export const Education = () => {
     return (
-        <div className="w-screen flex justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
+        <div className="w-screen flex justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)] edge-fade-x
              ">
             <div className="w-11/12 lg:w-3/5 relative bg-background  border-x border-border  ">
             <h2 className="text-xs font-semibold text-[#FF8243] 
