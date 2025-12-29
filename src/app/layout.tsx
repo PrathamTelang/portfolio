@@ -21,7 +21,7 @@ display: 'swap',
 export const metadata: Metadata = {
   metadataBase: new URL("https://prathamtelang-portfolio.vercel.app/"),
 
-  title: "Pratham Telang | Design Engineer Portfolio",
+  title: "Pratham Telang | Design Engineer",
   description:
     "Portfolio of Pratham Telang, a full stack developer specializing in modern web applications, React, Next.js, TypeScript, and scalable backend systems.",
 
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Pratham Telang | Full Stack Developer",
+    title: "Pratham Telang | Design Engineer ",
     description:
       "Explore projects, skills, and experience of Pratham Telang — a full stack developer building fast, scalable, and user-focused web applications.",
     url: "https://prathamtelang-portfolio.vercel.app/",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Pratham Telang | Full Stack Developer",
+    title: "Pratham Telang | Design Engineer",
     description:
       "Full stack developer portfolio showcasing projects, skills, and modern web development expertise.",
     images: ["/og-portfolio.png"],
