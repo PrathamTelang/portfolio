@@ -28,17 +28,15 @@ export const Hero = () => {
                         className="rounded-full h-full w-full border-white  max-[475px]:min-w-full max-[475px]:max-h-36 object-cover" 
                     />    
                 </div>   
-                <div className="w-full h-full border-l border-border  max-[475px]:max-h-36">
+                <div className="w-full h-full flex flex-col justify-end border-l border-border  max-[475px]:max-h-36">
                     <div className="pl-4 text-xs text-secondary-text  select-none bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)]
-                    h-2/6 flex items-end max-[475px]:hidden">font-family: 'Source Code Pro', monospace;</div>
+                    h-full flex items-end ">font-family: 'Source Code Pro', monospace;</div>
                     <div className="w-full h-px bg-border " />
-                    <div className=" sm:h-4/6 flex items-end h-full">
+                    <div className="flex items-end">
                         <div className="w-full">
                             <h1 className="pl-4 text-3xl font-serif italic sm:text-5xl" >Pratham Telang</h1>
                             <div className="w-full h-px bg-border " />
-                            <p className="pl-4 text-secondary-text my-2 max-[475px]:my-0 text-md max-[475px]:text-sm ">Web developer & Design Engineer</p>  
-                            <div className="w-full h-px bg-border " />
-                            <p className="pl-4 text-secondary-text my-2 max-[475px]:my-0 text-xs ">Nagpur, Maharashtra, India</p>
+                            <p className="pl-4 text-secondary-text mt-2 max-[475px]:my-0 text-md max-[475px]:text-sm ">Web developer & Design Engineer</p>  
                         </div>
                     </div>
                 </div>
