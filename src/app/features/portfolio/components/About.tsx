@@ -9,14 +9,14 @@ export const About = () => {
            transform -rotate-90  absolute sm:top-7 sm:-left-12 sm:text-lg top-5 -left-7.5
         ">About Me</h2>
         
-        <p className="text-secondary-text px-4 my-2 text-sm flex items-center">
+        <div className="text-secondary-text px-4 my-2 text-sm flex items-center">
          <ul className="list-disc list-inside">
             <li className="pb-2">Design Engineer with a strong design sensibility, focused on pixel-perfect execution and attention to detail</li>
             <li className="pb-2">Skilled in Next.js, React, TypeScript, and modern front-end technologies, building clean and user-centric web interfaces</li>
             <li className="pb-2">Passionate about learning new technologies and turning ideas into reality through polished, thoughtfully crafted personal projects
             </li>
          </ul>
-        </p>
+        </div>
       </div>
     </div>
   );
