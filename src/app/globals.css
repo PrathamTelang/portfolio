@@ -21,6 +21,10 @@ body {
 .font-body {
   font-family: var(--font-body);
 }
+.font-serif {
+  font-family: var(--font-instrument-serif);
+}
+
 
 
 /* ================================
@@ -123,6 +127,7 @@ body {
 :root {
     --font-body: var(--font-source-code-pro);
     --font-display: var(--font-space-grotesk);
+
 
     --radius: 0.625rem;
 
