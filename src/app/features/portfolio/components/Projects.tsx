@@ -141,11 +141,11 @@ export default function Projects() {
                   </p>
                 </div>
 
-                <div className="pt-2">
+                <div className="p-4">
                   <Image
                     src={item.image}
                     alt={item.alt}
-                    className="rounded-lg px-4 pb-4"
+                    className="rounded-lg "
                   />
                 </div>
                 <Line />
