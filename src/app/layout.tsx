@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Source_Code_Pro, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./features/portfolio/components/Navbar";
 import { Footer } from "./features/portfolio/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const sourceCodePro = Source_Code_Pro({
+subsets: ['latin'],
+weight: ['200','300','400','500','600','700','800','900'],
+variable: '--font-source-code-pro',
+display: 'swap',
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const spaceGrotesk = Space_Grotesk({
+subsets: ['latin'],
+weight: '700',
+variable: '--font-space-grotesk',
+display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://prathamtelang-portfolio.vercel.app/"),
@@ -54,7 +58,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html  lang="en" suppressHydrationWarning className={`${sourceCodePro.variable} ${spaceGrotesk.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -72,7 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} min-h-screen w-screen`}>
+      <body className="min-h-screen w-screen">
         <Navbar/>
         <div id="content" className="pt-12">
   {children}
