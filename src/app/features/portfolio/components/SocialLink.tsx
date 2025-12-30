@@ -43,8 +43,8 @@ export default function SocialLinks() {
     <div className="w-screen flex justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)] edge-fade-x
          ">
         <div className="w-11/12 lg:w-3/5 relative bg-background  border-x border-border  ">
-            <h2 className="text-xs font-semibold text-[#F6D743] 
-           transform -rotate-90  absolute sm:top-11 sm:-left-16.5 sm:text-lg top-7.5 -left-10.5
+            <h2 className="text-xs font-serif italic text-[#F6D743] 
+           transform -rotate-90  absolute sm:top-6.5 sm:-left-11.5 sm:text-lg top-4 -left-7
         ">Social Links</h2>
         
           <GridForSocialLinks items={socialLinks.map(link => ({

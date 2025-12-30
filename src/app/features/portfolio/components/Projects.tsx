@@ -97,9 +97,9 @@ export default function Projects() {
 
         {/* Section label */}
         <h2
-          className="text-xs font-semibold text-[#00A6F4]
-          transform -rotate-90 absolute sm:top-7 sm:-left-12
-          sm:text-lg top-5 -left-8"
+          className="text-xs font-serif italic text-[#00A6F4]
+          transform -rotate-90 absolute sm:top-3 sm:-left-8
+          sm:text-lg top-2 -left-5"
         >
           Projects
         </h2>

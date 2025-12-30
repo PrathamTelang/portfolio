@@ -7,8 +7,8 @@ export const About = () => {
   edge-fade-x">
       <div className="w-11/12 lg:w-3/5 relative border-x bg-background border-border
       ">
-          <h2 className="text-xs z-50 font-semibold text-[#615FFF] 
-           transform -rotate-90  absolute sm:top-7 sm:-left-12 sm:text-lg top-5 -left-7.5
+          <h2 className="text-xs z-50 font-serif italic text-[#615FFF] 
+           transform -rotate-90  absolute sm:top-4 sm:-left-9 sm:text-lg top-3 -left-6
         ">About Me</h2>
         
         <div className="text-secondary-text px-4 my-2 text-sm flex items-center">
