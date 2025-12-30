@@ -11,6 +11,7 @@ import PortfolioSS from "../images/og-portfolio.png";
 import NexRead from "../images/og-nexread.png";
 import Button from "./Button";
 import { Line } from "./Line";
+import { createPortal } from "react-dom";
 
 /* ------------------------------------------------------------------ */
 /* Data */
@@ -197,7 +198,7 @@ function ProjectModal({
 
   const item = items[index];
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
       onClick={onClose}
@@ -245,6 +246,7 @@ function ProjectModal({
           />
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
