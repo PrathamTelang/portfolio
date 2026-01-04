@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pratham Telang | Design Engineer ",
     description:
-      "Explore projects, skills, and experience of Pratham Telang — a full stack developer building fast, scalable, and user-focused web applications.",
+      "Portfolio of Pratham Telang, a Design Engineer crafting expressive, performant web interfaces and systems.",
     url: "https://prathamtelang-portfolio.vercel.app/",
     siteName: "Pratham Telang Portfolio",
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pratham Telang | Design Engineer",
     description:
-      "Full stack developer portfolio showcasing projects, skills, and modern web development expertise.",
+      "Design Engineer portfolio showcasing interfaces, systems, and modern web experiences.",
     images: ["/og-portfolio.png"],
   },
 };
