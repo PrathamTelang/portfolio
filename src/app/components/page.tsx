@@ -4,9 +4,6 @@ import Grid from "../features/portfolio/components/Grid";
 
 const components = [
   { name: "SpotlightCard", slug: "spotlight-card", image: "/components/thumbnails/og-spotlightCard.png" },
-  { name: "SparkClickLayer", slug: "spark-click", image: "/components/thumbnails/spark-click.png" },
-  { name: "NewtonCradleLoader", slug: "newton-credle-loader", image: "/components/thumbnails/newton-cradle-loader.png" },
-  { name: "OfferButton", slug: "offer-button", image: "/components/thumbnails/offer-button.png" },
 ];
 
 export default function ComponentsPage() {
