@@ -1,6 +1,8 @@
 import Image from "next/image"
 import profilePic from "../images/heroImage.jpg"
 import IndianFlag from "../images/Flag_of_India.svg.png"
+import { RiVerifiedBadgeFill } from "react-icons/ri"
+import { GoDotFill } from "react-icons/go"
 
 export const Hero = () => {
     return (
@@ -34,7 +36,13 @@ export const Hero = () => {
                     <div className="w-full h-px bg-border " />
                     <div className="flex items-end">
                         <div className="w-full">
-                            <h1 className="pl-4 text-3xl font-serif italic sm:text-5xl" >Pratham Telang</h1>
+                            <div className="pl-4 flex items-center justify-between">
+                                <div className="flex items-center gap-4">
+                                    <h1 className=" text-3xl font-serif italic sm:text-5xl" >Pratham Telang</h1>
+                                <RiVerifiedBadgeFill className="text-2xl text-[#1D9BF0]" />
+                                </div>
+                                <div className="mr-4 px-4 py-1.5 border border-border rounded-2xl flex items-center gap-2 bg-border/50 text-sm"><GoDotFill className="text-[#00BC7D] animate-ping" />Available for work</div>
+                            </div>
                             <div className="w-full h-px bg-border " />
                             <p className="pl-4 text-secondary-text mt-2 max-[475px]:my-0 text-md max-[475px]:text-sm ">Web developer & Design Engineer</p>  
                         </div>
