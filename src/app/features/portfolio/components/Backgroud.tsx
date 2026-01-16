@@ -51,7 +51,7 @@ bg-size-[4px_4px]
           bg-background
           border border-border
           p-3
-          text-sm text-secondary-text
+          text-sm 
           shadow-lg
           pointer-events-none
         "
@@ -59,12 +59,12 @@ bg-size-[4px_4px]
         <div>
           
         <div className='flex justify-between items-center'>
-          <div className='text-primary text-2xl'>प्रथम</div>
+          <div className='text-primary-text text-2xl'>प्रथम</div>
           <div>---------------------</div>
         <div className='text-foreground font-serif italic text-md'>Pratham</div>
-
         </div>
-        <div>
+
+        <div className='text-secondary-text'>
          is a Sanskrit-origin word meaning
         &quot;first, foremost, beginning&quot; — symbolizing
         leadership and origin.
