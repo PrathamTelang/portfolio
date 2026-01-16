@@ -135,7 +135,7 @@ body {
     --background: #FFFFFF;
     --primary-text: #000000;
     --secondary-text: #404040;
-    --border: #E5E5E5;
+    --border: #EEEEF0;
 
     /* Cards & Popovers */
     --card: #F9F9F9;
@@ -184,7 +184,7 @@ body {
     --background: #000000;
     --primary-text: #FFFFFF;
     --secondary-text: #99A1AF;
-    --border: #1D202A;
+    --border: #27272A;
 
     --card: #0B101B;
     --card-foreground: #FFFFFF;
