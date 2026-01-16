@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-import { FaPlus } from 'react-icons/fa'
 import { motion } from "motion/react";
 
 
@@ -18,8 +17,8 @@ function Button(props: ButtonProps) {
     <a
     onClick={props.onClick}
     style={{ cursor: props.cursor }} 
-    className="group relative px-1.5 text-lg text-black dark:text-white">
-      <span className="absolute inset-0 border border-dashed border-black/60 bg-black/10 group-hover:bg-black/15 dark:border-white/30">
+    className="group relative px-1.5 text-lg bg-border/50 group-hover:bg-border/65 ">
+      <span className="absolute inset-0 border border-dashed border-border ">
       </span>
     {props.startIcon}
     {props.text}
