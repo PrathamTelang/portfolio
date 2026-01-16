@@ -18,8 +18,8 @@ function Button(props: ButtonProps) {
     <a
     onClick={props.onClick}
     style={{ cursor: props.cursor }} 
-    className="group relative px-1.5 text-lg text-sky-800 dark:text-sky-300">
-      <span className="absolute inset-0 border border-dashed border-sky-300/60 bg-sky-400/10 group-hover:bg-sky-400/15 dark:border-sky-300/30">
+    className="group relative px-1.5 text-lg text-black dark:text-white">
+      <span className="absolute inset-0 border border-dashed border-black/60 bg-black/10 group-hover:bg-black/15 dark:border-white/30">
       </span>
     {props.startIcon}
     {props.text}
@@ -28,7 +28,7 @@ function Button(props: ButtonProps) {
       width="5" 
       height="5" 
       viewBox="0 0 5 5" 
-      className="absolute top-[-2px] left-[-2px] fill-sky-300 dark:fill-sky-300/50 drop-shadow-2xl drop-shadow-sky-400/20 dark:drop-shadow-sky-900/20
+      className="absolute top-[-2px] left-[-2px] fill-black dark:fill-white/50 drop-shadow-2xl drop-shadow-black/20 dark:drop-shadow-white/20
 
 "
       animate={{ opacity: [0, 1, 0] }}
@@ -44,7 +44,7 @@ function Button(props: ButtonProps) {
     width="5" 
     height="5" 
     viewBox="0 0 5 5" 
-    className="absolute top-[-2px] right-[-2px] fill-sky-300 dark:fill-sky-300/50" 
+    className="absolute top-[-2px] right-[-2px] fill-black dark:fill-white/50" 
     animate={{ opacity: [0, 1, 0] }}
       transition={{
         duration: 2,
@@ -57,14 +57,14 @@ function Button(props: ButtonProps) {
     width="5" 
     height="5" 
     viewBox="0 0 5 5" 
-    className="absolute bottom-[-2px] left-[-2px] fill-sky-300 dark:fill-sky-300/50" 
+    className="absolute bottom-[-2px] left-[-2px] fill-black dark:fill-white/50" 
     animate={{ opacity: [0, 1, 0] }}
       transition={{
         duration: 2,
         repeat: Infinity,
         ease: "easeInOut"
       }}><path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path></motion.svg>
-    <motion.svg width="5" height="5" viewBox="0 0 5 5" className="absolute right-[-2px] bottom-[-2px] fill-sky-300 dark:fill-sky-300/50" animate={{ opacity: [0, 1, 0] }}
+    <motion.svg width="5" height="5" viewBox="0 0 5 5" className="absolute right-[-2px] bottom-[-2px] fill-black dark:fill-white/50" animate={{ opacity: [0, 1, 0] }}
       transition={{
         duration: 2,
         repeat: Infinity,
