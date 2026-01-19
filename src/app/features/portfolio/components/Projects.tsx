@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import type { StaticImageData } from "next/image";
-import { RxCross2 } from "react-icons/rx";
 
 import PulseRead from "../images/og-pulseread.png";
 import LinkStash from "../images/og-linkstash.png";
@@ -11,23 +9,21 @@ import PortfolioSS from "../images/og-portfolio.png";
 import NexRead from "../images/og-nexread.png";
 import Button from "./Button";
 import { Line } from "./Line";
-import { createPortal } from "react-dom";
+import { MdOutlineArrowOutward } from "react-icons/md";
+import { RiGithubLine } from "react-icons/ri";
 
-/* ------------------------------------------------------------------ */
-/* Data */
-/* ------------------------------------------------------------------ */
 
 const projectsLinks = [
   {
     name: "LinkStash",
-    description: "Save and organize your links",
+    description: "Tool to save, organize, and quickly access important links.",
     image: LinkStash,
     alt: "LinkStash Preview",
     giturl: "https://github.com/PrathamTelang/LinkStash",
   },
   {
     name: "PulseRead",
-    description: "Master speed reading, one pulse at a time.",
+    description: "Speed-reading app that flashes words from any PDF or book at adjustable WPM.",
     image: PulseRead,
     alt: "PulseRead Preview",
     weburl: "https://pulse-read.vercel.app/",
@@ -35,7 +31,7 @@ const projectsLinks = [
   },
   {
     name: "NexRead",
-    description: "AI Summaries & Insights Instantly",
+    description: "AI tool that provides insights, short & long summaries, with audio support.",
     image: NexRead,
     alt: "NexRead Preview",
     weburl: "https://nex-read.vercel.app/",
@@ -43,7 +39,7 @@ const projectsLinks = [
   },
   {
     name: "Portfolio",
-    description: "My personal portfolio website",
+    description: "Personal website showcasing projects with clean UI and smooth motion.",
     image: PortfolioSS,
     alt: "Portfolio Preview",
     weburl: "https://prathamtelang-portfolio.vercel.app/",
@@ -80,13 +76,6 @@ function useGridColumns() {
 
 export default function Projects() {
   const cols = useGridColumns();
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-
-  const openAt = (index: number) => {
-    setSelectedIndex(index);
-    setIsOpen(true);
-  };
 
   return (
     <div
@@ -124,30 +113,54 @@ export default function Projects() {
             relative z-20
           "
         >
-          {projectsLinks.map((item, idx) => (
+          {projectsLinks.map((item) => (
             <li key={item.name}>
               <button
-                onClick={() => openAt(idx)}
                 className="
-                  w-full text-left  cursor-pointer
+                  w-full text-left
                   hover:bg-hover
                   transition
                 "
               >
                 <Line />
-                <div className="pt-2 pl-4">
-                  <h3 className="font-semibold">{item.name}</h3>
-                  <p className="text-sm text-secondary-text">
-                    {item.description}
-                  </p>
-                </div>
+                
 
-                <div className="p-4">
+                <div className="">
                   <Image
                     src={item.image}
                     alt={item.alt}
-                    className="rounded-lg "
+                    className="py-2 px-4 border-b border-border "
                   />
+                  
+                  <div className=" mt-2 py-2 px-4 border-t border-border">
+                    
+                  <div className="flex justify-between items-center mb-2 ">
+                    <h3 className="text-2xl font-serif italic">{item.name}</h3>
+                  <div className="flex justify-center items-center gap-2">
+                    <Button
+                    text={<RiGithubLine />}
+                    fontSize="25px"
+                    variant="primary"
+                    cursor={item.giturl ? "pointer" : "not-allowed"}
+                    
+                    onClick={() => item.giturl && window.open(item.giturl, "_blank")}
+                  />
+                    <Button
+                    text={<MdOutlineArrowOutward />}
+                    fontSize="25px"
+                    variant="secondary"
+                    cursor={item.weburl ? "pointer" : "not-allowed"}
+                    onClick={() => item.weburl && window.open(item.weburl, "_blank")}
+                  />
+                  
+                  </div>
+                  </div>
+                  <p className="text-sm text-secondary-text">
+                    {item.description}
+                  </p>
+                  
+                </div>
+                  
                 </div>
                 <Line />
               </button>
@@ -155,98 +168,8 @@ export default function Projects() {
           ))}
         </ul>
 
-        {/* Modal */}
-        {isOpen && selectedIndex !== null && (
-          <ProjectModal
-            items={projectsLinks}
-            startIndex={selectedIndex}
-            onClose={() => setIsOpen(false)}
-          />
-        )}
+        
       </div>
     </div>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/* Modal */
-/* ------------------------------------------------------------------ */
-
-type Project = {
-  name: string;
-  description: string;
-  image: StaticImageData;
-  alt: string;
-  weburl?: string;
-  giturl?: string;
-};
-
-function ProjectModal({
-  items,
-  startIndex,
-  onClose,
-}: {
-  items: Project[];
-  startIndex: number;
-  onClose: () => void;
-}) {
-  const [index, setIndex] = useState(startIndex);
-
-  useEffect(() => {
-    setIndex(startIndex);
-  }, [startIndex]);
-
-  const item = items[index];
-
-  return createPortal(
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
-      onClick={onClose}
-    >
-      <div
-        className="bg-background border border-border rounded-lg
-        p-4 w-11/12 max-w-3xl"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex items-start justify-between">
-          <div>
-            <h3 className="font-semibold">{item.name}</h3>
-            <p className="text-sm text-secondary-text">
-              {item.description}
-            </p>
-          </div>
-
-          <button
-            onClick={onClose}
-            aria-label="Close"
-            className="text-secondary-text"
-          >
-            <RxCross2 className="text-xl cursor-pointer" />
-          </button>
-        </div>
-
-        <div className="mt-4">
-          <Image
-            src={item.image}
-            alt={item.alt}
-            className="rounded-lg w-full h-auto"
-          />
-        </div>
-
-        <div className="pt-3 flex gap-4">
-          <Button
-            text="View Project"
-            cursor={item.weburl ? "pointer" : "not-allowed"}
-            onClick={() => item.weburl && window.open(item.weburl, "_blank")}
-          />
-          <Button
-            text="View Code"
-            cursor={item.giturl ? "pointer" : "not-allowed"}
-            onClick={() => item.giturl && window.open(item.giturl, "_blank")}
-          />
-        </div>
-      </div>
-    </div>,
-    document.body
   );
 }
