@@ -48,7 +48,7 @@ bg-size-[4px_4px]
         className="
           z-9999
           w-80
-          bg-background
+          bg-background/25
           border border-border
           p-3
           text-sm 
