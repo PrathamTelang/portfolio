@@ -46,6 +46,8 @@ export const Navbar = () => {
       <div>
             <Button
               text="Email"
+              fontSize="20px"
+              variant="primary"
               onClick={() => window.open("https://mail.google.com/mail/?view=cm&fs=1&to=prathamtelang007@gmail.com", "_blank")} 
             />
           </div>
