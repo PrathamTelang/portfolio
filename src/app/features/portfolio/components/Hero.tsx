@@ -1,28 +1,89 @@
+"use client"
 import Image from "next/image"
 import profilePic from "../images/heroImage.jpg"
 import IndianFlag from "../images/Flag_of_India.svg.png"
 import { RiVerifiedBadgeFill } from "react-icons/ri"
 import { GoDotFill } from "react-icons/go"
+import { useEffect, useRef, useState } from "react"
+import { createPortal } from "react-dom"
+import { AnimatePresence, motion } from "motion/react"
 
 export const Hero = () => {
+      const [show, setShow] = useState(false)
+    const ref = useRef<HTMLDivElement>(null)
+    const [rect, setRect] = useState<DOMRect | null>(null)
+
+    const [, tick] = useState(0)
+
+useEffect(() => {
+  const id = setInterval(() => tick(t => t + 1), 60_000)
+  return () => clearInterval(id)
+}, [])
+
+    const time = new Date().toLocaleTimeString("en-IN", {
+  timeZone: "Asia/Kolkata",
+  hour: "2-digit",
+  minute: "2-digit",
+})
+
+    
     return (
         <div className="w-screen  flex justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)] edge-fade-x
              ">
             <div className="flex border-x border-border   bg-background w-11/12 lg:w-3/5  max-[475px]:max-h-36 max-h-full">
                 <div className="h-48 min-w-48 max-[475px]:min-w-36 max-[475px]:min-h-full">
-                    <div className="absolute group inline-block ">
-                    <Image
-                        alt="Indian Flag"
-                        src={IndianFlag}
-                        className="h-12 w-auto max-[475px]:h-8"
-                      />
-                      <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 
-                                      opacity-0 group-hover:opacity-100 
-                                      transition-opacity duration-300 
-                                      bg-gray-800  text-white text-sm rounded py-1 px-2 whitespace-nowrap pointer-events-none">
-                        I'm from India
-                      </div>
-                    </div>
+                    <motion.div className="absolute group inline-block
+                     "
+                     ref={ref}
+                        onHoverStart={() => {
+    const r = ref.current?.getBoundingClientRect()
+    if (r) setRect(r)
+    setShow(true)
+  }}
+  onHoverEnd={() => setShow(false)}>
+<Image
+    alt="Indian Flag"
+    src={IndianFlag}
+    className="h-12 w-auto max-[475px]:h-8"
+/>
+{show && rect &&
+    createPortal(
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 6 }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          style={{
+            position: "fixed",
+            left: rect.left + rect.width / 2,
+            top: rect.top - 40,
+            transform: "translateX(-50%)",
+          }}
+          className="
+            z-50
+            backdrop-blur-md
+            border border-border
+            p-3
+            text-sm 
+            shadow-lg
+            pointer-events-none
+          "
+        >
+        <div>
+            Nagpur, IN
+            <div className="text-xs text-secondary-text">
+  Local time · {time} IST
+</div>
+
+        </div>
+        </motion.div>
+      </AnimatePresence>,
+      document.body
+    )
+}
+                      
+                    </motion.div>
 
                     <Image
                         src={profilePic} 
