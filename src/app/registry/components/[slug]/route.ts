@@ -1,6 +1,6 @@
 import { readFile } from "fs/promises"
 import path from "path"
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 
 /**
  * Map shadcn install names → your actual file names
@@ -13,10 +13,11 @@ const COMPONENT_MAP: Record<string, string> = {
 }
 
 export async function GET(
-  _: Request,
-  { params }: { params: { slug: string } }
+  _request: NextRequest,
+  context: { params: Promise<{ slug: string }> }
 ) {
-  const fileName = COMPONENT_MAP[params.slug]
+  const { slug } = await context.params
+  const fileName = COMPONENT_MAP[slug]
 
   if (!fileName) {
     return new NextResponse("Component not found", { status: 404 })
