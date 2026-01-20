@@ -1,6 +1,6 @@
 "use client";
 import { FaGitAlt, FaNodeJs, FaReact } from "react-icons/fa";
-import { motion, useAnimation } from "motion/react";
+import { motion } from "motion/react";
 import { SiExpress, SiJavascript, SiMongodb, SiPostgresql, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
@@ -25,7 +25,6 @@ const technologies = [
 ];
 
 export const Skills = () => {
-    const controls = useAnimation();
   return (
     <div className="w-screen flex justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)] edge-fade-x
          ">
@@ -37,23 +36,16 @@ export const Skills = () => {
         ">
           <div className="overflow-hidden">
             <motion.div
-      className="flex items-center w-max"
-      animate={controls}
-      initial={{ x: "0%" }}
-      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      onHoverStart={() => controls.stop()}
-      onHoverEnd={() =>
-        controls.start({
-          x: ["0%", "-50%"],
-        })
-      }
-    >
-      {[...technologies, ...technologies].map((technology, index) => (
-        <div key={`${technology.name}-${index}`} className="inline-block m-4">
-          <Tooltip icon={technology.icon} link={technology.link} />
-        </div>
-      ))}
-    </motion.div>
+          className="flex items-center w-max "
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          >
+            {[...technologies, ...technologies].map((technology, index) => (
+              <div key={`${technology.name}-${index}`} className="inline-block m-4 text-center">
+                <Tooltip icon={technology.icon} link={technology.link} />
+              </div>
+            ))}
+          </motion.div>
           </div>
             
           
