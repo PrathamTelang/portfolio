@@ -21,7 +21,11 @@ const instrumentSerif = Instrument_Serif({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://prathamtelang-portfolio.vercel.app/"),
+  metadataBase: new URL("https://prathamtelang-portfolio.vercel.app"),
+
+  alternates: {
+  canonical: "https://prathamtelang-portfolio.vercel.app",
+},
 
   title: "Pratham Telang | Design Engineer",
   description:
@@ -30,31 +34,33 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.svg",
   },
+openGraph: {
+  title: "Pratham Telang | Design Engineer",
+  description:
+    "Portfolio of Pratham Telang, a Design Engineer crafting expressive, performant web interfaces and systems.",
+  url: "https://prathamtelang-portfolio.vercel.app",
+  siteName: "Pratham Telang Portfolio",
+  images: [
+    {
+      url: "https://prathamtelang-portfolio.vercel.app/og-portfolio.png",
+      width: 1200,
+      height: 630,
+      alt: "Pratham Telang Portfolio Website Preview",
+    },
+  ],
+  type: "website",
+},
 
-  openGraph: {
-    title: "Pratham Telang | Design Engineer ",
-    description:
-      "Portfolio of Pratham Telang, a Design Engineer crafting expressive, performant web interfaces and systems.",
-    url: "https://prathamtelang-portfolio.vercel.app/",
-    siteName: "Pratham Telang Portfolio",
-    images: [
-      {
-        url: "/og-portfolio.png",
-        width: 1200,
-        height: 630,
-        alt: "Pratham Telang Portfolio Website Preview",
-      },
-    ],
-    type: "website",
-  },
+twitter: {
+  card: "summary_large_image",
+  title: "Pratham Telang | Design Engineer",
+  description:
+    "Design Engineer portfolio showcasing interfaces, systems, and modern web experiences.",
+  images: [
+    "https://prathamtelang-portfolio.vercel.app/og-portfolio.png",
+  ],
+},
 
-  twitter: {
-    card: "summary_large_image",
-    title: "Pratham Telang | Design Engineer",
-    description:
-      "Design Engineer portfolio showcasing interfaces, systems, and modern web experiences.",
-    images: ["/og-portfolio.png"],
-  },
 };
 
 
