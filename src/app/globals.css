@@ -249,4 +249,14 @@ body {
   );
 }
 
+/* Change text selection color */
+::selection {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+::-moz-selection {
+  background-color: rgba(128, 128, 128, 0.4);
+
+}
+
 
