@@ -1,10 +1,28 @@
+"use client";
 import { FaGitAlt, FaNodeJs, FaReact } from "react-icons/fa";
-import { Line } from "./Line";
+import { motion } from "motion/react";
 import { SiExpress, SiJavascript, SiMongodb, SiPostgresql, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import motionIconpng from "../images/motion.png";
 import Image from "next/image";
+import { link } from "fs";
+
+
+const technologies = [
+  { name: "JavaScript", icon: <SiJavascript size={40} color="#F7DF1E" />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { name: "TypeScript", icon: <SiTypescript size={40} color="#3178C6" /> , link: "https://www.typescriptlang.org/" },
+  { name: "React", icon: <FaReact size={40} color="#61DAFB" /> , link: "https://react.dev/" },
+  { name: "Next.js", icon: <RiNextjsFill size={40} className="dark:text-white dark:bg-black " />  , link: "https://nextjs.org/" },
+  { name: "Node.js", icon: <FaNodeJs size={40} color="#339933" /> , link: "https://nodejs.org/" },
+  { name: "Express.js", icon: <SiExpress size={40} className="dark:text-white dark:bg-black " /> , link: "https://expressjs.com/" },
+  { name: "MongoDB", icon: <SiMongodb size={40} color="#47A248" />, link: "https://www.mongodb.com/" },
+  { name: "PostgreSQL", icon: <SiPostgresql size={40} color="#336791" /> , link: "https://www.postgresql.org/" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss size={40} color="#38B2AC" /> , SiTypescriptlink: "https://tailwindcss.com/" },
+  { name: "Git", icon: <FaGitAlt size={40} color="#F05032" /> , link: "https://git-scm.com/" },
+  { name: "VS Code", icon: <VscVscode size={40} color="#007ACC" /> , link: "https://code.visualstudio.com/" },
+  { name: "Framer Motion", icon: <Image src={motionIconpng} alt="Framer Motion" width={40} height={40} /> , link: "https://www.framer.com/motion/" },
+];
 
 export const Skills = () => {
   return (
@@ -16,54 +34,21 @@ export const Skills = () => {
         ">TechStack</h2>
         <div className="bg-[radial-gradient(circle,var(--color-border)_1px,transparent_1px)]
         ">
-          <div className="relative z-10">
-
-            {/* Frontend */}
-            <div className="pt-2">
-              <h3 className="text-lg px-4 font-semibold text-primary-text ">Frontend</h3>
-              <div className="flex items-center pl-4 text-4xl gap-4">
-                <Tooltip icon={<SiTypescript className="text-[#007ACC]" />} text="TypeScript" link="https://www.typescriptlang.org/" />
-                <Tooltip icon={<SiJavascript className="text-[#F7DF1E]" />} text="JavaScript" link="https://www.javascript.com/" />
-                <Tooltip icon={<FaReact className="text-[#61DAFB]" />} text="React" link="https://reactjs.org/" />
-                <Tooltip icon={<RiNextjsFill className="dark:text-white" />} text="Next.js" link="https://nextjs.org/" />
-                <Tooltip icon={<SiTailwindcss className="text-[#06B6D4]" />} text="Tailwind CSS" link="https://tailwindcss.com/" />
+          <div className="overflow-hidden">
+            <motion.div
+          className="flex items-center w-max "
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          >
+            {[...technologies, ...technologies].map((technology, index) => (
+              <div key={`${technology.name}-${index}`} className="inline-block m-4 text-center">
+                <Tooltip icon={technology.icon} link={technology.link} />
               </div>
-            </div>
-
-            {/* Backend */}
-            <div className="pt-2">
-              <h3 className="text-lg px-4 font-semibold ">Backend</h3>
-              <div className="flex items-center pl-4 text-4xl gap-4">
-                <Tooltip icon={<FaNodeJs className="text-[#5EAF47]" />} text="Node.js" link="https://nodejs.org/" />
-                <Tooltip icon={<SiExpress className="dark:text-white" />} text="Express" link="https://expressjs.com/" />
-                <Tooltip icon={<SiMongodb className="text-[#6CAC48]" />} text="MongoDB" link="https://www.mongodb.com/" />
-                <Tooltip icon={<SiPostgresql className="text-[#396C94]" />} text="PostgreSQL" link="https://www.postgresql.org/" />
-              </div>
-            </div>
-
-            {/* Design & Tools */}
-            <div className="pt-2">
-              <h3 className="text-lg px-4 font-semibold ">Design and Tools</h3>
-              <div className="flex items-center pl-4 text-4xl gap-4">
-                <Tooltip icon={<FaGitAlt className="text-[#DE4C36]" />} text="Git" link="https://git-scm.com/" />
-                <Tooltip icon={<VscVscode className="text-[#2AAFF2]" />} text="VSCode" link="https://code.visualstudio.com/" />
-                <Tooltip
-                  icon={
-                    <Image
-                      src={motionIconpng}
-                      alt="Motion"
-                      width={40}
-                      height={40}
-                      className="object-contain p-1"
-                    />
-                  }
-                  text="Motion"
-                  link="https://motion.dev/"
-                />
-              </div>
-            </div>
-
+            ))}
+          </motion.div>
           </div>
+            
+          
         </div>
       </div>
     </div>
@@ -71,18 +56,12 @@ export const Skills = () => {
 };
 
 // Tooltip component
-const Tooltip = ({ icon, text, link }: { icon: any; text: any; link?: any }) => {
+const Tooltip = ({ icon,  link }: { icon: any; link?: any }) => {
   return (
-    <div className="relative group cursor-pointer">
+    <div className="relative group cursor-pointer p-10">
       <a href={link} target="_blank" rel="noopener noreferrer">
         {icon}
       </a>
-      <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 
-                      opacity-0 group-hover:opacity-100 
-                      transition-opacity duration-300 
-                      bg-border/50 border border-border text-primary-text text-sm rounded py-1 px-2 whitespace-nowrap pointer-events-none">
-        {text}
-      </div>
     </div>
   );
 };
