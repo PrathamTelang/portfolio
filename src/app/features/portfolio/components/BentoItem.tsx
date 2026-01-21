@@ -28,7 +28,7 @@ export function BentoItem({
           {icon}
         </div>
         <div className="flex flex-col justify-center items-center sm:pt-2">
-          <h3 className="font-semibold">{name}</h3>
+          <h3 className="font-semibold font-serif italic text-xl">{name}</h3>
           <p className="text-sm text-neutral-400">{username}</p>
         </div>
       </div>
