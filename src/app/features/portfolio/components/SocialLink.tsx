@@ -8,6 +8,8 @@ import { Line } from "./Line";
 import Grid from "./Grid";
 import Image from "next/image";
 import React from "react";
+import { BentoGrid } from "./BentoGrid";
+import { BentoItem } from "./BentoItem";
 
 
 const socialLinks = [
@@ -35,6 +37,18 @@ const socialLinks = [
     icon: <FaReddit className="text-[#FF4500] dark:bg-background rounded-full" />,
     url: "https://www.reddit.com/user/MissionBasis7442/",
   },
+  {
+    name: "YouTube",
+    username: "Pratham Telang",
+    icon: <FaYoutube className="text-[#FF0000] rounded-md" />,
+    url: "https://www.youtube.com/@prathamtelang",
+  },
+  {
+    name: "Daily.dev",
+    username: "Pratham Telang",
+    icon: <SiDailydotdev className="text-[#000000] dark:text-white rounded-md" />,
+    url: "https://daily.dev/prathamtelang",
+  }
 ];
 
 export default function SocialLinks() {
@@ -47,12 +61,33 @@ export default function SocialLinks() {
            transform -rotate-90  absolute sm:top-6.5 sm:-left-11.5 sm:text-lg top-4 -left-7
         ">Social Links</h2>
         
-          <GridForSocialLinks items={socialLinks.map(link => ({
-          name: link.name,
-          username: link.username,
-          icon: link.icon,
-          url: link.url,
-        }))} />
+          <BentoGrid>
+  {socialLinks.map((link, index) => (
+    <BentoItem
+      key={link.name}
+      name={link.name}
+      username={link.username}
+      icon={link.icon}
+      url={link.url}
+      className={
+            index === 0
+          ? "md:row-span-1"
+          : index === 1
+          ? "md:col-span-1"
+          : index === 2
+          ? "md:col-span-2"
+          : index === 3
+          ? "md:col-span-1"
+          : index === 4
+          ? "md:col-span-2"
+          : index === 5
+          ? "md:col-span-1"
+          : "md:col-span-2"
+
+      }
+    />
+  ))}
+</BentoGrid>
         
         </div>
     </div>
