@@ -84,7 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="min-h-screen w-screen">
+      <body className="min-h-screen w-screen overflow-x-hidden">
         <Navbar/>
         <div id="content" className="pt-12">
   {children}
