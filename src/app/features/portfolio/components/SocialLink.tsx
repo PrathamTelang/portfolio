@@ -53,8 +53,8 @@ export default function SocialLinks() {
          ">
         <div className="w-11/12 lg:w-3/5 relative bg-background  border-x border-border  ">
             <h2 className="text-xs font-serif italic text-[#F6D743] 
-           transform -rotate-90  absolute sm:top-6.5 sm:-left-11.5 sm:text-lg top-4 -left-7
-        ">Contacts</h2>
+           transform -rotate-90  absolute sm:top-3.5 sm:-left-8.5 sm:text-lg top-2.5 -left-5
+        ">Connect</h2>
         
           <BentoGrid>
   {socialLinks.map((link, index) => (
