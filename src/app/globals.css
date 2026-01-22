@@ -233,21 +233,29 @@ body {
 }
 
 .edge-fade-x {
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 25%,
-    black 75%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 25%,
-    black 75%,
-    transparent
-  );
+  /* default: no mask */
 }
+
+@media (min-width: 1024px) {
+  .edge-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 20%,
+      black 80%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 20%,
+      black 80%,
+      transparent
+    );
+  }
+}
+
+
 
 /* Change text selection color */
 ::selection {

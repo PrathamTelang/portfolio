@@ -49,8 +49,7 @@ const socialLinks = [
 export default function SocialLinks() {
   return (
     
-    <div className="w-screen flex justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)] edge-fade-x
-         ">
+    <div className="w-screen flex justify-center bg-background bg-[repeating-linear-gradient(45deg,var(--color-border)_0_1px,transparent_1px_8px)] edge-fade-x">
         <div className="w-11/12 lg:w-3/5 relative bg-background  border-x border-border  ">
             <h2 className="text-xs font-serif italic text-[#F6D743] 
            transform -rotate-90  absolute sm:top-3.5 sm:-left-8.5 sm:text-lg top-2.5 -left-5
