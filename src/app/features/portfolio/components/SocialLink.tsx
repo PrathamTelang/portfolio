@@ -1,12 +1,10 @@
 "use client";
-import { FaLinkedin, FaGithub, FaXTwitter, FaYoutube, FaReddit, FaSquareXTwitter , } from "react-icons/fa6";
-import Link from "next/link";
+import { FaLinkedin, FaReddit, FaSquareXTwitter, } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
-import { Line } from "./Line";
-import React from "react";
 import { BentoGrid } from "./BentoGrid";
 import { BentoItem } from "./BentoItem";
 import { MdAlternateEmail } from "react-icons/md";
+import { BsFiletypePdf } from "react-icons/bs";
 
 
 const socialLinks = [
@@ -39,6 +37,12 @@ const socialLinks = [
     username: "prathamtelang007@gmail.com",
     icon: <MdAlternateEmail />,
     url: "mailto:prathamtelang007@gmail.com",
+  },
+  {
+    name: "Resume",
+    username: "View Resume",
+    icon: <BsFiletypePdf />,
+    url: "/Pratham_Telang_Resume.pdf",
   }
 ];
 
