@@ -2,6 +2,7 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { oneLight } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IconCheck, IconCopy } from "@tabler/icons-react";
 
 type CodeBlockProps = {
@@ -54,7 +55,14 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-    <div className="relative w-full rounded-lg bg-card p-4 font-mono text-sm">
+    <div
+  className="
+    relative w-full rounded-lg p-4 font-mono text-sm
+    bg-zinc-50 text-zinc-900
+    dark:bg-zinc-900 dark:text-zinc-100
+    max-h-[65vh] overflow-auto
+  "
+>
       <div className="flex flex-col gap-2">
         {tabsExist && (
           <div className="flex  overflow-x-auto">
@@ -74,41 +82,73 @@ export const CodeBlock = ({
           </div>
         )}
         {!tabsExist && filename && (
-          <div className="flex justify-between items-center py-2">
+          <div className="flex justify-between items-center py-2 ">
             <div className="text-xs text-zinc-400">{filename}</div>
             <button
               onClick={copyToClipboard}
-              className="flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200 transition-colors font-sans"
+              className="flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200  transition-colors font-sans "
             >
               {copied ? <IconCheck size={14} /> : <IconCopy size={14} />}
             </button>
           </div>
         )}
       </div>
-      <SyntaxHighlighter
-        language={activeLanguage}
-        style={atomDark}
-        customStyle={{
-          margin: 0,
-          padding: 0,
-          background: "transparent",
-          fontSize: "0.875rem", // text-sm equivalent
-        }}
-        wrapLines={true}
-        showLineNumbers={true}
-        lineProps={(lineNumber) => ({
-          style: {
-            backgroundColor: activeHighlightLines.includes(lineNumber)
-              ? "rgba(255,255,255,0.1)"
-              : "transparent",
-            display: "block",
-            width: "100%",
-          },
-        })}
-        PreTag="div"
-      >
-        {String(activeCode)}
-      </SyntaxHighlighter>
+      {/* DARK MODE */}
+<div className="hidden dark:block">
+  <SyntaxHighlighter
+    language={activeLanguage}
+    style={atomDark}
+    customStyle={{
+      margin: 0,
+      padding: 0,
+      background: "transparent",
+      fontSize: "0.875rem",
+    }}
+    wrapLines
+    showLineNumbers
+    lineProps={(lineNumber) => ({
+      style: {
+        backgroundColor: activeHighlightLines.includes(lineNumber)
+          ? "rgba(255,255,255,0.08)"
+          : "transparent",
+        display: "block",
+        width: "100%",
+      },
+    })}
+    PreTag="div"
+  >
+    {String(activeCode)}
+  </SyntaxHighlighter>
+</div>
+
+{/* LIGHT MODE */}
+<div className="block dark:hidden">
+  <SyntaxHighlighter
+    language={activeLanguage}
+    style={oneLight}
+    customStyle={{
+      margin: 0,
+      padding: 0,
+      background: "transparent",
+      fontSize: "0.875rem",
+    }}
+    wrapLines
+    showLineNumbers
+    lineProps={(lineNumber) => ({
+      style: {
+        backgroundColor: activeHighlightLines.includes(lineNumber)
+          ? "rgba(0,0,0,0.05)"
+          : "transparent",
+        display: "block",
+        width: "100%",
+      },
+    })}
+    PreTag="div"
+  >
+    {String(activeCode)}
+  </SyntaxHighlighter>
+</div>
+
     </div>
   );
 };
