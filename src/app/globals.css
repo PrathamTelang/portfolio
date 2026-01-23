@@ -186,9 +186,9 @@ body {
     --secondary-text: #99A1AF;
     --border: #27272A;
 
-    --card: #0B101B;
+    --card: #000000;
     --card-foreground: #FFFFFF;
-    --popover: #0B101B;
+    --popover: #000000;
     --popover-foreground: #FFFFFF;
 
     --hover: #1B1B1E;
@@ -212,7 +212,7 @@ body {
     --chart-4: #28C76F;
     --chart-5: #9C27B0;
 
-    --sidebar: #0B101B;
+    --sidebar: #000000;
     --sidebar-foreground: #FFFFFF;
     --sidebar-primary: #00BCFF;
     --sidebar-primary-foreground: #FFFFFF;
