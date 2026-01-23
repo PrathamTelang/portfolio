@@ -12,6 +12,7 @@ const componentMap: Record<string, string> = {
   "spark-click": "SparkClickLayer",
   "newton-cradle-loader": "NewtonCradleLoader",
   "offer-button": "OfferButton",
+  "timeline": "Timeline",
 };
 
 
@@ -82,10 +83,13 @@ export default async function ComponentShowcase({
           {/*------------ Preview Tab --------- */}
           <TabsContent value="preview">
             <Card>
-              <CardContent className="py-10">
-                <ComponentPreview name={component} />
-              </CardContent>
-            </Card>
+  <CardContent className="p-0">
+    <div className="h-[60vh] overflow-y-auto px-6 py-10">
+      <ComponentPreview name={component} />
+    </div>
+  </CardContent>
+</Card>
+
           </TabsContent>
           {/*------------ Code Tab --------- */}
           <TabsContent value="code">

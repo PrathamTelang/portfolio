@@ -4,6 +4,7 @@ import Grid from "../features/portfolio/components/Grid";
 
 const components = [
   { name: "SpotlightCard", slug: "spotlight-card", image: "/components/thumbnails/og-spotlightCard.png" },
+  { name: "Timeline", slug: "timeline", image: "/components/thumbnails/og-timeline.png" },
 ];
 
 export default function ComponentsPage() {
