@@ -14,7 +14,7 @@ import { Footer } from "./features/portfolio/components/Footer";
 
 export default function Home() {
   return (
-   <div className="max-w-screen tracking-tighter text-balance overflow-x-hidden ">
+   <div className="max-w-screen  text-balance overflow-x-hidden ">
     <div className="h-full max-w-screen">
       <Background/>
       <Line/>

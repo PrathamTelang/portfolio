@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Source_Code_Pro, Space_Grotesk, Instrument_Serif } from "next/font/google";
+import {  Instrument_Serif, Geist } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./features/portfolio/components/Navbar";
 import { Footer } from "./features/portfolio/components/Footer";
 
-const sourceCodePro = Source_Code_Pro({
+const geist = Geist({
 subsets: ['latin'],
 weight: ['200','300','400','500','600','700','800','900'],
-variable: '--font-source-code-pro',
+variable: '--font-geist',
 display: 'swap',
 })
 
@@ -66,7 +66,7 @@ twitter: {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html  lang="en" suppressHydrationWarning className={`${sourceCodePro.variable} ${instrumentSerif.variable}`}>
+    <html  lang="en" suppressHydrationWarning className={`${geist.variable} ${instrumentSerif.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
