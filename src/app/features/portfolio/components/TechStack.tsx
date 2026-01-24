@@ -6,7 +6,6 @@ import { RiNextjsFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import motionIconpng from "../images/motion.png";
 import Image from "next/image";
-import { link } from "fs";
 
 
 const technologies = [

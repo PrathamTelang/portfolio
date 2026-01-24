@@ -1,4 +1,3 @@
-import { Line } from "./Line"
 
 export const Experience = () => {
     return (

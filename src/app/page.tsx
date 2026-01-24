@@ -9,8 +9,6 @@ import { Education } from "./features/portfolio/components/Education";
 import SocialLinks from "./features/portfolio/components/SocialLink";
 import Projects from "./features/portfolio/components/Projects"
 import GitHubContributions from "./features/portfolio/components/GithubContributions";
-import { Footer } from "./features/portfolio/components/Footer";
-
 
 export default function Home() {
   return (
