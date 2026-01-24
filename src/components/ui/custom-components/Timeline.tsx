@@ -18,49 +18,49 @@ export const timeline = [
     role: "Vacuum Tubes",
     date: "1940s–1950s",
     description: "The first electronic computers used vacuum tubes to perform calculations at scale.",
-    image: "/components/assets/vacuum-tube-computer-1940s.jpg",
+    image: "/components/assets/vacuum-tube-computer-1940s.jpeg",
   },
   {
     title: "Microprocessor Age",
     role: "Integrated Circuits",
     date: "1970s",
     description: "Single-chip CPUs enabled smaller, faster, and more affordable computing devices.",
-    image: "/components/assets/microprocessor-chip-1970s.jpg",
+    image: "/components/assets/microprocessor-chip-1970s.avif",
   },
   {
     title: "Personal Computing",
     role: "Desktop PCs",
     date: "1980s",
     description: "Computers became accessible to individuals, transforming homes, offices, and productivity.",
-    image: "/components/assets/personal-computer-1980s-desktop.jpg",
+    image: "/components/assets/personal-computer-1980s-desktop.webp",
   },
   {
     title: "Internet Era",
     role: "Early Web",
     date: "1990s",
     description: "The World Wide Web connected people globally and reshaped communication and information sharing.",
-    image: "/components/assets/early-internet-web-browser-1990s.jpg",
+    image: "/components/assets/early-internet-web-browser-1990s.webp",
   },
   {
     title: "Mobile Computing",
     role: "Smartphones",
     date: "2007–2010s",
     description: "Powerful handheld devices merged computing, communication, and the internet into one platform.",
-    image: "/components/assets/smartphone-evolution-timeline.jpg",
+    image: "/components/assets/smartphone-evolution-timeline.webp",
   },
   {
     title: "Cloud Infrastructure",
     role: "Data Centers",
     date: "2010s",
     description: "Scalable cloud platforms replaced local servers with on-demand global infrastructure.",
-    image: "/components/assets/cloud-computing-data-center.jpg",
+    image: "/components/assets/cloud-computing-data-center.webp",
   },
   {
     title: "Artificial Intelligence",
     role: "Machine Learning",
     date: "2020s–Future",
     description: "Algorithms capable of learning and reasoning now drive automation, insights, and new products.",
-    image: "/components/assets/artificial-intelligence-neural-network-illustration.jpg",
+    image: "/components/assets/artificial-intelligence-neural-network-illustration.png",
   },
 ];
 
@@ -94,13 +94,13 @@ export default function Timeline() {
             className="relative flex"
           >
             {/* dot */}
-            <span className="absolute top-2 h-2 w-2 rounded-full bg-[#FAFAFA] -translate-x-1/2 hover:scale-150 transition-transform duration-200" />
+            <span className="absolute top-2 h-2 w-2 rounded-full bg-black dark:bg-[#FAFAFA] -translate-x-1/2 hover:scale-150 transition-transform duration-200" />
 
             <div className="ml-4">
               <time className="text-sm text-[#A1A1AA]">{item.date}</time>
 
               <motion.h3
-                className="mt-1 text-md font-semibold text-[#FAFAFA] cursor-pointer "
+                className="mt-1 text-md font-semibold text-black dark:text-[#FAFAFA] cursor-pointer "
                 onMouseEnter={(e) =>
                   setActive({
                     rect: e.currentTarget.getBoundingClientRect(),
@@ -114,7 +114,7 @@ export default function Timeline() {
               </motion.h3>
 
               <p
-  className="text-sm text-[#A1A1AA] cursor-help inline-block"
+  className="text-sm text-gray-700 dark:text-[#A1A1AA] cursor-help inline-block"
   onMouseEnter={(e) =>
     setRoleTooltip({
       rect: e.currentTarget.getBoundingClientRect(),
@@ -185,7 +185,8 @@ export default function Timeline() {
           px-3
           py-2
           text-xs
-          text-[#E4E4E7]
+          text-gray-800
+          dark:text-[#E4E4E7]
           shadow-lg
           pointer-events-none
         "
