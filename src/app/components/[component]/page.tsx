@@ -118,14 +118,6 @@ export default async function ComponentShowcase({
                   code={usage}
                 />
               </section>
-              {/* -------- Example -------- */}
-              <section>
-                <h2>Example</h2>
-                <CodeBlock
-                  language="tsx"
-                  code={example}
-                />
-              </section>
             </div>
         </Tabs>
       </div>
