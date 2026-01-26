@@ -87,18 +87,18 @@ export default function Grid({ items = [] }: { items?: GridItem[] }) {
               className="hover:bg-hover transition block"
             >
               <Line />
-              <div className="p-2">
+              <div className="">
                 {item.image ? (
                   <Image
                     src={item.image}
                     alt={item.name}
                     width={400}
                     height={300}
-                    className="rounded-md mb-2"
+                    className="mb-2 p-2 border-b border-border object-cover"
                   />
                 ) : null}
-                <h3 className="font-semibold">{item.name}</h3>
-                <p className="text-sm text-neutral-400">View component →</p>
+                <h3 className="font-semibold border-t border-border pt-1 px-2">{item.name}</h3>
+                <p className="text-sm text-neutral-400 px-2 pb-1">View component →</p>
               </div>
               <Line />
             </Link>
