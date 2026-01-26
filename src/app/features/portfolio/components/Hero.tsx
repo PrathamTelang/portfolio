@@ -7,6 +7,7 @@ import { GoDotFill } from "react-icons/go"
 import { useEffect, useRef, useState } from "react"
 import { createPortal } from "react-dom"
 import { AnimatePresence, motion } from "motion/react"
+import Button from "./Button"
 
 export const Hero = () => {
       const [show, setShow] = useState(false)
@@ -102,7 +103,13 @@ useEffect(() => {
                                     <h1 className=" text-3xl font-serif italic sm:text-5xl" >Pratham Telang</h1>
                                 <RiVerifiedBadgeFill className="text-2xl text-[#1D9BF0]" />
                                 </div>
-                                <div className="mr-4 px-4 py-1.5 border border-border rounded-2xl flex items-center gap-2 bg-border/50 text-sm"><GoDotFill className="text-[#00BC7D] animate-ping" />Available for work</div>
+                                <div className="mr-4 mx-4 my-1.5 bg-green-500/30">
+                                    <Button
+                                    text="Available for work"
+                                    variant="primary"
+                                    fontSize="18px"
+                                    />
+                                </div>
                             </div>
                             <div className="w-full h-px bg-border " />
                             <p className="pl-4 text-secondary-text mt-2 max-[475px]:my-0 text-md max-[475px]:text-sm ">Web developer & Design Engineer</p>  
