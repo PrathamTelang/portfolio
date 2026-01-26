@@ -16,7 +16,7 @@ import { RiGithubLine } from "react-icons/ri";
 const projectsLinks = [
   {
     name: "LinkStash",
-    description: "Tool to save, organize, and quickly access important links.",
+    description: "One central place to save, organize, and access all your important links effortlessly.",
     image: LinkStash,
     alt: "LinkStash Preview",
     giturl: "https://github.com/PrathamTelang/LinkStash",
