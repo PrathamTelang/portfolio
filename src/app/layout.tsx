@@ -56,9 +56,10 @@ twitter: {
   title: "Pratham Telang | Design Engineer",
   description:
     "Design Engineer portfolio showcasing interfaces, systems, and modern web experiences.",
-  images: [
-    "https://prathamtelang-portfolio.vercel.app/og-portfolio.png",
-  ],
+  images: {
+    url: "https://prathamtelang-portfolio.vercel.app/og-portfolio.png",
+    alt: "Pratham Telang Portfolio Website Preview",
+  },
 },
 
 };
