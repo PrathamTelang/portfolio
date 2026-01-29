@@ -1,5 +1,7 @@
 "use client"
 
+import { motion } from "motion/react"
+
 type BreadcrumbItem = {
   label: string
   href?: string
@@ -8,48 +10,44 @@ type BreadcrumbItem = {
 
 interface ArrowBreadcrumbsProps {
   items: BreadcrumbItem[]
+  onItemClick?: (index: number) => void
 }
 
-export default function ArrowBreadcrumbs({ items }: ArrowBreadcrumbsProps) {
-  return (
-    <nav aria-label="Breadcrumb" className="flex items-center text-sm cursor-pointer">
-      <style jsx>{`
-        .arrow {
-          clip-path: polygon(
-            0 0,
-            92% 0,
-            100% 50%,
-            92% 100%,
-            0 100%,
-            8% 50%
-          );
-        }
-      `}</style>
 
+const arrowClipPath =
+  "polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%, 8% 50%)"
+
+export default function ArrowBreadcrumbs({
+  items,
+  onItemClick,
+}: ArrowBreadcrumbsProps) {
+  return (
+    <nav aria-label="Breadcrumb" className="flex items-center text-sm">
       <ol className="flex items-center">
         {items.map((item, idx) => {
-          const isLast = idx === items.length - 1
+          const isActive = item.active 
 
           return (
-            <li
+            <motion.li
               key={idx}
+              whileTap={{ scale: 0.94 }}
+              transition={{ type: "spring", stiffness: 400, damping: 22 }}
+              style={{
+                clipPath: arrowClipPath,
+                WebkitClipPath: arrowClipPath,
+                zIndex: isActive ? 20 : 10,
+              }}
               className={[
-                "arrow px-6 py-2 -ml-3 first:ml-0",
+                "px-6 py-2 -ml-3 first:ml-0 cursor-pointer select-none",
                 "transition-colors duration-200",
-                item.active || isLast
-                  ? "bg-black text-white dark:bg-white dark:text-black z-30"
+                isActive
+                  ? "bg-black text-white dark:bg-white dark:text-black"
                   : "bg-neutral-800 text-neutral-200 hover:bg-neutral-700",
               ].join(" ")}
-              style={{ zIndex: item.active || isLast ? 20 : 10 }}
+              onClick={() => onItemClick?.(idx)}
             >
-              {item.href && !isLast ? (
-                <a href={item.href} className="block">
-                  {item.label}
-                </a>
-              ) : (
-                <span>{item.label}</span>
-              )}
-            </li>
+              <span>{item.label}</span>
+            </motion.li>
           )
         })}
       </ol>
