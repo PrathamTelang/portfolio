@@ -42,7 +42,7 @@ export default function ArrowBreadcrumbs({
                 "transition-colors duration-200",
                 isActive
                   ? "bg-black text-white dark:bg-white dark:text-black"
-                  : "bg-neutral-800 text-neutral-200 hover:bg-neutral-700",
+                  : "bg-[#F0F0F0] text-black hover:bg-neutral-300 dark:bg-neutral-800 dark:text-white dark:hover:bg-neutral-700",
               ].join(" ")}
               onClick={() => onItemClick?.(idx)}
             >
