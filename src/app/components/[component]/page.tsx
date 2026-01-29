@@ -13,6 +13,7 @@ const componentMap: Record<string, string> = {
   "newton-cradle-loader": "NewtonCradleLoader",
   "offer-button": "OfferButton",
   "timeline": "Timeline",
+  "arrow-breadcrumbs": "ArrowBreadcrumbs",
 };
 
 

@@ -4,6 +4,7 @@ import Grid from "../features/portfolio/components/Grid";
 
 const components = [
   { name: "Timeline", slug: "timeline", image: "/components/thumbnails/og-timeline.png" },
+  { name: "ArrowBreadcrumbs", slug: "ArrowBreadcrumbs", image: "/components/thumbnails/og-arrow-breadcrumbs.png" },
 ];
 
 export default function ComponentsPage() {
