@@ -59,14 +59,14 @@ export const Navbar = () => {
       </div>
         <div className="flex gap-1 bg-border rounded-full p-1">
           <button
-            className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center border border-[#D9DADC] dark:border-none bg-background"
+            className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center border border-[#D9DADC] dark:border-none bg-background dark:bg-[#27272A]"
             onClick={() => { setDarkMode(false); flashSound(); }}
             title="Enable Light Mode"
           >
             <MdOutlineLightMode />
           </button>
           <button
-            className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center p-1 dark:border border-[#4A5465] dark:bg-[#364153]"
+              className="h-7 w-7 cursor-pointer rounded-full  flex items-center justify-center p-1 dark:border border-neutral-700 bg-[#EEEEF0] dark:bg-black"
             onClick={() => { setDarkMode(true); switchSound(); }}
             title="Enable Dark Mode"
           >
