@@ -136,17 +136,18 @@ function safeRead(filePath: string) {
 /* -------------- Dynamic Component Preview Loader -------------- */
 function ComponentPreview({ name }: { name: string }) {
   try {
+    const Demo = require(
+      `../../../components/ui/previews/${componentMap[name] || capitalize(name)}.demo`
+    ).default;
+
+    return <Demo />;
+  } catch {
     const Comp =
       require(`../../../components/ui/custom-components/${componentMap[name] || capitalize(name)}`).default;
-
-    const defaults = previewDefaults[componentMap[name] || capitalize(name)] || {};
-
-    return <Comp {...defaults} />;
-  } catch (err) {
-    console.error("PREVIEW ERROR:", err);
-    return <div>Preview not available.</div>;
+    return <Comp />;
   }
 }
+
 
 
 
