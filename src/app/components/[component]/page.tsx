@@ -133,25 +133,36 @@ function safeRead(filePath: string) {
     : "*No documentation available.*";
 }
 
+
+
 /* -------------- Dynamic Component Preview Loader -------------- */
 function ComponentPreview({ name }: { name: string }) {
+  const componentName = componentMap[name] || kebabToPascal(name);
+
   try {
     const Demo = require(
-      `../../../components/ui/previews/${componentMap[name] || capitalize(name)}.demo`
+      `../../../components/ui/previews/${componentName}.demo`
     ).default;
 
     return <Demo />;
   } catch {
-    const Comp =
-      require(`../../../components/ui/custom-components/${componentMap[name] || capitalize(name)}`).default;
-    return <Comp />;
+    const Comp = require(
+      `../../../components/ui/custom-components/${componentName}`
+    ).default;
+
+    return <Comp />; // safe only for prop-less components
   }
 }
-
-
 
 
 /* -------------------- Helpers -------------------- */
 function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function kebabToPascal(str: string) {
+  return str
+    .split("-")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("");
 }
