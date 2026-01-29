@@ -81,17 +81,21 @@ export const CodeBlock = ({
             ))}
           </div>
         )}
-        {!tabsExist && filename && (
-          <div className="flex justify-between items-center py-2 ">
-            <div className="text-xs text-zinc-400">{filename}</div>
-            <button
-              onClick={copyToClipboard}
-              className="flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200  transition-colors font-sans "
-            >
-              {copied ? <IconCheck size={14} /> : <IconCopy size={14} />}
-            </button>
-          </div>
-        )}
+        {!tabsExist && (
+  <div className="flex justify-between items-center py-2">
+    {filename ? (
+      <div className="text-xs text-zinc-400">{filename}</div>
+    ) : (
+      <div />
+    )}
+    <button
+      onClick={copyToClipboard}
+      className="flex items-center gap-1 text-xs cursor-pointer text-zinc-400 hover:text-zinc-200 transition-colors font-sans"
+    >
+      {copied ? <IconCheck size={14} /> : <IconCopy size={14} />}
+    </button>
+  </div>
+)}
       </div>
       {/* DARK MODE */}
 <div className="hidden dark:block">
