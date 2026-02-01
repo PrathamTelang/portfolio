@@ -85,9 +85,11 @@ export default async function ComponentShowcase({
           <TabsContent value="preview">
             <Card>
   <CardContent className="p-0">
-    <div className="h-[60vh] flex justify-center items-center overflow-y-auto px-6 py-10">
-      <ComponentPreview name={component} />
-    </div>
+    <div className="w-full overflow-y-auto max-h-[60vh]">
+  <div className="px-6 w-11/12 lg:w-3/5 mx-auto py-10">
+    <ComponentPreview name={component} />
+  </div>
+</div>
   </CardContent>
 </Card>
 
