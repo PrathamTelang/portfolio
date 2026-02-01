@@ -31,7 +31,7 @@ const timelineData: TimelineItem[] = [
 
 export default function TimelineDemo() {
   return (
-    <div className="rounded-xl border border-neutral-800 bg-neutral-950 p-6">
+    <div>
       <Timeline items={timelineData} />
     </div>
   )
