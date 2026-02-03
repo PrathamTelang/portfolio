@@ -12,6 +12,7 @@ import LinkdinImage from "../images/linkedin-bg.png";
 import GithubImage from "../images/github-bg.png";
 import RedditImage from "../images/reddit-bg.png";
 import ResumeImage from "../images/resume-bg.png";
+import EmailImage from "../images/email-bg.png";
 
 const socialLinks = [
   {
@@ -47,7 +48,7 @@ const socialLinks = [
     username: "prathamtelang007@gmail.com",
     icon: <MdAlternateEmail />,
     url: "mailto:prathamtelang007@gmail.com",
-    image: "",
+    image: EmailImage,
   },
   {
     name: "Resume",
