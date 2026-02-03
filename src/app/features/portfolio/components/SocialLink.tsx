@@ -7,6 +7,11 @@ import { MdAlternateEmail } from "react-icons/md";
 import { BsFiletypePdf } from "react-icons/bs";
 import Image from "next/image";
 import { image } from "motion/react-client";
+import XImage from "../images/x-bg.png";
+import LinkdinImage from "../images/linkedin-bg.png";
+import GithubImage from "../images/github-bg.png";
+import RedditImage from "../images/reddit-bg.png";
+import ResumeImage from "../images/resume-bg.png";
 
 const socialLinks = [
   {
@@ -14,42 +19,42 @@ const socialLinks = [
     username: "Pratham Telang",
     icon: <FaLinkedin className="text-[#0A66C2]" />,
     url: "https://www.linkedin.com/in/prathamtelang/",
-    image: "/linkedin-bg.png",
+    image: LinkdinImage,
   },
   {
     name: "GitHub",
     username: "PrathamTelang",
     icon: <FaGithubSquare className="rounded-md" />,
     url: "https://github.com/PrathamTelang",
-    image: "/github-bg.png",
+    image: GithubImage,
   },
   {
     name: "X",
     username: "@Prat_Telang",
     icon: <FaSquareXTwitter className=" rounded-md" />,
     url: "https://x.com/Prat_Telang",
-    image: "/x-bg.png",
+    image: XImage,
   },
   {
     name: "Reddit",
     username: "MissionBasis7442",
     icon: <FaReddit className="text-[#FF4500] dark:bg-background rounded-full" />,
     url: "https://www.reddit.com/user/MissionBasis7442/",
-    image: "/reddit-bg.png",
+    image: RedditImage,
   },
   {
     name: "Email",
     username: "prathamtelang007@gmail.com",
     icon: <MdAlternateEmail />,
     url: "mailto:prathamtelang007@gmail.com",
-    image: "/email-bg.png",
+    image: "",
   },
   {
     name: "Resume",
     username: "View Resume",
     icon: <BsFiletypePdf />,
     url: "/Pratham_Telang_Resume.pdf",
-    image: "/resume-bg.png",
+    image: ResumeImage,
   }
 ];
 
