@@ -89,7 +89,6 @@ export default function SocialLinks() {
           : index === 5
           ? "md:col-span-1"
           : "md:col-span-2"
-
       }
       >
       <Image

@@ -58,7 +58,9 @@ export function BentoItem({
       </div>
     )}
 
-    <div className="relative z-20 flex flex-col h-full justify-center items-center p-4 border border-border">
+    <div className="relative z-20 flex flex-col h-full justify-center items-center p-4 border border-border transition-opacity duration-300
+    group-hover:opacity-0
+">
       <div className="text-5xl flex items-center">{icon}</div>
 
       <div className="flex flex-col justify-center items-center sm:pt-2">
