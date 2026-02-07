@@ -1,12 +1,11 @@
 "use client";
 import { FaLinkedin, FaReddit, FaSquareXTwitter, } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
-import { BentoGrid } from "./BentoGrid";
-import { BentoItem } from "./BentoItem";
+import { BentoGrid } from "./Bento";
+import { BentoItem } from "./Bento";
 import { MdAlternateEmail } from "react-icons/md";
 import { BsFiletypePdf } from "react-icons/bs";
 import Image from "next/image";
-import { image } from "motion/react-client";
 import XImage from "../images/x-bg.png";
 import LinkdinImage from "../images/linkedin-bg.png";
 import GithubImage from "../images/github-bg.png";
