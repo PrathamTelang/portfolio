@@ -14,6 +14,7 @@ const componentMap: Record<string, string> = {
   "offer-button": "OfferButton",
   "timeline": "Timeline",
   "arrow-breadcrumbs": "ArrowBreadcrumbs",
+  "slide-to-unlock": "SlideToUnlock",
 };
 
 
