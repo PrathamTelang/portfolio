@@ -15,6 +15,8 @@ export default function SlideToUnlock() {
   const [unlocked, setUnlocked] = useState(false)
   const handleWidth = 56
 
+  // Key rotates gradually as you drag
+  const keyRotate = useTransform(x, [0, 180], [0, 180])
   const textOpacity = useTransform(x, [0, handleWidth], [1, 0])
 
   function handleDragEnd() {
@@ -51,7 +53,7 @@ export default function SlideToUnlock() {
             h-12 w-12 rounded-full bg-white
             flex items-center justify-center
             cursor-grab active:cursor-grabbing
-            shadow-md text-zinc-500
+            shadow-md text-zinc-600
           "
           style={{ x }}
           drag={!unlocked ? "x" : false}
@@ -60,11 +62,10 @@ export default function SlideToUnlock() {
           dragMomentum={false}
           onDragEnd={handleDragEnd}
         >
-          {/* 🔒 Lock Icon (Animated Shackle) */}
-          <motion.svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            className="w-6 h-6"
+            className="w-8 h-8"
             fill="currentColor"
           >
             {/* Lock Body */}
@@ -80,7 +81,6 @@ export default function SlideToUnlock() {
               style={{ originX: 0.5, originY: 1 }}
               animate={{
                 rotate: unlocked ? -35 : 0,
-                x: unlocked ? -1 : 0,
               }}
               transition={{
                 type: "spring",
@@ -88,7 +88,25 @@ export default function SlideToUnlock() {
                 damping: 20,
               }}
             />
-          </motion.svg>
+
+            {/* Rotating Key */}
+            <motion.g
+              style={{
+                originX: 0.5,
+                originY: 0.5,
+                rotate: keyRotate,
+              }}
+            >
+              <circle cx="12" cy="14" r="1.3" fill="white" />
+              <rect
+                x="11.7"
+                y="14"
+                width="1"
+                height="4"
+                fill="white"
+              />
+            </motion.g>
+          </svg>
         </motion.div>
       </div>
     </div>
