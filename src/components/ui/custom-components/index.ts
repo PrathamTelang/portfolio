@@ -4,3 +4,4 @@ export { default as NewtonCradleLoader } from "./NewtonCradleLoader";
 export { default as OfferButton } from "./OfferButton";
 export { default as Timeline } from "./Timeline";
 export { default as SlideToUnlock } from "./SlideToUnlock";
+export { default as MorphFooter } from "./MorphFooter";

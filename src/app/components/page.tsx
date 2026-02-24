@@ -6,6 +6,7 @@ const components = [
   { name: "ArrowBreadcrumbs", slug: "ArrowBreadcrumbs", image: "/components/thumbnails/og-arrow-breadcrumbs.png" },
   { name: "Timeline", slug: "Timeline", image: "/components/thumbnails/og-timeline.png" },
   { name: "SlideToUnlock", slug: "SlideToUnlock", image: "/components/thumbnails/og-slide-to-unlock.png" },
+  { name: "MorphFooter", slug: "MorphFooter", image: "/components/thumbnails/og-morph-footer.png" },
 ];
 
 export default function ComponentsPage() {

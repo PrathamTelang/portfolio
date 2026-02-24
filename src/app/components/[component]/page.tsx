@@ -15,6 +15,7 @@ const componentMap: Record<string, string> = {
   "timeline": "Timeline",
   "arrow-breadcrumbs": "ArrowBreadcrumbs",
   "slide-to-unlock": "SlideToUnlock",
+  "morph-footer": "MorphFooter",
 };
 
 
