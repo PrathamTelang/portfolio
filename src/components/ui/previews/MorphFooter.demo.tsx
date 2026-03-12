@@ -27,18 +27,28 @@ function MorphFooterdemo() {
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <p className="text-muted-foreground">
-              demo@gmail.com
+              donjoeh@gmail.com
             </p>
           </div>
 
         </div>
-      </div>
-      
         {/* Morphing footer */}
         <AnimatedFooter
   firstWord="BUILDING"
   secondWord="SINCE 2025"
 />
+{ /* privacy policy */}
+<div className='w-full flex justify-between'>
+    <p className="text-center text-xs text-muted-foreground mt-4">
+        &copy; 2024 Your Name. All rights reserved. | <span className="underline cursor-pointer">Privacy Policy</span>
+    </p>
+    <p className="text-center text-xs text-muted-foreground mt-4">
+        Made with ❤️ by Your Name
+    </p>
+</div>
+      </div>
+      
+        
     </div>
   )
 }
