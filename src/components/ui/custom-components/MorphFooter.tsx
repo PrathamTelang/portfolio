@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "motion/react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 type AnimatedFooterProps = {
   firstWord: string
