@@ -34,7 +34,7 @@ function MorphFooterdemo() {
         </div>
         {/* Morphing footer */}
         <AnimatedFooter
-  firstWord="BUILDING"
+  firstWord="DESIGNING"
   secondWord="SINCE 2025"
 />
 { /* privacy policy */}
