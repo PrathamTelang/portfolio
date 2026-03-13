@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react"
 import { useState } from "react"
+import { Textfit } from "react-textfit"
 
 type AnimatedFooterProps = {
   firstWord: string
@@ -19,11 +20,7 @@ export default function AnimatedFooter({
       <motion.span
         key={char + i}
         initial={false}
-        animate={
-          mode === "in"
-            ? { y: 0, opacity: 1 }
-            : { y: -20, opacity: 0 }
-        }
+        animate={mode === "in" ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }}
         transition={{
           delay: i * 0.04,
           duration: 0.4,
@@ -36,29 +33,31 @@ export default function AnimatedFooter({
     ))
 
   return (
-    <div>
-      <div
-  className="w-full text-center select-none"
-  onMouseEnter={() => setState("second")}
-  onMouseLeave={() => setState("first")}
->
-        <div className="relative w-full leading-none">
+    <div
+      className="w-full text-center select-none"
+      onMouseEnter={() => setState("second")}
+      onMouseLeave={() => setState("first")}
+    >
+      <div className="relative w-full leading-none h-[1em]">
 
-          {/* FIRST WORD */}
-          <div className="flex justify-center text-8xl md:text-[10vw] font-bold tracking-tight">
-            {state === "first"
-              ? split(firstWord, "in")
-              : split(firstWord, "out")}
-          </div>
+        {/* FIRST WORD */}
+        <Textfit
+          mode="single"
+          max={400}
+          className="flex justify-center font-bold tracking-tight w-full"
+        >
+          {state === "first"
+            ? split(firstWord, "in")
+            : split(firstWord, "out")}
+        </Textfit>
 
-          {/* SECOND WORD */}
-          <div className="absolute inset-0 flex items-center justify-center text-4xl md:text-[3vw] font-medium tracking-wide">
-            {state === "second"
-              ? split(secondWord, "in")
-              : split(secondWord, "out")}
-          </div>
-
+        {/* SECOND WORD */}
+        <div className="absolute inset-0 flex items-center justify-center translate-y-[0.95em] text-[clamp(1rem,4vw,2.5rem)] font-medium tracking-wide">
+          {state === "second"
+            ? split(secondWord, "in")
+            : split(secondWord, "out")}
         </div>
+
       </div>
     </div>
   )

@@ -37,15 +37,6 @@ function MorphFooterdemo() {
   firstWord="DESIGNING"
   secondWord="SINCE 2025"
 />
-{ /* privacy policy */}
-<div className='w-full flex justify-between'>
-    <p className="text-center text-xs text-muted-foreground mt-4">
-        &copy; 2024 Your Name. All rights reserved. | <span className="underline cursor-pointer">Privacy Policy</span>
-    </p>
-    <p className="text-center text-xs text-muted-foreground mt-4">
-        Made with ❤️ by Your Name
-    </p>
-</div>
       </div>
       
         

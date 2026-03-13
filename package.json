@@ -11,6 +11,7 @@
     "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-tabs": "^1.1.13",
     "@tabler/icons-react": "^3.35.0",
+    "@types/react-textfit": "^1.1.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.545.0",
@@ -21,6 +22,7 @@
     "react-github-calendar": "^4.5.11",
     "react-icons": "^5.5.0",
     "react-syntax-highlighter": "^16.1.0",
+    "react-textfit": "^1.1.1",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
