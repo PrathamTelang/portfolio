@@ -10,7 +10,7 @@ import XImage from "../images/x-bg.png";
 import LinkdinImage from "../images/linkedin-bg.png";
 import GithubImage from "../images/github-bg.png";
 import RedditImage from "../images/reddit-bg.png";
-import ResumeImage from "../images/resume-bg.png";
+import ResumeImage from "../images/Pratham_Telang_Resume.png";
 import EmailImage from "../images/email-bg.png";
 
 const socialLinks = [
