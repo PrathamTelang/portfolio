@@ -19,7 +19,7 @@ export const Education = () => {
             <p className="text-secondary-text px-4 mt-1 text-sm ">
                 Bachelor of Computer Application
             </p>
-            <p className="text-secondary-text ml-4 text-sm ">2024 - 2026</p>
+            <p className="text-secondary-text ml-4 text-sm ">2023 - 2026</p>
             </div>
         </div>
         </div>
