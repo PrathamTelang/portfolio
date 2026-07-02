@@ -5,6 +5,7 @@ import { SiExpress, SiJavascript, SiMongodb, SiPostgresql, SiTailwindcss, SiType
 import { RiNextjsFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import motionIconpng from "../images/motion.png";
+import figmaIconpng from "../images/figma.svg";
 import Image from "next/image";
 
 
@@ -21,6 +22,7 @@ const technologies = [
   { name: "Git", icon: <FaGitAlt size={40} color="#F05032" /> , link: "https://git-scm.com/" },
   { name: "VS Code", icon: <VscVscode size={40} color="#007ACC" /> , link: "https://code.visualstudio.com/" },
   { name: "Framer Motion", icon: <Image src={motionIconpng} alt="Framer Motion" width={40} height={40} /> , link: "https://www.framer.com/motion/" },
+  { name: "Figma", icon: <Image src={figmaIconpng} alt="Figma" width={28} height={28} /> , link: "https://www.figma.com/" },
 ];
 
 export const Skills = () => {
